@@ -12,6 +12,12 @@ trigger UpdateMonthlyGoal on Opportunity_LI_Monthly_Booking__c (after insert, af
     }
 
     for (Opportunity_LI_Monthly_Booking__c monthlyBooking : bookingList) {
-        System.debug(monthlyBooking);
+        List<AggregateResult> monthlyBookingsByMonth = [
+            SELECT Month__c, SUM(Amount__c) amount
+            FROM Opportunity_LI_Monthly_Booking__c
+            WHERE Month__c = :monthlyBooking.Month__c
+            GROUP BY Month__c
+        ];
+        
     }
 }
