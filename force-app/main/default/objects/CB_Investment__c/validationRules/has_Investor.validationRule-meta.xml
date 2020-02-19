@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>has_Investor</fullName>
+    <active>true</active>
+    <errorConditionFormula>Investor_Organization__c  = null    &amp;&amp;   Investor_Person__c = null</errorConditionFormula>
+    <errorMessage>An investment needs either an Organization or a Person as investor.</errorMessage>
+</ValidationRule>

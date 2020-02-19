@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ASP</fullName>
+        <default>false</default>
+        <label>ASP</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Offices</fullName>
+        <default>false</default>
+        <label>Family Offices</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Kickbox</fullName>
+        <default>false</default>
+        <label>Kickbox</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Equity</fullName>
+        <default>false</default>
+        <label>Private Equity</label>
+    </customValue>
+    <customValue>
+        <fullName>Procurement</fullName>
+        <default>false</default>
+        <label>Procurement</label>
+    </customValue>
+    <customValue>
+        <fullName>Validation</fullName>
+        <default>false</default>
+        <label>Validation</label>
+    </customValue>
+    <customValue>
+        <fullName>ESM</fullName>
+        <default>false</default>
+        <label>ESM</label>
+    </customValue>
+    <customValue>
+        <fullName>SH CEO Outreach</fullName>
+        <default>false</default>
+        <label>SH CEO Outreach</label>
+    </customValue>
+    <customValue>
+        <fullName>Landscaping</fullName>
+        <default>false</default>
+        <label>Landscaping</label>
+    </customValue>
+    <masterLabel>Sales Kampagne</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

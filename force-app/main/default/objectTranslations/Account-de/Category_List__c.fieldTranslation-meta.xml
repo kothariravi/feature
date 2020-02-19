@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Category List --></label>
+    <name>Category_List__c</name>
+    <picklistValues>
+        <masterLabel>ad network</masterLabel>
+        <translation><!-- ad network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>advertising</masterLabel>
+        <translation><!-- advertising --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>advertising platforms</masterLabel>
+        <translation><!-- advertising platforms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>apps</masterLabel>
+        <translation><!-- apps --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>architecture</masterLabel>
+        <translation><!-- architecture --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>artificial intelligence</masterLabel>
+        <translation><!-- artificial intelligence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>auto insurance</masterLabel>
+        <translation><!-- auto insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>automotive</masterLabel>
+        <translation><!-- automotive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>autonomous vehicles</masterLabel>
+        <translation><!-- autonomous vehicles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>b2b</masterLabel>
+        <translation><!-- b2b --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>baby</masterLabel>
+        <translation><!-- baby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>battery</masterLabel>
+        <translation><!-- battery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>beauty</masterLabel>
+        <translation><!-- beauty --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>big data</masterLabel>
+        <translation><!-- big data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>broadcasting</masterLabel>
+        <translation><!-- broadcasting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>cloud computing</masterLabel>
+        <translation><!-- cloud computing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>cloud data services</masterLabel>
+        <translation><!-- cloud data services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>cloud security</masterLabel>
+        <translation><!-- cloud security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>collaborative consumption</masterLabel>
+        <translation><!-- collaborative consumption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>computer</masterLabel>
+        <translation><!-- computer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>computer vision</masterLabel>
+        <translation><!-- computer vision --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>consumer</masterLabel>
+        <translation><!-- consumer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>consumer electronics</masterLabel>
+        <translation><!-- consumer electronics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>content</masterLabel>
+        <translation><!-- content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>cyber security</masterLabel>
+        <translation><!-- cyber security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>data integration</masterLabel>
+        <translation><!-- data integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>developer tools</masterLabel>
+        <translation><!-- developer tools --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>digital entertainment</masterLabel>
+        <translation><!-- digital entertainment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>digital media</masterLabel>
+        <translation><!-- digital media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>document management</masterLabel>
+        <translation><!-- document management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e-commerce</masterLabel>
+        <translation><!-- e-commerce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>edtech</masterLabel>
+        <translation><!-- edtech --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>education</masterLabel>
+        <translation><!-- education --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>energy storage</masterLabel>
+        <translation><!-- energy storage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>enterprise</masterLabel>
+        <translation><!-- enterprise --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>enterprise software</masterLabel>
+        <translation><!-- enterprise software --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>fashion</masterLabel>
+        <translation><!-- fashion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>finance</masterLabel>
+        <translation><!-- finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>fintech</masterLabel>
+        <translation><!-- fintech --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>food and beverage</masterLabel>
+        <translation><!-- food and beverage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>hardware</masterLabel>
+        <translation><!-- hardware --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>health care</masterLabel>
+        <translation><!-- health care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>home automation</masterLabel>
+        <translation><!-- home automation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>home improvement</masterLabel>
+        <translation><!-- home improvement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>home renovation</masterLabel>
+        <translation><!-- home renovation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>hospital</masterLabel>
+        <translation><!-- hospital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>hospitality</masterLabel>
+        <translation><!-- hospitality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>human computer interaction</masterLabel>
+        <translation><!-- human computer interaction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iaas</masterLabel>
+        <translation><!-- iaas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>industrial automation</masterLabel>
+        <translation><!-- industrial automation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>information services</masterLabel>
+        <translation><!-- information services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>information technology</masterLabel>
+        <translation><!-- information technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>infrastructure</masterLabel>
+        <translation><!-- infrastructure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>innovation management</masterLabel>
+        <translation><!-- innovation management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>insurance</masterLabel>
+        <translation><!-- insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>interior design</masterLabel>
+        <translation><!-- interior design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>internet</masterLabel>
+        <translation><!-- internet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>internet of things</masterLabel>
+        <translation><!-- internet of things --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>lead management</masterLabel>
+        <translation><!-- lead management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>legal</masterLabel>
+        <translation><!-- legal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>life insurance</masterLabel>
+        <translation><!-- life insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>location based services</masterLabel>
+        <translation><!-- location based services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>logistics</masterLabel>
+        <translation><!-- logistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>machine learning</masterLabel>
+        <translation><!-- machine learning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>manufacturing</masterLabel>
+        <translation><!-- manufacturing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>market research</masterLabel>
+        <translation><!-- market research --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>marketing</masterLabel>
+        <translation><!-- marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>marketing automation</masterLabel>
+        <translation><!-- marketing automation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>medical</masterLabel>
+        <translation><!-- medical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>messaging</masterLabel>
+        <translation><!-- messaging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mhealth</masterLabel>
+        <translation><!-- mhealth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mobile</masterLabel>
+        <translation><!-- mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mobile apps</masterLabel>
+        <translation><!-- mobile apps --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mobile devices</masterLabel>
+        <translation><!-- mobile devices --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>music</masterLabel>
+        <translation><!-- music --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>music streaming</masterLabel>
+        <translation><!-- music streaming --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>navigation</masterLabel>
+        <translation><!-- navigation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>open source</masterLabel>
+        <translation><!-- open source --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>organic food</masterLabel>
+        <translation><!-- organic food --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>payments</masterLabel>
+        <translation><!-- payments --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>photography</masterLabel>
+        <translation><!-- photography --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>procurement</masterLabel>
+        <translation><!-- procurement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>public transportation</masterLabel>
+        <translation><!-- public transportation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>publishing</masterLabel>
+        <translation><!-- publishing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>renewable energy</masterLabel>
+        <translation><!-- renewable energy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>retail technology</masterLabel>
+        <translation><!-- retail technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ride sharing</masterLabel>
+        <translation><!-- ride sharing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>robotics</masterLabel>
+        <translation><!-- robotics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>saas</masterLabel>
+        <translation><!-- saas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>scheduling</masterLabel>
+        <translation><!-- scheduling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>security</masterLabel>
+        <translation><!-- security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>self-storage</masterLabel>
+        <translation><!-- self-storage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>service industry</masterLabel>
+        <translation><!-- service industry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>sharing economy</masterLabel>
+        <translation><!-- sharing economy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>shipping</masterLabel>
+        <translation><!-- shipping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>shopping</masterLabel>
+        <translation><!-- shopping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>small and medium businesses</masterLabel>
+        <translation><!-- small and medium businesses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>social media</masterLabel>
+        <translation><!-- social media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>social media management</masterLabel>
+        <translation><!-- social media management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>social media marketing</masterLabel>
+        <translation><!-- social media marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>social network</masterLabel>
+        <translation><!-- social network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>software</masterLabel>
+        <translation><!-- software --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>sustainability</masterLabel>
+        <translation><!-- sustainability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>technical support</masterLabel>
+        <translation><!-- technical support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>textiles</masterLabel>
+        <translation><!-- textiles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>transportation</masterLabel>
+        <translation><!-- transportation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>travel</masterLabel>
+        <translation><!-- travel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>video</masterLabel>
+        <translation><!-- video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>video editing</masterLabel>
+        <translation><!-- video editing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>video streaming</masterLabel>
+        <translation><!-- video streaming --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>virtual reality</masterLabel>
+        <translation><!-- virtual reality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>web hosting</masterLabel>
+        <translation><!-- web hosting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>wireless</masterLabel>
+        <translation><!-- wireless --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>women&#39;s</masterLabel>
+        <translation><!-- women&apos;s --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

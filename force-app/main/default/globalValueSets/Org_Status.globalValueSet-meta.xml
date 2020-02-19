@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>operating</fullName>
+        <default>false</default>
+        <label>operating</label>
+    </customValue>
+    <customValue>
+        <fullName>ipo</fullName>
+        <default>false</default>
+        <label>ipo</label>
+    </customValue>
+    <customValue>
+        <fullName>acquired</fullName>
+        <default>false</default>
+        <label>acquired</label>
+    </customValue>
+    <customValue>
+        <fullName>closed</fullName>
+        <default>false</default>
+        <label>closed</label>
+    </customValue>
+    <masterLabel>Org_Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

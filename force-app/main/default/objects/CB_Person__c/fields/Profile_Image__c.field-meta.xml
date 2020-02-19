@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profile_Image__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(len(Profile_Image_URL__c)&gt;1,IMAGE( Profile_Image_URL__c , &#39;Profile Image&#39;),&#39;&#39;)</formula>
+    <label>Profile Image</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

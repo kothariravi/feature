@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Default</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Company</fieldNames>
+        <fieldNames>Website</fieldNames>
+        <fieldNames>Industry</fieldNames>
+        <fieldNames>AnnualRevenue</fieldNames>
+        <fieldNames>NumberOfEmployees</fieldNames>
+        <info>&lt;p class=&quot;p1&quot;&gt;&lt;strong&gt;Lernen Sie den neuen Lead schnell kennen und kontaktieren Sie ihn.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p class=&quot;p2&quot;&gt;Verwenden Sie Salesforce-Leads, um potenzielle Kunden von den Salesforce-Kontakten zu trennen, an die Sie bereits Produkte verkauft haben.&lt;/p&gt;
+
+&lt;ul&gt;&lt;li class=&quot;p1&quot;&gt;Antworten Sie dem Lead innerhalb von fünf Minuten, um Ihre Chancen auf eine Konvertierung des Leaddatensatzes in eine Opportunity zu erhöhen. &lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Besuchen Sie die Website des Leads, um sich über das Geschäft und die Branche des Leads zu informieren.&lt;/li&gt;&lt;li class=&quot;p1&quot;&gt;Suchen Sie in sozialen Netzwerken nach dem Lead, um herauszufinden, wie Sie am besten mit dem Lead interagieren und in Kontakt treten.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>In_Kontakt</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

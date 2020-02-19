@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Verantwortlicher bei hy --></label>
+    <name>Lead_Partner__c</name>
+    <picklistValues>
+        <masterLabel>Artur Reimer</masterLabel>
+        <translation><!-- Artur Reimer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Christoph Keese</masterLabel>
+        <translation><!-- Christoph Keese --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jan Thede</masterLabel>
+        <translation><!-- Jan Thede --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jan Wildhirth</masterLabel>
+        <translation><!-- Jan Wildhirth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>John Lange</masterLabel>
+        <translation><!-- John Lange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manuel Kilian</masterLabel>
+        <translation><!-- Manuel Kilian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Martin Spindler</masterLabel>
+        <translation><!-- Martin Spindler --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sebastian Herzog</masterLabel>
+        <translation><!-- Sebastian Herzog --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sebastian Voigt</masterLabel>
+        <translation><!-- Sebastian Voigt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simon Kozlik</masterLabel>
+        <translation><!-- Simon Kozlik --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

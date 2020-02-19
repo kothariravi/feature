@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Dropped Reason --></label>
+    <name>Dropped_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Falscher Ansprechpartner</masterLabel>
+        <translation><!-- Falscher Ansprechpartner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kein Budget</masterLabel>
+        <translation><!-- Kein Budget --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kein Fit</masterLabel>
+        <translation><!-- Kein Fit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kein Interesse</masterLabel>
+        <translation><!-- Kein Interesse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Antwort</masterLabel>
+        <translation><!-- Keine Antwort --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Entscheidung</masterLabel>
+        <translation><!-- Keine Entscheidung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

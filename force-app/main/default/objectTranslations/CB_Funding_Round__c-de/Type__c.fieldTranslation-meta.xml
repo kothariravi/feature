@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>angel</masterLabel>
+        <translation><!-- angel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>convertible_note</masterLabel>
+        <translation><!-- convertible_note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>debt_financing</masterLabel>
+        <translation><!-- debt_financing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>equity_crowdfunding</masterLabel>
+        <translation><!-- equity_crowdfunding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>grant</masterLabel>
+        <translation><!-- grant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>initial_coin_offering</masterLabel>
+        <translation><!-- initial_coin_offering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>non_equity_assistance</masterLabel>
+        <translation><!-- non_equity_assistance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>post_ipo_debt</masterLabel>
+        <translation><!-- post_ipo_debt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>post_ipo_equity</masterLabel>
+        <translation><!-- post_ipo_equity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>private_equity</masterLabel>
+        <translation><!-- private_equity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>product_crowdfunding</masterLabel>
+        <translation><!-- product_crowdfunding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>secondary_market</masterLabel>
+        <translation><!-- secondary_market --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>seed</masterLabel>
+        <translation><!-- seed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>undisclosed</masterLabel>
+        <translation><!-- undisclosed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>venture</masterLabel>
+        <translation><!-- venture --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

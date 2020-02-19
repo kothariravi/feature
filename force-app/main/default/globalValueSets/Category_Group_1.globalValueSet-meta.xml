@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>administrative services</fullName>
+        <default>false</default>
+        <label>administrative services</label>
+    </customValue>
+    <customValue>
+        <fullName>advertising</fullName>
+        <default>false</default>
+        <label>advertising</label>
+    </customValue>
+    <customValue>
+        <fullName>agriculture and farming</fullName>
+        <default>false</default>
+        <label>agriculture and farming</label>
+    </customValue>
+    <customValue>
+        <fullName>apps</fullName>
+        <default>false</default>
+        <label>apps</label>
+    </customValue>
+    <customValue>
+        <fullName>artificial intelligence</fullName>
+        <default>false</default>
+        <label>artificial intelligence</label>
+    </customValue>
+    <customValue>
+        <fullName>biotechnology</fullName>
+        <default>false</default>
+        <label>biotechnology</label>
+    </customValue>
+    <customValue>
+        <fullName>Close</fullName>
+        <default>false</default>
+        <label>Close</label>
+    </customValue>
+    <customValue>
+        <fullName>clothing and apparel</fullName>
+        <default>false</default>
+        <label>clothing and apparel</label>
+    </customValue>
+    <customValue>
+        <fullName>commerce and shopping</fullName>
+        <default>false</default>
+        <label>commerce and shopping</label>
+    </customValue>
+    <customValue>
+        <fullName>community and lifestyle</fullName>
+        <default>false</default>
+        <label>community and lifestyle</label>
+    </customValue>
+    <customValue>
+        <fullName>consumer electronics</fullName>
+        <default>false</default>
+        <label>consumer electronics</label>
+    </customValue>
+    <customValue>
+        <fullName>consumer goods</fullName>
+        <default>false</default>
+        <label>consumer goods</label>
+    </customValue>
+    <customValue>
+        <fullName>content and publishing</fullName>
+        <default>false</default>
+        <label>content and publishing</label>
+    </customValue>
+    <customValue>
+        <fullName>data and analytics</fullName>
+        <default>false</default>
+        <label>data and analytics</label>
+    </customValue>
+    <customValue>
+        <fullName>design</fullName>
+        <default>false</default>
+        <label>design</label>
+    </customValue>
+    <customValue>
+        <fullName>education</fullName>
+        <default>false</default>
+        <label>education</label>
+    </customValue>
+    <customValue>
+        <fullName>energy</fullName>
+        <default>false</default>
+        <label>energy</label>
+    </customValue>
+    <customValue>
+        <fullName>events</fullName>
+        <default>false</default>
+        <label>events</label>
+    </customValue>
+    <customValue>
+        <fullName>financial services</fullName>
+        <default>false</default>
+        <label>financial services</label>
+    </customValue>
+    <customValue>
+        <fullName>food and beverage</fullName>
+        <default>false</default>
+        <label>food and beverage</label>
+    </customValue>
+    <customValue>
+        <fullName>gaming</fullName>
+        <default>false</default>
+        <label>gaming</label>
+    </customValue>
+    <customValue>
+        <fullName>government and military</fullName>
+        <default>false</default>
+        <label>government and military</label>
+    </customValue>
+    <customValue>
+        <fullName>hardware</fullName>
+        <default>false</default>
+        <label>hardware</label>
+    </customValue>
+    <customValue>
+        <fullName>health care</fullName>
+        <default>false</default>
+        <label>health care</label>
+    </customValue>
+    <customValue>
+        <fullName>information technology</fullName>
+        <default>false</default>
+        <label>information technology</label>
+    </customValue>
+    <customValue>
+        <fullName>internet services</fullName>
+        <default>false</default>
+        <label>internet services</label>
+    </customValue>
+    <customValue>
+        <fullName>lending and investments</fullName>
+        <default>false</default>
+        <label>lending and investments</label>
+    </customValue>
+    <customValue>
+        <fullName>manufacturing</fullName>
+        <default>false</default>
+        <label>manufacturing</label>
+    </customValue>
+    <customValue>
+        <fullName>media and entertainment</fullName>
+        <default>false</default>
+        <label>media and entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>messaging and telecommunications</fullName>
+        <default>false</default>
+        <label>messaging and telecommunications</label>
+    </customValue>
+    <customValue>
+        <fullName>mobile</fullName>
+        <default>false</default>
+        <label>mobile</label>
+    </customValue>
+    <customValue>
+        <fullName>music and audio</fullName>
+        <default>false</default>
+        <label>music and audio</label>
+    </customValue>
+    <customValue>
+        <fullName>natural resources</fullName>
+        <default>false</default>
+        <label>natural resources</label>
+    </customValue>
+    <customValue>
+        <fullName>navigation and mapping</fullName>
+        <default>false</default>
+        <label>navigation and mapping</label>
+    </customValue>
+    <customValue>
+        <fullName>payments</fullName>
+        <default>false</default>
+        <label>payments</label>
+    </customValue>
+    <customValue>
+        <fullName>platforms</fullName>
+        <default>false</default>
+        <label>platforms</label>
+    </customValue>
+    <customValue>
+        <fullName>privacy and security</fullName>
+        <default>false</default>
+        <label>privacy and security</label>
+    </customValue>
+    <customValue>
+        <fullName>professional services</fullName>
+        <default>false</default>
+        <label>professional services</label>
+    </customValue>
+    <customValue>
+        <fullName>real estate</fullName>
+        <default>false</default>
+        <label>real estate</label>
+    </customValue>
+    <customValue>
+        <fullName>sales and marketing</fullName>
+        <default>false</default>
+        <label>sales and marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>science and engineering</fullName>
+        <default>false</default>
+        <label>science and engineering</label>
+    </customValue>
+    <customValue>
+        <fullName>software</fullName>
+        <default>false</default>
+        <label>software</label>
+    </customValue>
+    <customValue>
+        <fullName>sports</fullName>
+        <default>false</default>
+        <label>sports</label>
+    </customValue>
+    <customValue>
+        <fullName>sustainability</fullName>
+        <default>false</default>
+        <label>sustainability</label>
+    </customValue>
+    <customValue>
+        <fullName>transportation</fullName>
+        <default>false</default>
+        <label>transportation</label>
+    </customValue>
+    <customValue>
+        <fullName>travel and tourism</fullName>
+        <default>false</default>
+        <label>travel and tourism</label>
+    </customValue>
+    <customValue>
+        <fullName>video</fullName>
+        <default>false</default>
+        <label>video</label>
+    </customValue>
+    <description>Crunchbase Category Groups</description>
+    <masterLabel>Category Group 1</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>selected_sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>selected_sales</label>
+        <sharedTo>
+            <group>selected_sales_group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Share_with__c</field>
+            <operation>equals</operation>
+            <value>KPMG</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

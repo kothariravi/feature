@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pers. Herausforderung Gesprächspartner --></label>
+    <name>Pers_Herausforderung_Gespr_chspartner__c</name>
+    <picklistValues>
+        <masterLabel>Andere</masterLabel>
+        <translation><!-- Andere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Budget bekommen</masterLabel>
+        <translation><!-- Budget bekommen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Budget investieren</masterLabel>
+        <translation><!-- Budget investieren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ergebnislücke schließen</masterLabel>
+        <translation><!-- Ergebnislücke schließen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gremien überzeugen</masterLabel>
+        <translation><!-- Gremien überzeugen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internen Widerstand überwinden</masterLabel>
+        <translation><!-- Internen Widerstand überwinden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neue Geschäfte aufbauen</masterLabel>
+        <translation><!-- Neue Geschäfte aufbauen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prozesse optimieren</masterLabel>
+        <translation><!-- Prozesse optimieren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sense of urgency überzeugen</masterLabel>
+        <translation><!-- Sense of urgency überzeugen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stammgeschäft digitalisieren</masterLabel>
+        <translation><!-- Stammgeschäft digitalisieren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Umsatzziele erreichen</masterLabel>
+        <translation><!-- Umsatzziele erreichen --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

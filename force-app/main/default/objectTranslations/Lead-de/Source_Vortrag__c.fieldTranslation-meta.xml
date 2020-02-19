@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pflichtfeld bei Lead-Quelle “Vortrag”: Bitte gib den genauen Veranstaltungsnamen und das Jahr der Veranstaltung an. --></help>
+    <label><!-- Veranstaltung --></label>
+    <name>Source_Vortrag__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status im Zyklus --></label>
+    <name>Status_im_Zyklus__c</name>
+    <picklistValues>
+        <masterLabel>Einige disruptive Projekte laufen bereits</masterLabel>
+        <translation><!-- Einige disruptive Projekte laufen bereits --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erste Überlegungen zur Disruption</masterLabel>
+        <translation><!-- Erste Überlegungen zur Disruption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Noch gar nicht digitalisiert</masterLabel>
+        <translation><!-- Noch gar nicht digitalisiert --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partielle Digitalisierung</masterLabel>
+        <translation><!-- Partielle Digitalisierung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viele disruptive Projekte laufen bereits</masterLabel>
+        <translation><!-- Viele disruptive Projekte laufen bereits --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
