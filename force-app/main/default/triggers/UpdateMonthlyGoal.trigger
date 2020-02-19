@@ -12,12 +12,16 @@ trigger UpdateMonthlyGoal on Opportunity_LI_Monthly_Booking__c (after insert, af
     }
 
     for (Opportunity_LI_Monthly_Booking__c monthlyBooking : bookingList) {
-        List<AggregateResult> monthlyBookingsByMonth = [
-            SELECT Month__c, SUM(Amount__c) amount
+        AggregateResult monthlyBookingsByMonth = [
+            SELECT Month__c, SUM(Amount__c)
             FROM Opportunity_LI_Monthly_Booking__c
             WHERE Month__c = :monthlyBooking.Month__c
             GROUP BY Month__c
+            LIMIT 1
         ];
-        
+        Double monthlyBookingsAmountInMonth = (Double) monthlyBookingsByMonth.get('expr0');
+        Goal__c monthlyGoal = [SELECT id, Betrag_im_Zielmonat__c, Monat__c FROM Goal__c WHERE Monat__c = :monthlyBooking.Month__c LIMIT 1];
+        monthlyGoal.Betrag_im_Zielmonat__c = monthlyBookingsAmountInMonth;
+        update monthlyGoal;
     }
 }
