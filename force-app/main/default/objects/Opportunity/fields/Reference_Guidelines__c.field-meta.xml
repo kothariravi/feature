@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reference_Guidelines__c</fullName>
+    <description>Rules of information sharing about this project / NDA status</description>
+    <externalId>false</externalId>
+    <label>Reference Guidelines</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Confidential: Any information sharing prohibited</fullName>
+                <default>false</default>
+                <label>Confidential: Any information sharing prohibited</label>
+            </value>
+            <value>
+                <fullName>Only sharing of client status allowed</fullName>
+                <default>false</default>
+                <label>Only sharing of client status allowed</label>
+            </value>
+            <value>
+                <fullName>Only sharing of abstract project information allowed</fullName>
+                <default>false</default>
+                <label>Only sharing of abstract project information allowed</label>
+            </value>
+            <value>
+                <fullName>Referencing project allowed</fullName>
+                <default>false</default>
+                <label>Referencing project allowed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

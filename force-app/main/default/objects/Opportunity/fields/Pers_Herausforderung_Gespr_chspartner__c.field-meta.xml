@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pers_Herausforderung_Gespr_chspartner__c</fullName>
+    <externalId>false</externalId>
+    <label>Pers. Herausforderung Gesprächspartner</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stammgeschäft digitalisieren</fullName>
+                <default>false</default>
+                <label>Stammgeschäft digitalisieren</label>
+            </value>
+            <value>
+                <fullName>Neue Geschäfte aufbauen</fullName>
+                <default>false</default>
+                <label>Neue Geschäfte aufbauen</label>
+            </value>
+            <value>
+                <fullName>Umsatzziele erreichen</fullName>
+                <default>false</default>
+                <label>Umsatzziele erreichen</label>
+            </value>
+            <value>
+                <fullName>Prozesse optimieren</fullName>
+                <default>false</default>
+                <label>Prozesse optimieren</label>
+            </value>
+            <value>
+                <fullName>Ergebnislücke schließen</fullName>
+                <default>false</default>
+                <label>Ergebnislücke schließen</label>
+            </value>
+            <value>
+                <fullName>Gremien überzeugen</fullName>
+                <default>false</default>
+                <label>Gremien überzeugen</label>
+            </value>
+            <value>
+                <fullName>Budget bekommen</fullName>
+                <default>false</default>
+                <label>Budget bekommen</label>
+            </value>
+            <value>
+                <fullName>Budget investieren</fullName>
+                <default>false</default>
+                <label>Budget investieren</label>
+            </value>
+            <value>
+                <fullName>Internen Widerstand überwinden</fullName>
+                <default>false</default>
+                <label>Internen Widerstand überwinden</label>
+            </value>
+            <value>
+                <fullName>Sense of urgency überzeugen</fullName>
+                <default>false</default>
+                <label>Sense of urgency überzeugen</label>
+            </value>
+            <value>
+                <fullName>Andere</fullName>
+                <default>false</default>
+                <label>Andere</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

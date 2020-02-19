@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hausnummer_parsed__c</fullName>
+    <externalId>false</externalId>
+    <formula>RIGHT(
+  Street,
+  LEN(Street) - MIN(
+    IF(FIND(&quot;0&quot;, Street) = 0, 999, FIND(&quot;0&quot;, Street)),
+    IF(FIND(&quot;1&quot;, Street) = 0, 999, FIND(&quot;1&quot;, Street)),
+    IF(FIND(&quot;2&quot;, Street) = 0, 999, FIND(&quot;2&quot;, Street)),
+    IF(FIND(&quot;3&quot;, Street) = 0, 999, FIND(&quot;3&quot;, Street)),
+    IF(FIND(&quot;4&quot;, Street) = 0, 999, FIND(&quot;4&quot;, Street)),
+    IF(FIND(&quot;5&quot;, Street) = 0, 999, FIND(&quot;5&quot;, Street)),
+    IF(FIND(&quot;6&quot;, Street) = 0, 999, FIND(&quot;6&quot;, Street)),
+    IF(FIND(&quot;7&quot;, Street) = 0, 999, FIND(&quot;7&quot;, Street)),
+    IF(FIND(&quot;8&quot;, Street) = 0, 999, FIND(&quot;8&quot;, Street)),
+    IF(FIND(&quot;9&quot;, Street) = 0, 999, FIND(&quot;9&quot;, Street))
+  ) + 1
+)</formula>
+    <label>Hausnummer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

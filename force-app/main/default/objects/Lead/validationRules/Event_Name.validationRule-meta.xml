@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Name</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(LeadSource, &#39;Vortrag (nicht CK)&#39;),
+ISPICKVAL(LeadSource, &#39;Vortrag&#39;)
+),
+ISBLANK(Source_Vortrag__c)
+)</errorConditionFormula>
+    <errorDisplayField>Source_Vortrag__c</errorDisplayField>
+    <errorMessage>Bitte genaue Veranstaltung angeben</errorMessage>
+</ValidationRule>

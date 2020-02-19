@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>crunchbase__Number_of_Acquisitions__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Number of acquisitions made by this company</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of acquisitions made by this company</inlineHelpText>
+    <label>Number of Acquisitions (#)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Immobilien</fullName>
+    <active>false</active>
+    <businessProcess>Consulting</businessProcess>
+    <label>Immobilien</label>
+    <picklistValues>
+        <picklist>Aktuelle_Planungen__c</picklist>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bestehenden Plan begutachten lassen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entscheidungsvorlage erstellen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entwicklung einer neuen Strategie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firma gründen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firmenkultur verändern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Ökosystem investieren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neue Geschäftsmodelle suchen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Projekt gründen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sense of urgency schaffen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team weiterentwickeln</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technologie besser verstehen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zweite Meinung einholen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Überarbeitung einer bestehenden Strategie</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Andere_Beratungen_im_Einsatz__c</picklist>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCG %2F BCG Digital Ventures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bridgemaker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deloitte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faktor 10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KPMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>McKinsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PWC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCKT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TLLG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unbekannt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unklar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>etVenture %2F EY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Branche__c</picklist>
+        <values>
+            <fullName>Automobilzulieferer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banken</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baugewerbe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bildung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Druck%2FPapier%2FVerpackung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elektro%2FElektrotechnik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gesundheitswesen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immobilien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Konsumgüter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lagerlogistik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luftfahrt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maschinenbau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telekommunikation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Touristik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCs%2FInvestoren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verkehrslogistik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Versicherung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Öffentliche Unternehmen</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Division__c</picklist>
+        <values>
+            <fullName>Briefings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speaking Engagement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Domain__c</picklist>
+        <values>
+            <fullName>Align and Upskill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decode and Navigate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immobilie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandate CK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speaking Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structure and Position</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validate and Realize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hy Tech</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Eigene_Budgetverantwortung__c</picklist>
+        <values>
+            <fullName>Ja</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vielleicht</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Ausschreibung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Axel Springer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Egon Zehnder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Importiert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kloeckner%2Ei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kundenansprache</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kundenempfehlung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netzwerk %28CK%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netzwerk %28nicht CK%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upselling nach Projekten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermittler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vortrag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vortrag %28nicht CK%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Partner__c</picklist>
+        <values>
+            <fullName>AR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SV</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>Ansprechpartner gewechselt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entscheider nicht überzeugt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine Antwort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost to Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Budget %2F Lost Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Decision %2F Non-Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postponed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pers_Herausforderung_Gespr_chspartner__c</picklist>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Budget bekommen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Budget investieren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ergebnislücke schließen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gremien überzeugen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internen Widerstand überwinden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neue Geschäfte aufbauen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prozesse optimieren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sense of urgency überzeugen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stammgeschäft digitalisieren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Umsatzziele erreichen</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reference_Guidelines__c</picklist>
+        <values>
+            <fullName>Confidential%3A Any information sharing prohibited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Only sharing of abstract project information allowed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Only sharing of client status allowed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referencing project allowed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Kampagne__c</picklist>
+        <values>
+            <fullName>ASP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Offices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kickbox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landscaping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SH CEO Outreach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_im_Zyklus__c</picklist>
+        <values>
+            <fullName>Einige disruptive Projekte laufen bereits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Erste Überlegungen zur Disruption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noch gar nicht digitalisiert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partielle Digitalisierung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viele disruptive Projekte laufen bereits</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Verbliebene_Zweifel__c</picklist>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bekomme das Budget nicht</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disruption ist zu radikal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interne Widerstände</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hy Produkte passen nicht</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hy nicht der richtige Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verbliebene_Zweifel__c</fullName>
+    <externalId>false</externalId>
+    <label>Verbliebene Zweifel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>hy nicht der richtige Partner</fullName>
+                <default>false</default>
+                <label>hy nicht der richtige Partner</label>
+            </value>
+            <value>
+                <fullName>hy Produkte passen nicht</fullName>
+                <default>false</default>
+                <label>hy Produkte passen nicht</label>
+            </value>
+            <value>
+                <fullName>Bekomme das Budget nicht</fullName>
+                <default>false</default>
+                <label>Bekomme das Budget nicht</label>
+            </value>
+            <value>
+                <fullName>Disruption ist zu radikal</fullName>
+                <default>false</default>
+                <label>Disruption ist zu radikal</label>
+            </value>
+            <value>
+                <fullName>Interne Widerstände</fullName>
+                <default>false</default>
+                <label>Interne Widerstände</label>
+            </value>
+            <value>
+                <fullName>Andere</fullName>
+                <default>false</default>
+                <label>Andere</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

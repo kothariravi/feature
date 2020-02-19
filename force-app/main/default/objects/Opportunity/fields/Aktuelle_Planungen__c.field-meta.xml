@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aktuelle_Planungen__c</fullName>
+    <externalId>false</externalId>
+    <label>Aktuelle Planungen</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Entwicklung einer neuen Strategie</fullName>
+                <default>false</default>
+                <label>Entwicklung einer neuen Strategie</label>
+            </value>
+            <value>
+                <fullName>Überarbeitung einer bestehenden Strategie</fullName>
+                <default>false</default>
+                <label>Überarbeitung einer bestehenden Strategie</label>
+            </value>
+            <value>
+                <fullName>In Ökosystem investieren</fullName>
+                <default>false</default>
+                <label>In Ökosystem investieren</label>
+            </value>
+            <value>
+                <fullName>Firma gründen</fullName>
+                <default>false</default>
+                <label>Firma gründen</label>
+            </value>
+            <value>
+                <fullName>Projekt gründen</fullName>
+                <default>false</default>
+                <label>Projekt gründen</label>
+            </value>
+            <value>
+                <fullName>Bestehenden Plan begutachten lassen</fullName>
+                <default>false</default>
+                <label>Bestehenden Plan begutachten lassen</label>
+            </value>
+            <value>
+                <fullName>Entscheidungsvorlage erstellen</fullName>
+                <default>false</default>
+                <label>Entscheidungsvorlage erstellen</label>
+            </value>
+            <value>
+                <fullName>Zweite Meinung einholen</fullName>
+                <default>false</default>
+                <label>Zweite Meinung einholen</label>
+            </value>
+            <value>
+                <fullName>Technologie besser verstehen</fullName>
+                <default>false</default>
+                <label>Technologie besser verstehen</label>
+            </value>
+            <value>
+                <fullName>Neue Geschäftsmodelle suchen</fullName>
+                <default>false</default>
+                <label>Neue Geschäftsmodelle suchen</label>
+            </value>
+            <value>
+                <fullName>Team weiterentwickeln</fullName>
+                <default>false</default>
+                <label>Team weiterentwickeln</label>
+            </value>
+            <value>
+                <fullName>Firmenkultur verändern</fullName>
+                <default>false</default>
+                <label>Firmenkultur verändern</label>
+            </value>
+            <value>
+                <fullName>Sense of urgency schaffen</fullName>
+                <default>false</default>
+                <label>Sense of urgency schaffen</label>
+            </value>
+            <value>
+                <fullName>Andere</fullName>
+                <default>false</default>
+                <label>Andere</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,3167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consulting</fullName>
+    <active>true</active>
+    <label>Consulting</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Ausschreibung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Axel Springer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Egon Zehnder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Importiert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kloeckner%2Ei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kundenansprache</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kundenempfehlung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netzwerk %28CK%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netzwerk %28nicht CK%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upselling nach Projekten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vermittler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vortrag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vortrag %28nicht CK%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category_Group_List__c</picklist>
+        <values>
+            <fullName>administrative services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>agriculture and farming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>apps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>artificial intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>clothing and apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>commerce and shopping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>community and lifestyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>consumer electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>consumer goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>content and publishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>data and analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>financial services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>food and beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>government and military</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>health care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>information technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>internet services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>lending and investments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>media and entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>messaging and telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>music and audio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>natural resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>navigation and mapping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>platforms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>privacy and security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>professional services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>real estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sales and marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>science and engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sustainability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>travel and tourism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category_List__c</picklist>
+        <values>
+            <fullName>ad network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>advertising platforms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>apps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>architecture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>artificial intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>auto insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>autonomous vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>b2b</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>baby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>battery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>beauty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>big data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>broadcasting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>cloud computing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>cloud data services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>cloud security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>collaborative consumption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>computer vision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>consumer electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>cyber security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>data integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>developer tools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>digital entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>digital media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>document management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>e-commerce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>edtech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>energy storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>enterprise software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>fashion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>fintech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>food and beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>health care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>home automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>home improvement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>home renovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>human computer interaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iaas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>industrial automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>information services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>information technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>innovation management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>interior design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>internet of things</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>lead management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>life insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>location based services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>machine learning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>market research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>marketing automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mhealth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mobile apps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mobile devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>music streaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>navigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>open source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>organic food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>photography</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>procurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>public transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>publishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>renewable energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>retail technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ride sharing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>robotics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>saas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>scheduling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>self-storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>service industry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sharing economy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>shopping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>small and medium businesses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>social media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>social media management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>social media marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>social network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sustainability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>technical support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>textiles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>video editing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>video streaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>virtual reality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>web hosting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>women%27s</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Employee_count__c</picklist>
+        <values>
+            <fullName>-</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1-10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10001-1000000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1001-5000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101-250</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11-50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>201-500</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>251-500</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5001-10000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>501-1000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51-100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51-200</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Automobilzulieferer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banken</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baugewerbe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bildung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Druck%2FPapier%2FVerpackung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elektronik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gesundheit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immobilien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Konsumgüter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lagerlogistik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lebensmittel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luftfahrt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maschinenbau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Messen%2FKonferenzanbieter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telekommunikation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Touristik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCs%2FInvestoren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verkehrslogistik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Versicherung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Öffentliche Unternehmen</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kundensegment__c</picklist>
+        <values>
+            <fullName>Bronze</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicht relevant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>tbd</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Role__c</picklist>
+        <values>
+            <fullName>company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>school</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Allgemeines Interesse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interesse %2F Opp%2E nicht klar erkennbar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunität klar erkennbar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Share_with__c</picklist>
+        <values>
+            <fullName>Internal</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>KPMG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>acquired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ipo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>operating</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Startup</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>crunchbase__Crunchbase_Categories__c</picklist>
+        <values>
+            <fullName>3D Printing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3D Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ad Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ad Targeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanced Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adventure Travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertising Platforms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aerospace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Affiliate Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Air Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angel Investment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Animal Feed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Animation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>App Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Performance Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Architecture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Art</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Artificial Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asset Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auctions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Augmented Reality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autonomous Vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Battery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beauty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Big Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bioinformatics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biometrics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biopharma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bitcoin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blogging Platforms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brewing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Broadcasting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Browser Extensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Building Material</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Information Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Intelligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Sharing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casual Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Celebrity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Child Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Children</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Classifieds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clean Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CleanTech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinical Trials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Computing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Data Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collaboration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collaborative Consumption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collectibles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communication Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computer Vision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concerts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Lending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Reviews</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Creators</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Delivery Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Discovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Syndication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cooking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cosmetic Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cosmetics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coupons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coworking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Craft Beer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creative Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Cards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crowdfunding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crowdsourcing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyber Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Mining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Visualization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developer APIs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developer Platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developer Tools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dietary Supplements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Signage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Document Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domain Registrar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Commerce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Commerce Platforms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Learning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EBooks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EdTech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ediscovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elder Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric Vehicle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Embedded Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emerging Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Efficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy Storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eyewear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fantasy Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Farming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fashion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Sharing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Film</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Film Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FinTech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Exchanges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fitness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flash Storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fleet Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flowers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food and Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fraud Detection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freelance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furniture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gambling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gamification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Genetics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geospatial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gift Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GovTech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graphic Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Building</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Consumer Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GreenTech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grocery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group Buying</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guides</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handmade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Diagnostics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hedge Funds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Decor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Improvement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Renovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homeland Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Computer Interaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humanitarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identity Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Image Recognition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Impact Investing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incubators</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Information Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Information Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovation Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intellectual Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intelligent Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interior Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Radio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet of Things</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jewelry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Journalism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Knowledge Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landscaping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Learning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laundry and Dry-cleaning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Generation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leisure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lifestyle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lighting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linux</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location Based Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loyalty Programs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MMO Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machine Learning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management Information Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mapping Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketplace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mechanical Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media and Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Device</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Men%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Messaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mineral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mining Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Apps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music Streaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Music Venues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Musical Instruments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NFC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nanotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natural Language Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Natural Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Navigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neuroscience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightclubs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightlife</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nutrition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oil and Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Auctions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Portals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operating Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optical Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdoors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outsourcing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PC Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packaging Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parenting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peer to Peer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performing Arts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Branding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personalization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmaceutical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photo Editing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photo Sharing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photography</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastics and Rubber Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Point of Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Politics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Grid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Precious Metals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Predictive Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price Comparison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Privacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Social Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Productivity Tools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Safety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QR Codes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate Investment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruiting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recycling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Religion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewable Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reputation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reservations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resorts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restaurants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ride Sharing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Robotics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SaaS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satellite Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search Engine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semantic Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semantic Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semiconductor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sensor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Industry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharing Economy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shoes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shopping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skill Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small and Medium Businesses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart Building</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soccer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Bookmarking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Entrepreneurship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Innovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social News</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Recruiting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speech Recognition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sporting Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staffing Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock Exchanges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscription Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Chain Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sustainability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Task Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test and Measurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Textiles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Theatre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Therapeutics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ticketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tourism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trading Platform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transaction Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Translation Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Accommodations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tutoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UX Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture Capital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veterinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Conferencing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Editing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video Streaming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video on Demand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual Currency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual Reality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtualization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visual Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VoIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waste Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water Purification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wealth Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wearables</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Apps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Browsers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Hosting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wedding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wellness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wind Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wine And Spirits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Women%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Young Adults</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eSports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mHealth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>crunchbase__Latest_Round_Funding_Type_Series__c</picklist>
+        <values>
+            <fullName>Angel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convertible Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debt Financing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity Crowdfunding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Equity Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-IPO Debt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-IPO Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Crowdfunding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secondary Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undisclosed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series G</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venture - Series J</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>crunchbase__Number_of_Employees_Crunchbase__c</picklist>
+        <values>
+            <fullName>1 - 10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10001 - 1000000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1001 - 5000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101 - 250</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11 - 50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>251 - 500</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5001 - 10000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>501 - 1000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51 - 100</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

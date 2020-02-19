@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>crunchbase__Latest_Funding_Type_and_Series__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Latest Funding Type and Series</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Seed</fullName>
+                <default>false</default>
+                <label>Seed</label>
+            </value>
+            <value>
+                <fullName>Angel</fullName>
+                <default>false</default>
+                <label>Angel</label>
+            </value>
+            <value>
+                <fullName>Venture</fullName>
+                <default>false</default>
+                <label>Venture</label>
+            </value>
+            <value>
+                <fullName>Venture - Series A</fullName>
+                <default>false</default>
+                <label>Venture - Series A</label>
+            </value>
+            <value>
+                <fullName>Venture - Series B</fullName>
+                <default>false</default>
+                <label>Venture - Series B</label>
+            </value>
+            <value>
+                <fullName>Venture - Series C</fullName>
+                <default>false</default>
+                <label>Venture - Series C</label>
+            </value>
+            <value>
+                <fullName>Venture - Series D</fullName>
+                <default>false</default>
+                <label>Venture - Series D</label>
+            </value>
+            <value>
+                <fullName>Venture - Series E</fullName>
+                <default>false</default>
+                <label>Venture - Series E</label>
+            </value>
+            <value>
+                <fullName>Venture - Series F</fullName>
+                <default>false</default>
+                <label>Venture - Series F</label>
+            </value>
+            <value>
+                <fullName>Venture - Series G</fullName>
+                <default>false</default>
+                <label>Venture - Series G</label>
+            </value>
+            <value>
+                <fullName>Venture - Series H</fullName>
+                <default>false</default>
+                <label>Venture - Series H</label>
+            </value>
+            <value>
+                <fullName>Venture - Series I</fullName>
+                <default>false</default>
+                <label>Venture - Series I</label>
+            </value>
+            <value>
+                <fullName>Venture - Series J</fullName>
+                <default>false</default>
+                <label>Venture - Series J</label>
+            </value>
+            <value>
+                <fullName>Equity Crowdfunding</fullName>
+                <default>false</default>
+                <label>Equity Crowdfunding</label>
+            </value>
+            <value>
+                <fullName>Product Crowdfunding</fullName>
+                <default>false</default>
+                <label>Product Crowdfunding</label>
+            </value>
+            <value>
+                <fullName>Private Equity</fullName>
+                <default>false</default>
+                <label>Private Equity</label>
+            </value>
+            <value>
+                <fullName>Convertible Note</fullName>
+                <default>false</default>
+                <label>Convertible Note</label>
+            </value>
+            <value>
+                <fullName>Debt Financing</fullName>
+                <default>false</default>
+                <label>Debt Financing</label>
+            </value>
+            <value>
+                <fullName>Secondary Market</fullName>
+                <default>false</default>
+                <label>Secondary Market</label>
+            </value>
+            <value>
+                <fullName>Grant</fullName>
+                <default>false</default>
+                <label>Grant</label>
+            </value>
+            <value>
+                <fullName>Post-IPO Equity</fullName>
+                <default>false</default>
+                <label>Post-IPO Equity</label>
+            </value>
+            <value>
+                <fullName>Post-IPO Debt</fullName>
+                <default>false</default>
+                <label>Post-IPO Debt</label>
+            </value>
+            <value>
+                <fullName>Non-Equity Assistance</fullName>
+                <default>false</default>
+                <label>Non-Equity Assistance</label>
+            </value>
+            <value>
+                <fullName>Undisclosed</fullName>
+                <default>false</default>
+                <label>Undisclosed</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

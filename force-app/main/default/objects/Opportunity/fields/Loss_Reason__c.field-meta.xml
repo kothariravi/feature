@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Grund für Verlust</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Postponed</fullName>
+                <default>false</default>
+                <label>Verschoben</label>
+            </value>
+            <value>
+                <fullName>No Decision / Non-Responsive</fullName>
+                <default>false</default>
+                <label>Keine Entscheidung</label>
+            </value>
+            <value>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+                <label>An Wettbewerber verloren</label>
+            </value>
+            <value>
+                <fullName>Ansprechpartner gewechselt</fullName>
+                <default>false</default>
+                <label>Ansprechpartner gewechselt</label>
+            </value>
+            <value>
+                <fullName>No Budget / Lost Funding</fullName>
+                <default>false</default>
+                <label>Kein Budget</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Preis</label>
+            </value>
+            <value>
+                <fullName>Entscheider nicht überzeugt</fullName>
+                <default>false</default>
+                <label>Entscheider nicht überzeugt</label>
+            </value>
+            <value>
+                <fullName>Keine Antwort</fullName>
+                <default>false</default>
+                <label>Keine Antwort</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Andere</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

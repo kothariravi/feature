@@ -40,4 +40,12 @@
         <errorMessage><!-- Bitte die genaue Veranstaltung angeben --></errorMessage>
         <name>Vortrag</name>
     </validationRules>
+    <webLinks>
+        <label><!-- Send_to_Slack --></label>
+        <name>slackv2__Send_to_Slack</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Slack_Alerts --></label>
+        <name>slackv2__Slack_Alerts</name>
+    </webLinks>
 </CustomObjectTranslation>

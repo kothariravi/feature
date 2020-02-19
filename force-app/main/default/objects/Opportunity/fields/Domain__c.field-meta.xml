@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domain__c</fullName>
+    <externalId>false</externalId>
+    <label>Domain</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Decode and Navigate</fullName>
+                <default>false</default>
+                <label>Decode and Navigate</label>
+            </value>
+            <value>
+                <fullName>Validate and Realize</fullName>
+                <default>false</default>
+                <label>Validate and Realize</label>
+            </value>
+            <value>
+                <fullName>Structure and Position</fullName>
+                <default>false</default>
+                <label>Structure and Position</label>
+            </value>
+            <value>
+                <fullName>Align and Upskill</fullName>
+                <default>false</default>
+                <label>Align and Upskill</label>
+            </value>
+            <value>
+                <fullName>Immobilie</fullName>
+                <default>false</default>
+                <label>Immobilie</label>
+            </value>
+            <value>
+                <fullName>Mandate CK</fullName>
+                <default>false</default>
+                <label>Mandate CK</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partnererlöse</label>
+            </value>
+            <value>
+                <fullName>Speaking Engagement</fullName>
+                <default>false</default>
+                <label>Reden</label>
+            </value>
+            <value>
+                <fullName>hy Tech</fullName>
+                <default>false</default>
+                <label>hy Tech</label>
+            </value>
+            <value>
+                <fullName>2019_Briefing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2019_Briefings</label>
+            </value>
+            <value>
+                <fullName>2019_Intelligence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2019_Intelligence</label>
+            </value>
+            <value>
+                <fullName>2019_Solutions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2019_Solutions</label>
+            </value>
+            <value>
+                <fullName>Sales / Pricing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sales / Pricing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

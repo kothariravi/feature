@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_im_Zyklus__c</fullName>
+    <externalId>false</externalId>
+    <label>Status im Zyklus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Noch gar nicht digitalisiert</fullName>
+                <default>false</default>
+                <label>Noch gar nicht digitalisiert</label>
+            </value>
+            <value>
+                <fullName>Partielle Digitalisierung</fullName>
+                <default>false</default>
+                <label>Partielle Digitalisierung</label>
+            </value>
+            <value>
+                <fullName>Erste Überlegungen zur Disruption</fullName>
+                <default>false</default>
+                <label>Erste Überlegungen zur Disruption</label>
+            </value>
+            <value>
+                <fullName>Einige disruptive Projekte laufen bereits</fullName>
+                <default>false</default>
+                <label>Einige disruptive Projekte laufen bereits</label>
+            </value>
+            <value>
+                <fullName>Viele disruptive Projekte laufen bereits</fullName>
+                <default>false</default>
+                <label>Viele disruptive Projekte laufen bereits</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

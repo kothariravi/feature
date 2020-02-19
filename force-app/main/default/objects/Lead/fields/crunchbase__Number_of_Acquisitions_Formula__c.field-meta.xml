@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>crunchbase__Number_of_Acquisitions_Formula__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK( crunchbase__Crunchbase_URL__c) , &quot;&quot;, 
+IF(ISNULL(crunchbase__Number_of_Acquisitions__c) || crunchbase__Number_of_Acquisitions__c == 0, 
+&#39;No Acquisitions Available&#39;, 
+HYPERLINK(crunchbase__Crunchbase_URL__c + &#39;/acquisitions&#39;, TEXT(crunchbase__Number_of_Acquisitions__c) + &#39; Acquisitions&#39;)
+)
+)</formula>
+    <label>Number of Acquisitions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

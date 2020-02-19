@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>billing_address</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR ( 
+ISBLANK(BillingStreet), 
+ISBLANK(BillingCity), 
+LEN(BillingCountry) &lt;&gt; 2)</errorConditionFormula>
+    <errorMessage>Please provide a billing address</errorMessage>
+</ValidationRule>

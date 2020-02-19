@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dropped_Reason_Other</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND
+(
+ISPICKVAL(Dropped_Reason__c, &#39;Other&#39;),
+ISBLANK(Dropped_Reason_Other__c)
+)</errorConditionFormula>
+    <errorDisplayField>Dropped_Reason_Other__c</errorDisplayField>
+    <errorMessage>Please specific Dropped Reason</errorMessage>
+</ValidationRule>

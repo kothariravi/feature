@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_List__c</fullName>
+    <externalId>false</externalId>
+    <label>Category List</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ad network</fullName>
+                <default>false</default>
+                <label>ad network</label>
+            </value>
+            <value>
+                <fullName>advertising</fullName>
+                <default>false</default>
+                <label>advertising</label>
+            </value>
+            <value>
+                <fullName>advertising platforms</fullName>
+                <default>false</default>
+                <label>advertising platforms</label>
+            </value>
+            <value>
+                <fullName>apps</fullName>
+                <default>false</default>
+                <label>apps</label>
+            </value>
+            <value>
+                <fullName>architecture</fullName>
+                <default>false</default>
+                <label>architecture</label>
+            </value>
+            <value>
+                <fullName>artificial intelligence</fullName>
+                <default>false</default>
+                <label>artificial intelligence</label>
+            </value>
+            <value>
+                <fullName>auto insurance</fullName>
+                <default>false</default>
+                <label>auto insurance</label>
+            </value>
+            <value>
+                <fullName>automotive</fullName>
+                <default>false</default>
+                <label>automotive</label>
+            </value>
+            <value>
+                <fullName>autonomous vehicles</fullName>
+                <default>false</default>
+                <label>autonomous vehicles</label>
+            </value>
+            <value>
+                <fullName>b2b</fullName>
+                <default>false</default>
+                <label>b2b</label>
+            </value>
+            <value>
+                <fullName>baby</fullName>
+                <default>false</default>
+                <label>baby</label>
+            </value>
+            <value>
+                <fullName>battery</fullName>
+                <default>false</default>
+                <label>battery</label>
+            </value>
+            <value>
+                <fullName>beauty</fullName>
+                <default>false</default>
+                <label>beauty</label>
+            </value>
+            <value>
+                <fullName>big data</fullName>
+                <default>false</default>
+                <label>big data</label>
+            </value>
+            <value>
+                <fullName>broadcasting</fullName>
+                <default>false</default>
+                <label>broadcasting</label>
+            </value>
+            <value>
+                <fullName>cloud computing</fullName>
+                <default>false</default>
+                <label>cloud computing</label>
+            </value>
+            <value>
+                <fullName>cloud data services</fullName>
+                <default>false</default>
+                <label>cloud data services</label>
+            </value>
+            <value>
+                <fullName>cloud security</fullName>
+                <default>false</default>
+                <label>cloud security</label>
+            </value>
+            <value>
+                <fullName>collaborative consumption</fullName>
+                <default>false</default>
+                <label>collaborative consumption</label>
+            </value>
+            <value>
+                <fullName>computer</fullName>
+                <default>false</default>
+                <label>computer</label>
+            </value>
+            <value>
+                <fullName>computer vision</fullName>
+                <default>false</default>
+                <label>computer vision</label>
+            </value>
+            <value>
+                <fullName>consumer</fullName>
+                <default>false</default>
+                <label>consumer</label>
+            </value>
+            <value>
+                <fullName>consumer electronics</fullName>
+                <default>false</default>
+                <label>consumer electronics</label>
+            </value>
+            <value>
+                <fullName>content</fullName>
+                <default>false</default>
+                <label>content</label>
+            </value>
+            <value>
+                <fullName>cyber security</fullName>
+                <default>false</default>
+                <label>cyber security</label>
+            </value>
+            <value>
+                <fullName>data integration</fullName>
+                <default>false</default>
+                <label>data integration</label>
+            </value>
+            <value>
+                <fullName>developer tools</fullName>
+                <default>false</default>
+                <label>developer tools</label>
+            </value>
+            <value>
+                <fullName>digital entertainment</fullName>
+                <default>false</default>
+                <label>digital entertainment</label>
+            </value>
+            <value>
+                <fullName>digital media</fullName>
+                <default>false</default>
+                <label>digital media</label>
+            </value>
+            <value>
+                <fullName>document management</fullName>
+                <default>false</default>
+                <label>document management</label>
+            </value>
+            <value>
+                <fullName>e-commerce</fullName>
+                <default>false</default>
+                <label>e-commerce</label>
+            </value>
+            <value>
+                <fullName>edtech</fullName>
+                <default>false</default>
+                <label>edtech</label>
+            </value>
+            <value>
+                <fullName>education</fullName>
+                <default>false</default>
+                <label>education</label>
+            </value>
+            <value>
+                <fullName>energy storage</fullName>
+                <default>false</default>
+                <label>energy storage</label>
+            </value>
+            <value>
+                <fullName>enterprise</fullName>
+                <default>false</default>
+                <label>enterprise</label>
+            </value>
+            <value>
+                <fullName>enterprise software</fullName>
+                <default>false</default>
+                <label>enterprise software</label>
+            </value>
+            <value>
+                <fullName>fashion</fullName>
+                <default>false</default>
+                <label>fashion</label>
+            </value>
+            <value>
+                <fullName>finance</fullName>
+                <default>false</default>
+                <label>finance</label>
+            </value>
+            <value>
+                <fullName>fintech</fullName>
+                <default>false</default>
+                <label>fintech</label>
+            </value>
+            <value>
+                <fullName>food and beverage</fullName>
+                <default>false</default>
+                <label>food and beverage</label>
+            </value>
+            <value>
+                <fullName>hardware</fullName>
+                <default>false</default>
+                <label>hardware</label>
+            </value>
+            <value>
+                <fullName>health care</fullName>
+                <default>false</default>
+                <label>health care</label>
+            </value>
+            <value>
+                <fullName>home automation</fullName>
+                <default>false</default>
+                <label>home automation</label>
+            </value>
+            <value>
+                <fullName>home improvement</fullName>
+                <default>false</default>
+                <label>home improvement</label>
+            </value>
+            <value>
+                <fullName>home renovation</fullName>
+                <default>false</default>
+                <label>home renovation</label>
+            </value>
+            <value>
+                <fullName>hospital</fullName>
+                <default>false</default>
+                <label>hospital</label>
+            </value>
+            <value>
+                <fullName>hospitality</fullName>
+                <default>false</default>
+                <label>hospitality</label>
+            </value>
+            <value>
+                <fullName>human computer interaction</fullName>
+                <default>false</default>
+                <label>human computer interaction</label>
+            </value>
+            <value>
+                <fullName>iaas</fullName>
+                <default>false</default>
+                <label>iaas</label>
+            </value>
+            <value>
+                <fullName>industrial automation</fullName>
+                <default>false</default>
+                <label>industrial automation</label>
+            </value>
+            <value>
+                <fullName>information services</fullName>
+                <default>false</default>
+                <label>information services</label>
+            </value>
+            <value>
+                <fullName>information technology</fullName>
+                <default>false</default>
+                <label>information technology</label>
+            </value>
+            <value>
+                <fullName>infrastructure</fullName>
+                <default>false</default>
+                <label>infrastructure</label>
+            </value>
+            <value>
+                <fullName>innovation management</fullName>
+                <default>false</default>
+                <label>innovation management</label>
+            </value>
+            <value>
+                <fullName>insurance</fullName>
+                <default>false</default>
+                <label>insurance</label>
+            </value>
+            <value>
+                <fullName>interior design</fullName>
+                <default>false</default>
+                <label>interior design</label>
+            </value>
+            <value>
+                <fullName>internet</fullName>
+                <default>false</default>
+                <label>internet</label>
+            </value>
+            <value>
+                <fullName>internet of things</fullName>
+                <default>false</default>
+                <label>internet of things</label>
+            </value>
+            <value>
+                <fullName>lead management</fullName>
+                <default>false</default>
+                <label>lead management</label>
+            </value>
+            <value>
+                <fullName>legal</fullName>
+                <default>false</default>
+                <label>legal</label>
+            </value>
+            <value>
+                <fullName>life insurance</fullName>
+                <default>false</default>
+                <label>life insurance</label>
+            </value>
+            <value>
+                <fullName>location based services</fullName>
+                <default>false</default>
+                <label>location based services</label>
+            </value>
+            <value>
+                <fullName>logistics</fullName>
+                <default>false</default>
+                <label>logistics</label>
+            </value>
+            <value>
+                <fullName>machine learning</fullName>
+                <default>false</default>
+                <label>machine learning</label>
+            </value>
+            <value>
+                <fullName>manufacturing</fullName>
+                <default>false</default>
+                <label>manufacturing</label>
+            </value>
+            <value>
+                <fullName>marketing</fullName>
+                <default>false</default>
+                <label>marketing</label>
+            </value>
+            <value>
+                <fullName>marketing automation</fullName>
+                <default>false</default>
+                <label>marketing automation</label>
+            </value>
+            <value>
+                <fullName>market research</fullName>
+                <default>false</default>
+                <label>market research</label>
+            </value>
+            <value>
+                <fullName>medical</fullName>
+                <default>false</default>
+                <label>medical</label>
+            </value>
+            <value>
+                <fullName>messaging</fullName>
+                <default>false</default>
+                <label>messaging</label>
+            </value>
+            <value>
+                <fullName>mhealth</fullName>
+                <default>false</default>
+                <label>mhealth</label>
+            </value>
+            <value>
+                <fullName>mobile</fullName>
+                <default>false</default>
+                <label>mobile</label>
+            </value>
+            <value>
+                <fullName>mobile apps</fullName>
+                <default>false</default>
+                <label>mobile apps</label>
+            </value>
+            <value>
+                <fullName>mobile devices</fullName>
+                <default>false</default>
+                <label>mobile devices</label>
+            </value>
+            <value>
+                <fullName>music</fullName>
+                <default>false</default>
+                <label>music</label>
+            </value>
+            <value>
+                <fullName>music streaming</fullName>
+                <default>false</default>
+                <label>music streaming</label>
+            </value>
+            <value>
+                <fullName>navigation</fullName>
+                <default>false</default>
+                <label>navigation</label>
+            </value>
+            <value>
+                <fullName>open source</fullName>
+                <default>false</default>
+                <label>open source</label>
+            </value>
+            <value>
+                <fullName>organic food</fullName>
+                <default>false</default>
+                <label>organic food</label>
+            </value>
+            <value>
+                <fullName>payments</fullName>
+                <default>false</default>
+                <label>payments</label>
+            </value>
+            <value>
+                <fullName>photography</fullName>
+                <default>false</default>
+                <label>photography</label>
+            </value>
+            <value>
+                <fullName>procurement</fullName>
+                <default>false</default>
+                <label>procurement</label>
+            </value>
+            <value>
+                <fullName>public transportation</fullName>
+                <default>false</default>
+                <label>public transportation</label>
+            </value>
+            <value>
+                <fullName>publishing</fullName>
+                <default>false</default>
+                <label>publishing</label>
+            </value>
+            <value>
+                <fullName>renewable energy</fullName>
+                <default>false</default>
+                <label>renewable energy</label>
+            </value>
+            <value>
+                <fullName>retail technology</fullName>
+                <default>false</default>
+                <label>retail technology</label>
+            </value>
+            <value>
+                <fullName>ride sharing</fullName>
+                <default>false</default>
+                <label>ride sharing</label>
+            </value>
+            <value>
+                <fullName>robotics</fullName>
+                <default>false</default>
+                <label>robotics</label>
+            </value>
+            <value>
+                <fullName>saas</fullName>
+                <default>false</default>
+                <label>saas</label>
+            </value>
+            <value>
+                <fullName>scheduling</fullName>
+                <default>false</default>
+                <label>scheduling</label>
+            </value>
+            <value>
+                <fullName>security</fullName>
+                <default>false</default>
+                <label>security</label>
+            </value>
+            <value>
+                <fullName>self-storage</fullName>
+                <default>false</default>
+                <label>self-storage</label>
+            </value>
+            <value>
+                <fullName>service industry</fullName>
+                <default>false</default>
+                <label>service industry</label>
+            </value>
+            <value>
+                <fullName>sharing economy</fullName>
+                <default>false</default>
+                <label>sharing economy</label>
+            </value>
+            <value>
+                <fullName>shipping</fullName>
+                <default>false</default>
+                <label>shipping</label>
+            </value>
+            <value>
+                <fullName>shopping</fullName>
+                <default>false</default>
+                <label>shopping</label>
+            </value>
+            <value>
+                <fullName>small and medium businesses</fullName>
+                <default>false</default>
+                <label>small and medium businesses</label>
+            </value>
+            <value>
+                <fullName>social media</fullName>
+                <default>false</default>
+                <label>social media</label>
+            </value>
+            <value>
+                <fullName>social media management</fullName>
+                <default>false</default>
+                <label>social media management</label>
+            </value>
+            <value>
+                <fullName>social media marketing</fullName>
+                <default>false</default>
+                <label>social media marketing</label>
+            </value>
+            <value>
+                <fullName>social network</fullName>
+                <default>false</default>
+                <label>social network</label>
+            </value>
+            <value>
+                <fullName>software</fullName>
+                <default>false</default>
+                <label>software</label>
+            </value>
+            <value>
+                <fullName>sustainability</fullName>
+                <default>false</default>
+                <label>sustainability</label>
+            </value>
+            <value>
+                <fullName>technical support</fullName>
+                <default>false</default>
+                <label>technical support</label>
+            </value>
+            <value>
+                <fullName>textiles</fullName>
+                <default>false</default>
+                <label>textiles</label>
+            </value>
+            <value>
+                <fullName>transportation</fullName>
+                <default>false</default>
+                <label>transportation</label>
+            </value>
+            <value>
+                <fullName>travel</fullName>
+                <default>false</default>
+                <label>travel</label>
+            </value>
+            <value>
+                <fullName>video</fullName>
+                <default>false</default>
+                <label>video</label>
+            </value>
+            <value>
+                <fullName>video editing</fullName>
+                <default>false</default>
+                <label>video editing</label>
+            </value>
+            <value>
+                <fullName>video streaming</fullName>
+                <default>false</default>
+                <label>video streaming</label>
+            </value>
+            <value>
+                <fullName>virtual reality</fullName>
+                <default>false</default>
+                <label>virtual reality</label>
+            </value>
+            <value>
+                <fullName>web hosting</fullName>
+                <default>false</default>
+                <label>web hosting</label>
+            </value>
+            <value>
+                <fullName>wireless</fullName>
+                <default>false</default>
+                <label>wireless</label>
+            </value>
+            <value>
+                <fullName>women&#39;s</fullName>
+                <default>false</default>
+                <label>women&#39;s</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

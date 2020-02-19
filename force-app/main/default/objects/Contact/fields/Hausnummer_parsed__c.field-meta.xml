@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hausnummer_parsed__c</fullName>
+    <externalId>false</externalId>
+    <formula>RIGHT(
+  MailingStreet,
+  LEN(MailingStreet) - MIN(
+    IF(FIND(&quot;0&quot;, MailingStreet) = 0, 999, FIND(&quot;0&quot;, MailingStreet)),
+    IF(FIND(&quot;1&quot;, MailingStreet) = 0, 999, FIND(&quot;1&quot;, MailingStreet)),
+    IF(FIND(&quot;2&quot;, MailingStreet) = 0, 999, FIND(&quot;2&quot;, MailingStreet)),
+    IF(FIND(&quot;3&quot;, MailingStreet) = 0, 999, FIND(&quot;3&quot;, MailingStreet)),
+    IF(FIND(&quot;4&quot;, MailingStreet) = 0, 999, FIND(&quot;4&quot;, MailingStreet)),
+    IF(FIND(&quot;5&quot;, MailingStreet) = 0, 999, FIND(&quot;5&quot;, MailingStreet)),
+    IF(FIND(&quot;6&quot;, MailingStreet) = 0, 999, FIND(&quot;6&quot;, MailingStreet)),
+    IF(FIND(&quot;7&quot;, MailingStreet) = 0, 999, FIND(&quot;7&quot;, MailingStreet)),
+    IF(FIND(&quot;8&quot;, MailingStreet) = 0, 999, FIND(&quot;8&quot;, MailingStreet)),
+    IF(FIND(&quot;9&quot;, MailingStreet) = 0, 999, FIND(&quot;9&quot;, MailingStreet))
+  ) + 1
+)</formula>
+    <label>Hausnummer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
