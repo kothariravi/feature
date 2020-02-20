@@ -63,6 +63,10 @@
         <apexClass>TestTriggerLaunchCampaignFlow</apexClass>
         <enabled>false</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>TestUpdateMonthlyGoalTrigger</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
     <custom>true</custom>
     <fieldPermissions>
         <editable>false</editable>
