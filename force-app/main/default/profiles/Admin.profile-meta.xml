@@ -955,7 +955,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Goal__c.Betrag_im_Zielmonat__c</field>
         <readable>true</readable>
     </fieldPermissions>
