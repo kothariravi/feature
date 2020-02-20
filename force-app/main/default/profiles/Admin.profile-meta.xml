@@ -970,17 +970,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Goal__c.Zieldifferenz__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Goal__c.Zielfortschritt__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Goal__c.goal_month__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Goal__c.goal_year__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1411,16 +1406,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Vortrag__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity.opp_month__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity.opp_year__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

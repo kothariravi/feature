@@ -291,14 +291,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -379,8 +371,6 @@
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -607,14 +597,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -695,8 +677,6 @@
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -927,14 +907,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -1016,8 +988,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -1244,14 +1214,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -1332,8 +1294,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -1564,14 +1524,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -1653,8 +1605,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -1881,14 +1831,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -1969,8 +1911,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -2201,14 +2141,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -2290,8 +2222,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -2518,14 +2448,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -2606,8 +2528,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -2838,14 +2758,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -2927,8 +2839,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -3155,14 +3065,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -3243,8 +3145,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -3475,14 +3375,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -3564,8 +3456,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>
@@ -3792,14 +3682,6 @@
             <label>Lost to Competitor</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICL</field>
-            <label>opp_month</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
-            <field>00N1v00000T0ICQ</field>
-            <label>opp_year</label>
-        </opportunityListFieldsLabelMappings>
-        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcH</field>
             <label>Pers. Herausforderung Gesprächspartner</label>
         </opportunityListFieldsLabelMappings>
@@ -3880,8 +3762,6 @@
             <field>00N1v00000SRRmz</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
-            <field>00N1v00000T0ICL</field>
-            <field>00N1v00000T0ICQ</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
             <field>00N0Y00000REFE0</field>

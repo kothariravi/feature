@@ -4,6 +4,7 @@
     <columns>NAME</columns>
     <columns>Monatsziel__c</columns>
     <columns>Betrag_im_Zielmonat__c</columns>
+    <columns>Zieldifferenz__c</columns>
     <columns>Zielfortschritt__c</columns>
     <columns>UPDATEDBY_USER</columns>
     <columns>Monat__c</columns>

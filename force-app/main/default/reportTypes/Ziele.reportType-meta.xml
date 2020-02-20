@@ -38,6 +38,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Zieldifferenz__c</field>
+            <table>Goal__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
             <table>Goal__c</table>
         </columns>
