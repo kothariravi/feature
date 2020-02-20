@@ -20,8 +20,13 @@ trigger UpdateMonthlyGoal on Opportunity_LI_Monthly_Booking__c (after insert, af
             LIMIT 1
         ];
         Double monthlyBookingsAmountInMonth = (Double) monthlyBookingsByMonth.get('expr0');
-        Goal__c monthlyGoal = [SELECT id, Betrag_im_Zielmonat__c, Monat__c FROM Goal__c WHERE Monat__c = :monthlyBooking.Month__c LIMIT 1];
-        monthlyGoal.Betrag_im_Zielmonat__c = monthlyBookingsAmountInMonth;
-        update monthlyGoal;
+        try {
+            Goal__c monthlyGoal = [SELECT id, Betrag_im_Zielmonat__c, Monat__c FROM Goal__c WHERE Monat__c = :monthlyBooking.Month__c LIMIT 1];
+            monthlyGoal.Betrag_im_Zielmonat__c = monthlyBookingsAmountInMonth;
+            update monthlyGoal;
+        } catch (QueryException e) {
+            System.debug('no goal found');
+            System.debug(e.getMessage());
+        }
     }
 }
