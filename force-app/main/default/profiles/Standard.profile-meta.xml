@@ -16,6 +16,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>standard__LightningInstrumentation</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>standard__LightningSales</application>
         <default>false</default>
         <visible>true</visible>
@@ -1121,11 +1126,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Lead.created_weeknum__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Lead.crunchbase__Crunchbase_Categories__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1536,10 +1536,6 @@
     </fieldPermissions>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Launch_Campaign_User_Id_Flow</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
         <flow>Launch_Goal_Flow</flow>
     </flowAccesses>
     <flowAccesses>
@@ -1628,6 +1624,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Contact-Contact Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ContactPointEmail-Kontaktpunkt-E-Mail-Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ContactPointPhone-Kontaktpunkttelefon-Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ContactProjectAsso__c-ContactProjectAssociation Layout</layout>
@@ -2028,6 +2030,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendExternalEmailAvailable</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

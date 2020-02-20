@@ -148,11 +148,6 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Opportunity.Opportunity_Lost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
@@ -181,6 +176,11 @@
             <actionName>NewEvent</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Edit</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>FeedItem.ContentNote</actionName>

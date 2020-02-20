@@ -16,7 +16,7 @@
                 <field>Monatsziel__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Edit</behavior>
                 <field>Betrag_im_Zielmonat__c</field>
             </layoutItems>
             <layoutItems>
