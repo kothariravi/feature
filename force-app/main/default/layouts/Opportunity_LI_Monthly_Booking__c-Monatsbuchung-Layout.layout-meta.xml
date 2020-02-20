@@ -74,6 +74,10 @@
                 <behavior>Edit</behavior>
                 <field>ServiceDate__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Opp_is_Closed_Won__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

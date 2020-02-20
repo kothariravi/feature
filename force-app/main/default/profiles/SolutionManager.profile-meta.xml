@@ -1464,6 +1464,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity_LI_Monthly_Booking__c.Opp_is_Closed_Won__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity_LI_Monthly_Booking__c.OpportunityLineItem_ID__c</field>
         <readable>true</readable>
