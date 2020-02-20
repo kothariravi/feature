@@ -1465,6 +1465,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity_LI_Monthly_Booking__c.Opp_is_Closed_Won__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity_LI_Monthly_Booking__c.OpportunityLineItem_ID__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1540,10 +1545,6 @@
     </fieldPermissions>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Launch_Goal_Flow</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
         <flow>Lead_Dropped</flow>
     </flowAccesses>
     <flowAccesses>
@@ -1569,10 +1570,6 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Update_Campaign_Users</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>Update_Monthly_Goal</flow>
     </flowAccesses>
     <layoutAssignments>
         <layout>Account-Account Layout</layout>

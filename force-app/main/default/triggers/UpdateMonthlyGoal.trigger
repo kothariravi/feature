@@ -16,6 +16,7 @@ trigger UpdateMonthlyGoal on Opportunity_LI_Monthly_Booking__c (after insert, af
             SELECT Month__c, SUM(Amount__c)
             FROM Opportunity_LI_Monthly_Booking__c
             WHERE Month__c = :monthlyBooking.Month__c
+                AND opp_is_closed_won__c = TRUE
             GROUP BY Month__c
             LIMIT 1
         ];
