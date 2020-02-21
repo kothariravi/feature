@@ -33,48 +33,22 @@
             <name>originalFormula</name>
             <value>
                 <stringValue>&quot;Ziel &quot;
-+ CASE(MONTH([Goal__c].Monat__c),
-1, &quot;Januar&quot;,
-2, &quot;Februar&quot;,
-3, &quot;März&quot;,
-4, &quot;April&quot;,
-5, &quot;Mai&quot;,
-6, &quot;Juni&quot;,
-7, &quot;Juli&quot;,
-8, &quot;August&quot;,
-9, &quot;September&quot;,
-10, &quot;Oktober&quot;,
-11, &quot;November&quot;,
-12, &quot;Dezember&quot;,
-&quot;None&quot;)
-+ &quot;-&quot; + TEXT(YEAR([Goal__c].Monat__c))</stringValue>
++ TEXT(MONTH([Goal__c].Monat__c))
++ &quot;/&quot; + TEXT(YEAR([Goal__c].Monat__c))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_0670549760</name>
+        <name>formula_2_myRule_1_A1_3936992678</name>
         <dataType>String</dataType>
         <expression>&quot;Ziel &quot;
-+ CASE(MONTH({!myVariable_current.Monat__c}),
-1, &quot;Januar&quot;,
-2, &quot;Februar&quot;,
-3, &quot;März&quot;,
-4, &quot;April&quot;,
-5, &quot;Mai&quot;,
-6, &quot;Juni&quot;,
-7, &quot;Juli&quot;,
-8, &quot;August&quot;,
-9, &quot;September&quot;,
-10, &quot;Oktober&quot;,
-11, &quot;November&quot;,
-12, &quot;Dezember&quot;,
-&quot;None&quot;)
-+ &quot;-&quot; + TEXT(YEAR({!myVariable_current.Monat__c}))</expression>
++ TEXT(MONTH({!myVariable_current.Monat__c}))
++ &quot;/&quot; + TEXT(YEAR({!myVariable_current.Monat__c}))</expression>
     </formulas>
     <formulas>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
-    <interviewLabel>Set_Goal_Name-2_InterviewLabel</interviewLabel>
+    <interviewLabel>Set_Goal_Name-3_InterviewLabel</interviewLabel>
     <label>Set Goal Name</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -176,7 +150,7 @@
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_0670549760</elementReference>
+                <elementReference>formula_2_myRule_1_A1_3936992678</elementReference>
             </value>
         </inputAssignments>
         <object>Goal__c</object>

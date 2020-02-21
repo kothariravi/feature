@@ -1050,6 +1050,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Lead.Kontaktperson__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Lead.Konvertiert_am__c</field>
         <readable>true</readable>
     </fieldPermissions>
