@@ -3,7 +3,8 @@ global class OppForecastCalculator {
     List<Opportunity> allOpps;
     List<Opportunity> allClosedOpps;
     List<Opportunity> allOpenOpps;
-    List<AggregateResult> allOppsHistory;
+    List<Opportunity> allOppsWithHistories;
+    Set<List<String>> oppHistoryTable;
 
     public OppForecastCalculator() {
         allOpps = [
@@ -25,11 +26,21 @@ global class OppForecastCalculator {
             }
         }
 
-        allOppsHistory = [
-            SELECT stagename, count_distinct(opportunityid)
-            FROM opportunityHistory
-            GROUP BY stageName
+        allOppsWithHistories = [
+            SELECT id, leadSource, (SELECT stagename FROM opportunityHistories)
+            FROM opportunity
         ];
+
+        oppHistoryTable = new Set<List<String>>();
+        for (Opportunity opp : allOppsWithHistories) {
+            for (OpportunityHistory oppHistory : opp.opportunityHistories) {
+                oppHistoryTable.add(new List<String>{
+                    opp.id,
+                    opp.leadSource,
+                    oppHistory.stageName
+                });
+            }
+        }
     }
 
     public void updateOpenOpps() {
