@@ -4,7 +4,7 @@ global class OppForecastCalculator {
     List<Opportunity> allClosedOpps;
     List<Opportunity> allOpenOpps;
     List<Opportunity> allOppsWithHistories;
-    Set<List<String>> oppHistoryTable;
+    Set<Map<String, String>> oppHistoryTable;
 
     public OppForecastCalculator() {
         allOpps = [
@@ -27,17 +27,18 @@ global class OppForecastCalculator {
         }
 
         allOppsWithHistories = [
-            SELECT id, leadSource, (SELECT stagename FROM opportunityHistories)
+            SELECT id, stageName, leadSource, (SELECT stagename FROM opportunityHistories)
             FROM opportunity
         ];
 
-        oppHistoryTable = new Set<List<String>>();
+        oppHistoryTable = new Set<Map<String, String>>();
         for (Opportunity opp : allOppsWithHistories) {
             for (OpportunityHistory oppHistory : opp.opportunityHistories) {
-                oppHistoryTable.add(new List<String>{
-                    opp.id,
-                    opp.leadSource,
-                    oppHistory.stageName
+                oppHistoryTable.add(new Map<String, String>{
+                    'opportunityId' => opp.id,
+                    'oppLeadSource' => opp.leadSource,
+                    'oppCurrentStage' => opp.stageName,
+                    'oppHistoryStage' => oppHistory.stageName
                 });
             }
         }
@@ -51,21 +52,28 @@ global class OppForecastCalculator {
     }
 
     public Opportunity calculateOppForecast(Opportunity oppToUpdate) {
-        List<Opportunity> allClosedOppsSameSource = new List<Opportunity>();
-        for (Opportunity opp : allClosedOpps) {
-            if (opp.leadSource == oppToUpdate.leadSource) {
-                allClosedOppsSameSource.add(opp);
+        Set<Map<String, String>> allOppsSameParams = new Set<Map<String, String>>();
+        for (Map<String, String> oppEntry : oppHistoryTable) {
+            System.debug(oppEntry);
+            if (oppEntry.get('oppHistoryStage') == oppToUpdate.stageName
+                && oppEntry.get('oppLeadSource') == oppToUpdate.leadSource
+                && oppEntry.get('opportunityId') != oppToUpdate.Id
+            ) {
+                allOppsSameParams.add(oppEntry);
             }
         }
+        System.debug(allOppsSameParams);
 
-        List<Opportunity> allWonOppsSameSource = new List<Opportunity>();
-        for (Opportunity opp : allClosedOppsSameSource) {
-            if (opp.StageName == 'Closed Won') {
-                allWonOppsSameSource.add(opp);
+        Set<Map<String, String>> allWonOppsSameParams = new Set<Map<String, String>>();
+        for (Map<String, String> oppEntry : allOppsSameParams) {
+            if (oppEntry.get('oppCurrentStage') == 'Closed Won') {
+                allWonOppsSameParams.add(oppEntry);
             }
         }
+        System.debug(allWonOppsSameParams);
 
-        Double calculatedCVR = allWonOppsSameSource.size() / (Double) allClosedOppsSameSource.size();
+        // handle divide by 0 exeption if no opps are found (company-wide avg cvr?)
+        Double calculatedCVR = allWonOppsSameParams.size() / (Double) allOppsSameParams.size();
         Double calculatedAmount = oppToUpdate.amount * calculatedCVR;
 
         oppToUpdate.expected_amount__c = calculatedAmount;
