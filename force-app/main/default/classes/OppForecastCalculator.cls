@@ -2,13 +2,14 @@ global class OppForecastCalculator {
 
     List<Opportunity> allOpps;
     List<Opportunity> allClosedOpps;
+    List<Opportunity> allWonOpps;
     List<Opportunity> allOpenOpps;
     List<Opportunity> allOppsWithHistories;
     Set<Map<String, String>> oppHistoryTable;
 
     public OppForecastCalculator() {
         allOpps = [
-            SELECT id, amount, closedate, StageName, isClosed, leadSource
+            SELECT id, amount, closedate, StageName, isClosed, isWon, leadSource
             FROM opportunity
         ];
 
@@ -16,6 +17,13 @@ global class OppForecastCalculator {
         for (Opportunity opp : allOpps) {
             if (opp.isClosed) {
                 allClosedOpps.add(opp);
+            }
+        }
+
+        allWonOpps = new List<Opportunity>();
+        for (Opportunity opp : allClosedOpps) {
+            if (opp.isWon) {
+                allWonOpps.add(opp);
             }
         }
 
@@ -45,16 +53,19 @@ global class OppForecastCalculator {
     }
 
     public void updateOpenOpps() {
+        List<Opportunity> oppsToUpdate = new List<Opportunity>();
         for (Opportunity opp : allOpenOpps) {
             Opportunity oppToUpdate = this.calculateOppForecast(opp);
-            update oppToUpdate;
+            oppsToUpdate.add(oppToUpdate);
         }
+        TriggerBypass.bypassUpdateOppForecast = TRUE;
+        update oppsToUpdate;
+        TriggerBypass.bypassUpdateOppForecast = FALSE;
     }
 
     public Opportunity calculateOppForecast(Opportunity oppToUpdate) {
         Set<Map<String, String>> allOppsSameParams = new Set<Map<String, String>>();
         for (Map<String, String> oppEntry : oppHistoryTable) {
-            System.debug(oppEntry);
             if (oppEntry.get('oppHistoryStage') == oppToUpdate.stageName
                 && oppEntry.get('oppLeadSource') == oppToUpdate.leadSource
                 && oppEntry.get('opportunityId') != oppToUpdate.Id
@@ -62,7 +73,7 @@ global class OppForecastCalculator {
                 allOppsSameParams.add(oppEntry);
             }
         }
-        System.debug(allOppsSameParams);
+        System.debug('allOppsSameParams: ' + allOppsSameParams);
 
         Set<Map<String, String>> allWonOppsSameParams = new Set<Map<String, String>>();
         for (Map<String, String> oppEntry : allOppsSameParams) {
@@ -70,13 +81,20 @@ global class OppForecastCalculator {
                 allWonOppsSameParams.add(oppEntry);
             }
         }
-        System.debug(allWonOppsSameParams);
+        System.debug('allWonOppsSameParams: ' + allWonOppsSameParams);
 
-        // handle divide by 0 exeption if no opps are found (company-wide avg cvr?)
-        Double calculatedCVR = allWonOppsSameParams.size() / (Double) allOppsSameParams.size();
-        Double calculatedAmount = oppToUpdate.amount * calculatedCVR;
+        Double calculatedAmount;
+        if (allOppsSameParams.size() == 0) {
+            // org-wide avg cvr
+            Double calculatedCVR = allWonOpps.size() / (Double) allClosedOpps.size();
+            calculatedAmount = oppToUpdate.amount * calculatedCVR;
+        } else {
+            Double calculatedCVR = allWonOppsSameParams.size() / (Double) allOppsSameParams.size();
+            calculatedAmount = oppToUpdate.amount * calculatedCVR;
+        }
 
         oppToUpdate.expected_amount__c = calculatedAmount;
+
         return oppToUpdate;
     }
 }
