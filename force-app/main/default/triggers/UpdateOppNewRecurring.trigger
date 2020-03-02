@@ -1,4 +1,9 @@
 trigger UpdateOppNewRecurring on Opportunity (before insert, before update) {
+
+    if (TriggerBypass.bypassUpdateOppNewRecurring) {
+        return;
+    }
+
     for (Opportunity opp : Trigger.new) {
         List<Opportunity> oppsFromAccount = [
             SELECT id

@@ -5,7 +5,7 @@ private class TestOppForecastCalculator {
     // method has all data access to query opportunity history
     @isTest (seeAllData = TRUE)
     static void testScheduledMethod() {
-        TriggerBypass.bypassUpdateOppForecast = TRUE;
+        TriggerBypass.bypassAllOppTriggers(TRUE);
 
         Opportunity oppWon = new Opportunity(
             Name = 'Test Opportunity',
@@ -38,7 +38,7 @@ private class TestOppForecastCalculator {
             LeadSource = 'Kundenempfehlung'
         );
         insert oppOpen;
-        TriggerBypass.bypassUpdateOppForecast = FALSE;
+        TriggerBypass.bypassAllOppTriggers(FALSE);
 
         List<Opportunity> allOppsWithHistories = [
             SELECT id, stageName, leadSource, (SELECT stagename FROM opportunityHistories)
