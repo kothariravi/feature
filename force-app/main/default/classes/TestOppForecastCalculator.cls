@@ -1,31 +1,52 @@
 @isTest
 private class TestOppForecastCalculator {
     public static String CRON_EXP = '0 0 0 15 3 ? 2022';
-    @isTest static void testScheduledMethod() {
-        String[] stages = new List<String>();
-        stages.add('Pitch');
-        stages.add('Closed Won');
-        stages.add('Closed Lost');
 
-        String[] sources = new List<String>();
-        sources.add('Netzwerk (CK)');
-        sources.add('Importiert');
-        sources.add('Vortrag (CK)');
-        sources.add('Kundenempfehlung');
+    // method has all data access to query opportunity history
+    @isTest (seeAllData = TRUE)
+    static void testScheduledMethod() {
+        TriggerBypass.bypassUpdateOppForecast = TRUE;
 
-        List<Opportunity> opps = new List<Opportunity>();
-        for (Integer i=1; i<=60; i++) {
-            Opportunity opp = new Opportunity(
-                Name = 'Opportunity ' + i,
-                CloseDate = Date.today(),
-                Amount = 2000 * i,
-                StageName = stages[Math.mod(i, stages.size())],
-                LeadSource = sources[Math.mod(i, sources.size())],
-                Loss_Reason__c = 'Other'
-            );
-            opps.add(opp);
+        Opportunity oppWon = new Opportunity(
+            Name = 'Test Opportunity',
+            CloseDate = Date.today(),
+            Amount = 2000,
+            StageName = 'Pitch',
+            LeadSource = 'Kundenempfehlung'
+        );
+        insert oppWon;
+        oppWon.stageName = 'Closed Won';
+        update oppWon;
+
+        Opportunity oppLost = new Opportunity(
+            Name = 'Test Opportunity',
+            CloseDate = Date.today(),
+            Amount = 2000,
+            StageName = 'Pitch',
+            LeadSource = 'Kundenempfehlung',
+            Loss_Reason__c = 'Other'
+        );
+        insert oppLost;
+        oppLost.stageName = 'Closed Lost';
+        update oppLost;
+
+        Opportunity oppOpen = new Opportunity(
+            Name = 'Test Opportunity',
+            CloseDate = Date.today(),
+            Amount = 10000,
+            StageName = 'Pitch',
+            LeadSource = 'Kundenempfehlung'
+        );
+        insert oppOpen;
+        TriggerBypass.bypassUpdateOppForecast = FALSE;
+
+        List<Opportunity> allOppsWithHistories = [
+            SELECT id, stageName, leadSource, (SELECT stagename FROM opportunityHistories)
+            FROM opportunity
+        ];
+        for (Opportunity opp : allOppsWithHistories) {
+            System.debug(opp);
         }
-        insert opps;
 
         Test.startTest();
         String jobId = System.schedule('ScheduledApexTest',
@@ -33,9 +54,20 @@ private class TestOppForecastCalculator {
             new ScheduledOppForecastCalculator());
         Test.stopTest();
 
-        List<Opportunity> oppsAfterUpdate = [SELECT id, expected_amount__c FROM opportunity];
-        for (Opportunity opp : oppsAfterUpdate) {
-            System.debug(opp.expected_amount__c);
-        }
+        Opportunity oppAssertion = [SELECT Id, Expected_Amount__c FROM opportunity WHERE Id = :oppOpen.Id LIMIT 1];
+        System.debug(oppAssertion.expected_amount__c);
+        // cant assert abs value bc seeAllData might change CVR
+        System.assert(oppAssertion.expected_amount__c != 0);
+
+
+        // test trigger
+        Opportunity oppTrigger = [SELECT Id, Amount, Expected_Amount__c FROM opportunity WHERE Id = :oppOpen.Id LIMIT 1];
+        oppTrigger.amount = 20000;
+        update oppTrigger;
+
+        Opportunity oppTriggerAfterUpdate = [SELECT Id, Amount, Expected_Amount__c FROM opportunity WHERE Id = :oppTrigger.Id LIMIT 1];
+        System.debug(oppTriggerAfterUpdate.amount);
+        System.debug(oppTriggerAfterUpdate.expected_amount__c);
+        System.assert(oppTriggerAfterUpdate.expected_amount__c > oppTrigger.expected_amount__c);
     }
 }
