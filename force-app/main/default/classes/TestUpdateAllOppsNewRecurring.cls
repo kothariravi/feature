@@ -28,6 +28,11 @@ private class TestUpdateAllOppsNewRecurring {
         insert secondOpp;
         TriggerBypass.bypassAllOppTriggers(FALSE);
 
-        UpdateAllOppsNewRecurring.updateAllOppsNewRecurring();
+        Test.startTest();
+        UpdateAllOppsNewRecurring batchObj = new UpdateAllOppsNewRecurring(); 
+        Id batchId = Database.executeBatch(batchObj);
+        Test.stopTest();
+
+        System.debug(batchId);
     }
 }
