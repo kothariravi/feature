@@ -7,8 +7,6 @@ global class UpdateAllOppsNewRecurring implements Database.Batchable<sObject> {
     }
 
     global void execute(Database.BatchableContext ctxBtch, List<Opportunity> scope) {
-        Set<Opportunity> oppsToUpdateBeyondScope = new Set<Opportunity>();
-
         for (Opportunity oppToUpdate : scope) {
             List<Opportunity> wonOppsFromAccount = [
                 SELECT Id, CloseDate, AccountId, IsWon, IsClosed
@@ -26,15 +24,12 @@ global class UpdateAllOppsNewRecurring implements Database.Batchable<sObject> {
                 for (Opportunity wonOppFromAccount : wonOppsFromAccount) {
                     if (oppToUpdate.closeDate > wonOppFromAccount.closeDate) {
                         oppToUpdate.type = 'Existing Business';
-                        wonOppFromAccount.type = 'New Business';
-                        oppsToUpdateBeyondScope.add(wonOppFromAccount);
                     }
                 }
             }
         }
         TriggerBypass.bypassAllOppTriggers(TRUE);
         update scope;
-        update new List<Opportunity>(oppsToUpdateBeyondScope);
         TriggerBypass.bypassAllOppTriggers(FALSE);
     }
 
