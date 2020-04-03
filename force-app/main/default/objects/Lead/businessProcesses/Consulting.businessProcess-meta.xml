@@ -3,14 +3,6 @@
     <fullName>Consulting</fullName>
     <isActive>true</isActive>
     <values>
-        <fullName>Call%2FPitch Follow Up</fullName>
-        <default>false</default>
-    </values>
-    <values>
-        <fullName>Call%2FPitch in Vorbereitung</fullName>
-        <default>false</default>
-    </values>
-    <values>
         <fullName>Cold Outreach</fullName>
         <default>false</default>
     </values>
@@ -28,6 +20,14 @@
     </values>
     <values>
         <fullName>Konvertiert</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Postponed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Priorisiert</fullName>
         <default>false</default>
     </values>
 </BusinessProcess>

@@ -16,9 +16,16 @@
     <columns>LEAD.URL</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>Sales_Kampagne__c</field>
+        <field>LEAD.ZIP</field>
         <operation>equals</operation>
-        <value>ESM</value>
+    </filters>
+    <filters>
+        <field>LEAD.STREET</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>LEAD.CITY</field>
+        <operation>equals</operation>
     </filters>
     <label>Alle Leads</label>
 </ListView>

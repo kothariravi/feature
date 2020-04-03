@@ -34,8 +34,4 @@
         <masterLabel>Preis</masterLabel>
         <translation><!-- Preis --></translation>
     </picklistValues>
-    <picklistValues>
-        <masterLabel>Verschoben</masterLabel>
-        <translation><!-- Verschoben --></translation>
-    </picklistValues>
 </CustomFieldTranslation>

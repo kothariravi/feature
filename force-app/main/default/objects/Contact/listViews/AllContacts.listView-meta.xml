@@ -9,10 +9,5 @@
     <columns>CORE.USERS.FIRST_NAME</columns>
     <columns>CORE.USERS.LAST_NAME</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>CONTACT.ADDRESS2_CITY</field>
-        <operation>equals</operation>
-        <value>Hamburg</value>
-    </filters>
     <label>Alle Kontakte</label>
 </ListView>

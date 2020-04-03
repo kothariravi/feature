@@ -12,8 +12,12 @@
         </sections>
     </layouts>
     <quickActions>
-        <label><!-- Lead Dropped --></label>
+        <label><!-- Drop Lead --></label>
         <name>Lead_Dropped</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Postpone Lead --></label>
+        <name>Postpone_Lead</name>
     </quickActions>
     <recordTypes>
         <label><!-- Consulting --></label>

@@ -28,6 +28,10 @@
     <objectMapping>
         <inputObject>Lead</inputObject>
         <mappingFields>
+            <inputField>Kontaktperson__c</inputField>
+            <outputField>Kontaktperson__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Sales_Kampagne__c</inputField>
             <outputField>Sales_Kampagne__c</outputField>
         </mappingFields>

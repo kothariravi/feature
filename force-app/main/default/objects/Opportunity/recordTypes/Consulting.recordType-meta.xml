@@ -344,6 +344,10 @@
     <picklistValues>
         <picklist>LeadSource</picklist>
         <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Ausschreibung</fullName>
             <default>false</default>
         </values>
@@ -356,7 +360,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Importiert</fullName>
+            <fullName>Gekauft</fullName>
             <default>false</default>
         </values>
         <values>
@@ -364,47 +368,35 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Kloeckner%2Ei</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Kundenansprache</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Kundenempfehlung</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>LinkedIn</fullName>
+            <fullName>Netzwerk</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Netzwerk %28CK%29</fullName>
+            <fullName>Outbound</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Netzwerk %28nicht CK%29</fullName>
+            <fullName>Serviceplan</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>PR</fullName>
+            <fullName>Veranstaltung%3A eigen %2F bei hy</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Upselling nach Projekten</fullName>
+            <fullName>Veranstaltung%3A fremd%2C Honorar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veranstaltung%3A fremd%2C unbezahlt</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Vermittler</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Vortrag</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Vortrag %28nicht CK%29</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -483,10 +475,6 @@
         </values>
         <values>
             <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Postponed</fullName>
             <default>false</default>
         </values>
         <values>
@@ -661,6 +649,21 @@
         </values>
         <values>
             <fullName>hy nicht der richtige Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wiedervorlage_Phase__c</picklist>
+        <values>
+            <fullName>LoP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pitch</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Scoping</fullName>
             <default>false</default>
         </values>
     </picklistValues>

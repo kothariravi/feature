@@ -19,7 +19,7 @@
                 <field>WhoId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>Responsible__c</field>
             </layoutItems>
         </layoutColumns>

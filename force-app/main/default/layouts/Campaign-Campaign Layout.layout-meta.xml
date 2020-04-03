@@ -96,10 +96,6 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>NumberOfResponses</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
                 <field>NumberOfLeads</field>
             </layoutItems>
             <layoutItems>

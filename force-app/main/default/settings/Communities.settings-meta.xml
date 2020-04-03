@@ -2,6 +2,7 @@
 <CommunitiesSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableCspContactVisibilityPref>false</enableCspContactVisibilityPref>
     <enableGuestRecordReassignOrgPref>false</enableGuestRecordReassignOrgPref>
+    <enableGuestSecurityOptOutCruc>false</enableGuestSecurityOptOutCruc>
     <enableInviteChatterGuestEnabled>true</enableInviteChatterGuestEnabled>
     <enableNetworksEnabled>false</enableNetworksEnabled>
     <enableOotbProfExtUserOpsEnable>false</enableOotbProfExtUserOpsEnable>

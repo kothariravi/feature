@@ -3,7 +3,7 @@
     <fullName>Kontaktperson__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Kontaktperson</label>
+    <label>Lead-Erstkontakt</label>
     <lookupFilter>
         <active>true</active>
         <errorMessage>Benutzer ist inaktiv.</errorMessage>

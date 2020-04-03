@@ -283,6 +283,10 @@
             <label>Jahresziel 2018</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -321,6 +325,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -369,6 +381,7 @@
             <field>00N1v00000T05UR</field>
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -379,6 +392,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -589,6 +604,10 @@
             <label>Jahresziel 2018</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -627,6 +646,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -675,6 +702,7 @@
             <field>00N0Y00000SLSK5</field>
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -685,6 +713,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -899,6 +929,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -937,6 +971,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -986,6 +1028,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -996,6 +1039,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -1206,6 +1251,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -1244,6 +1293,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1292,6 +1349,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -1302,6 +1360,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -1516,6 +1576,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -1554,6 +1618,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1603,6 +1675,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -1613,6 +1686,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -1823,6 +1898,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -1861,6 +1940,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -1909,6 +1996,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -1919,6 +2007,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -2133,6 +2223,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -2171,6 +2265,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2220,6 +2322,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -2230,6 +2333,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -2440,6 +2545,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -2478,6 +2587,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2526,6 +2643,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -2536,6 +2654,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -2750,6 +2870,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -2788,6 +2912,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -2837,6 +2969,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -2847,6 +2980,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -3057,6 +3192,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -3095,6 +3234,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -3143,6 +3290,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -3153,6 +3301,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -3367,6 +3517,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -3405,6 +3559,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -3454,6 +3616,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -3464,6 +3627,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>
@@ -3674,6 +3839,10 @@
             <label>Jahresziel 2019</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0NbR</field>
+            <label>Kontaktperson</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000T0D92</field>
             <label>Loss Reason Other</label>
         </opportunityListFieldsLabelMappings>
@@ -3712,6 +3881,14 @@
         <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQfcW</field>
             <label>Verbliebene Zweifel</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uio</field>
+            <label>Wiedervorlage am</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0Uit</field>
+            <label>Wiedervorlage Phase</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsSelectedSettings>
             <field>OPPORTUNITY.NAME</field>
@@ -3760,6 +3937,7 @@
             <field>00N0Y00000IgKSa</field>
             <field>00N1v00000SQlSr</field>
             <field>00N1v00000SRRmz</field>
+            <field>00N1v00000T0NbR</field>
             <field>00N1v00000T0D92</field>
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
@@ -3770,6 +3948,8 @@
             <field>00N1v00000T0FkZ</field>
             <field>00N0Y00000OZ4ZI</field>
             <field>00N1v00000SQfcW</field>
+            <field>00N1v00000T0Uio</field>
+            <field>00N1v00000T0Uit</field>
         </opportunityListFieldsUnselectedSettings>
         <quotasSettings>
             <showQuotas>false</showQuotas>

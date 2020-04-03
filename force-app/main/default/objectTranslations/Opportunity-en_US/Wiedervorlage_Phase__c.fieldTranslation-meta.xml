@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Wiedervorlage Phase --></label>
+    <name>Wiedervorlage_Phase__c</name>
+    <picklistValues>
+        <masterLabel>LoP</masterLabel>
+        <translation><!-- LoP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pitch</masterLabel>
+        <translation><!-- Pitch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scoping</masterLabel>
+        <translation><!-- Scoping --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

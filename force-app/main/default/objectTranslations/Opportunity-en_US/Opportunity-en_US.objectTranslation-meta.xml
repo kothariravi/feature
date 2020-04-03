@@ -11,6 +11,10 @@
         <label><!-- Opportunity Lost --></label>
         <name>Opportunity_Lost</name>
     </quickActions>
+    <quickActions>
+        <label><!-- Postpone Opp --></label>
+        <name>Postpone_Opp</name>
+    </quickActions>
     <recordTypes>
         <label><!-- Consulting --></label>
         <name>Consulting</name>

@@ -177,7 +177,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Importiert</fullName>
+            <fullName>Gekauft</fullName>
             <default>false</default>
         </values>
         <values>
@@ -185,47 +185,15 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Kloeckner%2Ei</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Kundenansprache</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Kundenempfehlung</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>LinkedIn</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Netzwerk %28CK%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Netzwerk %28nicht CK%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>PR</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Upselling nach Projekten</fullName>
+            <fullName>Outbound</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Vermittler</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Vortrag</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Vortrag %28nicht CK%29</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -343,6 +311,17 @@
         <values>
             <fullName>New Business</fullName>
             <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wiedervorlage_Status__c</picklist>
+        <values>
+            <fullName>Call%2FPitch Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In_Kontakt</fullName>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>

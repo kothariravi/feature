@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Leads_pro_User</fullName>
-    <booleanFilter>1 AND 2 AND (3 OR 4 OR 5) AND 6</booleanFilter>
+    <booleanFilter>(1 AND 2 AND (3 OR 4 OR 5)) OR 6</booleanFilter>
     <columns>FULL_NAME</columns>
     <columns>LEAD.COMPANY</columns>
-    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.STATUS</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>LEAD.STATUS</field>
         <operation>equals</operation>
-        <value>In_Kontakt,In Kontakt,Call/Pitch in Vorbereitung,Call/Pitch Follow Up</value>
+        <value>In_Kontakt</value>
     </filters>
     <filters>
         <field>CORE.USERS.ALIAS</field>
@@ -19,7 +19,7 @@
     <filters>
         <field>LEAD.LAST_ACTIVITY</field>
         <operation>equals</operation>
-        <value>LAST_N_DAYS:14</value>
+        <value>LAST_N_DAYS:1</value>
     </filters>
     <filters>
         <field>LEAD.CREATED_DATE</field>
@@ -29,12 +29,12 @@
     <filters>
         <field>LEAD.LAST_UPDATE</field>
         <operation>equals</operation>
-        <value>LAST_N_DAYS:14</value>
+        <value>LAST_N_DAYS:1</value>
     </filters>
     <filters>
-        <field>UPDATEDBY_USER.ALIAS</field>
-        <operation>notEqual</operation>
-        <value>creman</value>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Call/Pitch Follow Up</value>
     </filters>
     <label>Neue Leads pro User</label>
 </ListView>
