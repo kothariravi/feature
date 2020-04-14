@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Total funding raised in USD --></help>
-    <label><!-- Total Funding (USD) --></label>
-    <name>crunchbase__Total_Funding_USD__c</name>
-</CustomFieldTranslation>

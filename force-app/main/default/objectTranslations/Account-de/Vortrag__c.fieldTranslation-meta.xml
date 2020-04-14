@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Bitte gib an, um welche Veranstaltung es sich gehandelt hat --></help>
-    <label><!-- Veranstaltung --></label>
-    <name>Vortrag__c</name>
-</CustomFieldTranslation>

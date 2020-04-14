@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Datetime when Account record was last enriched with Crunchbase data --></help>
-    <label><!-- Date Crunchbase Last Update --></label>
-    <name>crunchbase__Date_Crunchbase_Last_Update__c</name>
-</CustomFieldTranslation>

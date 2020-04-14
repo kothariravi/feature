@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- Gibt die Laufzeit der Kampagne in Tagen an. Falls noch kein Enddatum gesetzt ist, wird die Laufzeit seit Startdatum bis heute berechnet. --></help>
-    <label><!-- Kampagnenlaufzeit --></label>
-    <name>Kampagnenlaufzeit__c</name>
-</CustomFieldTranslation>

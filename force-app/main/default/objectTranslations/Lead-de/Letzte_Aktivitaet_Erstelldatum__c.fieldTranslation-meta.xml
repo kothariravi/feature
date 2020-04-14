@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label><!-- Letzte Aktivität / Erstelldatum --></label>
-    <name>Letzte_Aktivitaet_Erstelldatum__c</name>
-</CustomFieldTranslation>
