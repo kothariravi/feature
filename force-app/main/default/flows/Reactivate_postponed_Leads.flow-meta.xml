@@ -24,6 +24,63 @@
             <targetReference>update_loop_lead</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>set_task_name_for_in_kontakt</name>
+        <label>set task name for in kontakt</label>
+        <locationX>1013</locationX>
+        <locationY>289</locationY>
+        <assignmentItems>
+            <assignToReference>string_task_name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Reminder: Wiederaufnahme Kontakt</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>create_reactivation_task</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>set_task_name_for_priorisiert</name>
+        <label>set task name for priorisiert</label>
+        <locationX>1099</locationX>
+        <locationY>447</locationY>
+        <assignmentItems>
+            <assignToReference>string_task_name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Reminder: Lead wieder vorantreiben</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>create_reactivation_task</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>decision_loop_lead_status</name>
+        <label>decision loop lead status</label>
+        <locationX>743</locationX>
+        <locationY>349</locationY>
+        <defaultConnector>
+            <targetReference>set_task_name_for_priorisiert</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>priorisiert</defaultConnectorLabel>
+        <rules>
+            <name>outcome_in_kontakt</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>loop_lead.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In_Kontakt</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>set_task_name_for_in_kontakt</targetReference>
+            </connector>
+            <label>in kontakt</label>
+        </rules>
+    </decisions>
     <interviewLabel>Reactivate postponed Leads {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Reactivate postponed Leads</label>
     <loops>
@@ -54,8 +111,8 @@
     <recordCreates>
         <name>create_reactivation_task</name>
         <label>create reactivation task</label>
-        <locationX>777</locationX>
-        <locationY>349</locationY>
+        <locationX>1157</locationX>
+        <locationY>156</locationY>
         <connector>
             <targetReference>loop_over_leads</targetReference>
         </connector>
@@ -86,7 +143,7 @@
         <inputAssignments>
             <field>Subject</field>
             <value>
-                <stringValue>Lead reaktivieren</stringValue>
+                <elementReference>string_task_name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -128,10 +185,10 @@
     <recordUpdates>
         <name>update_loop_lead</name>
         <label>update loop lead</label>
-        <locationX>630</locationX>
-        <locationY>349</locationY>
+        <locationX>607</locationX>
+        <locationY>347</locationY>
         <connector>
-            <targetReference>create_reactivation_task</targetReference>
+            <targetReference>decision_loop_lead_status</targetReference>
         </connector>
         <inputReference>loop_lead</inputReference>
     </recordUpdates>
@@ -143,8 +200,8 @@
         </connector>
         <schedule>
             <frequency>Daily</frequency>
-            <startDate>2020-03-31</startDate>
-            <startTime>04:00:00.000Z</startTime>
+            <startDate>2020-04-09</startDate>
+            <startTime>04:45:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
@@ -159,6 +216,13 @@
     </variables>
     <variables>
         <name>loop_lead_status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>string_task_name</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

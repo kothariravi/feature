@@ -3,7 +3,6 @@
     <fullName>Other</fullName>
     <active>true</active>
     <businessProcess>Consulting</businessProcess>
-    <description>Reden und Immobilien</description>
     <label>Other</label>
     <picklistValues>
         <picklist>Aktuelle_Planungen__c</picklist>

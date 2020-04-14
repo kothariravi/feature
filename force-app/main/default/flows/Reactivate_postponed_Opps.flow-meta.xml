@@ -86,7 +86,7 @@
         <inputAssignments>
             <field>Subject</field>
             <value>
-                <stringValue>Lead reaktivieren</stringValue>
+                <stringValue>Reminder: Opp reaktivieren</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>

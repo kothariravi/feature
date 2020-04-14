@@ -191,6 +191,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Letzte_Aktivitaet_Erstelldatum__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.LinkedIn_URL__c</field>
         <readable>true</readable>
@@ -1506,6 +1511,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Letzte_Aktivitaet_Erstelldatum__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Loss_Reason_Other__c</field>
         <readable>true</readable>
@@ -1712,7 +1722,23 @@
     </fieldPermissions>
     <flowAccesses>
         <enabled>false</enabled>
+        <flow>Account_Last_Activity_Reminder</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Complete_all_Tasks</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Launch_Task_Completed_Flow</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
         <flow>Lead_Dropped</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Lead_Inactivity_Reminder</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -1733,6 +1759,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Lead_Stage_Tracking_out</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Opp_Last_Activity_Reminder</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -2314,6 +2344,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>OverrideForecasts</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunFlow</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

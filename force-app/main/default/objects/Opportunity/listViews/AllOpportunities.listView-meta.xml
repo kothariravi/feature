@@ -3,16 +3,11 @@
     <fullName>AllOpportunities</fullName>
     <columns>OPPORTUNITY.NAME</columns>
     <columns>OPPORTUNITY.AMOUNT</columns>
-    <columns>Division__c</columns>
-    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Branche__c</columns>
     <columns>OPPORTUNITY.STAGE_NAME</columns>
     <columns>OPPORTUNITY.PROBABILITY</columns>
     <columns>ACCOUNT.NAME</columns>
-    <columns>OPPORTUNITY.TYPE</columns>
     <columns>CORE.USERS.FULL_NAME</columns>
-    <columns>Lead_Partner__c</columns>
-    <columns>Reference_Guidelines__c</columns>
-    <columns>SYNCEDQUOTE.NAME</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>OPPORTUNITY.STAGE_NAME</field>

@@ -27,5 +27,10 @@
         <field>LEAD.CITY</field>
         <operation>equals</operation>
     </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>tkud</value>
+    </filters>
     <label>Alle Leads</label>
 </ListView>

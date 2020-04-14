@@ -2,7 +2,7 @@
 <ActivitiesSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <allowUsersToRelateMultipleContactsToTasksAndEvents>true</allowUsersToRelateMultipleContactsToTasksAndEvents>
     <autoRelateEventAttendees>false</autoRelateEventAttendees>
-    <enableActivityReminders>true</enableActivityReminders>
+    <enableActivityReminders>false</enableActivityReminders>
     <enableClickCreateEvents>true</enableClickCreateEvents>
     <enableDragAndDropScheduling>true</enableDragAndDropScheduling>
     <enableEmailTracking>true</enableEmailTracking>
