@@ -1,24 +1,34 @@
-global class OppInactivityReminder implements Database.Batchable<sObject>, Database.Stateful {
+global class LeadInactivityReminder implements Database.Batchable<sObject>, Database.Stateful {
 
     global Integer totalRecordsProcessed = 0;
     global Integer totalTasksCreated = 0;
 
-    global final String query = 'SELECT Id, OwnerId, Letzte_Aktivitaet_Erstelldatum__c FROM Opportunity WHERE IsClosed = false AND StageName != \'Postponed\'';
+    global final String query = 'SELECT Id, Status, OwnerId, Letzte_Aktivitaet_Erstelldatum__c FROM Lead WHERE Status IN (\'In_Kontakt\', \'Call/Pitch Follow Up\')';
 
     global Database.QueryLocator start(Database.BatchableContext batchContext) {
         return Database.getQueryLocator(query);
     }
 
-    global void execute(Database.BatchableContext batchContext, List<Opportunity> scope) {
-        for (Opportunity opp : scope) {
-            if (opp.Letzte_Aktivitaet_Erstelldatum__c <= Date.today() - 7) {
-                List<Task> openReminderTasks = [SELECT Id FROM Task WHERE IsClosed = false AND Type = 'Inactivity Reminder' AND WhatId = :opp.Id LIMIT 1];
+    global void execute(Database.BatchableContext batchContext, List<Lead> scope) {
+        for (Lead lead : scope) {
+            if ((lead.Letzte_Aktivitaet_Erstelldatum__c <= (Date.today() - 30) && lead.status == 'In_Kontakt')
+                || (lead.Letzte_Aktivitaet_Erstelldatum__c <= (Date.today() - 7) && lead.status == 'Call/Pitch Follow Up')) {
+
+                List<Task> openReminderTasks = [SELECT Id FROM Task WHERE IsClosed = false AND Type = 'Inactivity Reminder' AND WhoId = :lead.Id LIMIT 1];
+
+                String taskSubject;
+                if (lead.status == 'In_Kontakt') {
+                    taskSubject = 'Reminder: Wiederaufnahme Kontakt';
+                } else {
+                    taskSubject = 'Reminder: Lead vorantreiben';
+                }
+
                 if (openReminderTasks.isEmpty()) {
                     Task reminderTask = new Task(
-                        Subject = 'Reminder: Opportunity vorantreiben',
+                        Subject = taskSubject,
                         Type = 'Inactivity Reminder',
-                        WhatId = opp.Id,
-                        OwnerId = opp.OwnerId,
+                        WhoId = lead.Id,
+                        OwnerId = lead.OwnerId,
                         ActivityDate = Date.today()
                     );
                     insert reminderTask;

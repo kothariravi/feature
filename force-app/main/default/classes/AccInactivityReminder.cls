@@ -1,24 +1,27 @@
-global class OppInactivityReminder implements Database.Batchable<sObject>, Database.Stateful {
+global class AccInactivityReminder implements Database.Batchable<sObject>, Database.Stateful {
 
     global Integer totalRecordsProcessed = 0;
     global Integer totalTasksCreated = 0;
 
-    global final String query = 'SELECT Id, OwnerId, Letzte_Aktivitaet_Erstelldatum__c FROM Opportunity WHERE IsClosed = false AND StageName != \'Postponed\'';
+    global final String query = 'SELECT Id, Kundensegment__c, OwnerId, Letzte_Aktivitaet_Erstelldatum__c FROM Account WHERE Kundensegment__c IN (\'Gold\',\'Silber\',\'Bronze\')';
 
     global Database.QueryLocator start(Database.BatchableContext batchContext) {
         return Database.getQueryLocator(query);
     }
 
-    global void execute(Database.BatchableContext batchContext, List<Opportunity> scope) {
-        for (Opportunity opp : scope) {
-            if (opp.Letzte_Aktivitaet_Erstelldatum__c <= Date.today() - 7) {
-                List<Task> openReminderTasks = [SELECT Id FROM Task WHERE IsClosed = false AND Type = 'Inactivity Reminder' AND WhatId = :opp.Id LIMIT 1];
+    global void execute(Database.BatchableContext batchContext, List<Account> scope) {
+        for (Account acc : scope) {
+            if ((acc.Letzte_Aktivitaet_Erstelldatum__c <= (Date.today() - 60) && (acc.Kundensegment__c == 'Gold' || acc.Kundensegment__c == 'Silber'))
+                || (acc.Letzte_Aktivitaet_Erstelldatum__c <= (Date.today() - 90) && acc.Kundensegment__c == 'Bronze')) {
+
+                List<Task> openReminderTasks = [SELECT Id FROM Task WHERE IsClosed = false AND Type = 'Inactivity Reminder' AND WhatId = :acc.Id LIMIT 1];
+
                 if (openReminderTasks.isEmpty()) {
                     Task reminderTask = new Task(
-                        Subject = 'Reminder: Opportunity vorantreiben',
+                        Subject = 'Reminder: Wiederaufnahme Kontakt',
                         Type = 'Inactivity Reminder',
-                        WhatId = opp.Id,
-                        OwnerId = opp.OwnerId,
+                        WhatId = acc.Id,
+                        OwnerId = acc.OwnerId,
                         ActivityDate = Date.today()
                     );
                     insert reminderTask;
