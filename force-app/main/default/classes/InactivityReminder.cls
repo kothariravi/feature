@@ -26,6 +26,7 @@ global class InactivityReminder {
             for (Task task : allTasks) {
                 if (task.whatId == acc.id && !task.isClosed && task.subject.contains('Kontaktieren:')) {
                     hasOpenReminderTasks = TRUE;
+                    break;
                 }
             }
 
@@ -78,6 +79,7 @@ global class InactivityReminder {
             for (Task task : allTasks) {
                 if (task.whatId == opp.id && !task.isClosed && task.subject.contains('Kontaktieren:')) {
                     hasOpenReminderTasks = TRUE;
+                    break;
                 }
             }
 
@@ -113,6 +115,7 @@ global class InactivityReminder {
             for (Task task : allTasks) {
                 if (task.whoId == lead.id && !task.isClosed && task.subject.contains('Kontaktieren:')) {
                     hasOpenReminderTasks = TRUE;
+                    break;
                 }
             }
 
