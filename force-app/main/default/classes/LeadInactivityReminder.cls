@@ -11,10 +11,11 @@ global class LeadInactivityReminder implements Database.Batchable<sObject>, Data
 
     global void execute(Database.BatchableContext batchContext, List<Lead> scope) {
         for (Lead lead : scope) {
-            if ((lead.Letzte_Aktivitaet_Erstelldatum__c <= (Date.today() - 30) && lead.status == 'In_Kontakt')
-                || (lead.Letzte_Aktivitaet_Erstelldatum__c <= (Date.today() - 7) && lead.status == 'Call/Pitch Follow Up')) {
+            if ((lead.Letzte_Aktivitaet_Erstelldatum__c < (Date.today() - 30) && lead.status == 'In_Kontakt')
+                || (lead.Letzte_Aktivitaet_Erstelldatum__c < (Date.today() - 7) && lead.status == 'Call/Pitch Follow Up')) {
 
                 List<Task> openReminderTasks = [SELECT Id FROM Task WHERE IsClosed = false AND Type = 'Inactivity Reminder' AND WhoId = :lead.Id LIMIT 1];
+                List<Task> openTasksInFuture = [SELECT Id FROM Task WHERE IsClosed = false AND ActivityDate >= TODAY AND WhoId = :lead.Id LIMIT 1];
 
                 String taskSubject;
                 if (lead.status == 'In_Kontakt') {
@@ -23,7 +24,7 @@ global class LeadInactivityReminder implements Database.Batchable<sObject>, Data
                     taskSubject = 'Reminder: Lead vorantreiben';
                 }
 
-                if (openReminderTasks.isEmpty()) {
+                if (openReminderTasks.isEmpty() && openTasksInFuture.isEmpty()) {
                     Task reminderTask = new Task(
                         Subject = taskSubject,
                         Type = 'Inactivity Reminder',

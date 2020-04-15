@@ -11,9 +11,12 @@ global class OppInactivityReminder implements Database.Batchable<sObject>, Datab
 
     global void execute(Database.BatchableContext batchContext, List<Opportunity> scope) {
         for (Opportunity opp : scope) {
-            if (opp.Letzte_Aktivitaet_Erstelldatum__c <= Date.today() - 7) {
+            if (opp.Letzte_Aktivitaet_Erstelldatum__c < Date.today() - 7) {
+
                 List<Task> openReminderTasks = [SELECT Id FROM Task WHERE IsClosed = false AND Type = 'Inactivity Reminder' AND WhatId = :opp.Id LIMIT 1];
-                if (openReminderTasks.isEmpty()) {
+                List<Task> openTasksInFuture = [SELECT Id FROM Task WHERE IsClosed = false AND ActivityDate >= TODAY AND WhatId = :opp.Id LIMIT 1];
+
+                if (openReminderTasks.isEmpty() && openTasksInFuture.isEmpty()) {
                     Task reminderTask = new Task(
                         Subject = 'Reminder: Opportunity vorantreiben',
                         Type = 'Inactivity Reminder',

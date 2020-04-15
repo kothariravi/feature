@@ -11,12 +11,13 @@ global class AccInactivityReminder implements Database.Batchable<sObject>, Datab
 
     global void execute(Database.BatchableContext batchContext, List<Account> scope) {
         for (Account acc : scope) {
-            if ((acc.Letzte_Aktivitaet_Erstelldatum__c <= (Date.today() - 60) && (acc.Kundensegment__c == 'Gold' || acc.Kundensegment__c == 'Silber'))
-                || (acc.Letzte_Aktivitaet_Erstelldatum__c <= (Date.today() - 90) && acc.Kundensegment__c == 'Bronze')) {
+            if ((acc.Letzte_Aktivitaet_Erstelldatum__c < (Date.today() - 60) && (acc.Kundensegment__c == 'Gold' || acc.Kundensegment__c == 'Silber'))
+                || (acc.Letzte_Aktivitaet_Erstelldatum__c < (Date.today() - 90) && acc.Kundensegment__c == 'Bronze')) {
 
                 List<Task> openReminderTasks = [SELECT Id FROM Task WHERE IsClosed = false AND Type = 'Inactivity Reminder' AND WhatId = :acc.Id LIMIT 1];
+                List<Task> openTasksInFuture = [SELECT Id FROM Task WHERE IsClosed = false AND ActivityDate >= TODAY AND WhatId = :acc.Id LIMIT 1];
 
-                if (openReminderTasks.isEmpty()) {
+                if (openReminderTasks.isEmpty() && openTasksInFuture.isEmpty()) {
                     Task reminderTask = new Task(
                         Subject = 'Reminder: Wiederaufnahme Kontakt',
                         Type = 'Inactivity Reminder',
