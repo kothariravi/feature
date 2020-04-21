@@ -2,10 +2,12 @@ global class AccInactivityReminder implements Database.Batchable<sObject>, Datab
 
     global Integer totalRecordsProcessed = 0;
     global Integer totalTasksCreated = 0;
+    global User fallbackOwner;
 
     global final String query = 'SELECT Id, Kundensegment__c, OwnerId, Letzte_Aktivitaet_Erstelldatum__c FROM Account WHERE Kundensegment__c IN (\'Gold\',\'Silber\',\'Bronze\')';
 
     global Database.QueryLocator start(Database.BatchableContext batchContext) {
+        fallbackOwner = [SELECT Id FROM User WHERE Alias = 'nnied'][0];
         return Database.getQueryLocator(query);
     }
 
@@ -25,7 +27,13 @@ global class AccInactivityReminder implements Database.Batchable<sObject>, Datab
                         OwnerId = acc.OwnerId,
                         ActivityDate = Date.today()
                     );
-                    insert reminderTask;
+                    try {
+                        insert reminderTask;
+                    } catch (DmlException e) {
+                        System.debug(e.getMessage());
+                        reminderTask.OwnerId = fallbackOwner.Id;
+                        insert reminderTask;
+                    }
                     totalTasksCreated++;
                 }
             }
