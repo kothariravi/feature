@@ -1742,10 +1742,6 @@
     </fieldPermissions>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Account_Last_Activity_Reminder</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
         <flow>Complete_all_Tasks</flow>
     </flowAccesses>
     <flowAccesses>
@@ -1755,10 +1751,6 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Lead_Dropped</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>Lead_Inactivity_Reminder</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -1779,10 +1771,6 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Lead_Stage_Tracking_out</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>Opp_Last_Activity_Reminder</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>

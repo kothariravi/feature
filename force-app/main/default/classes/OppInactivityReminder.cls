@@ -2,10 +2,12 @@ global class OppInactivityReminder implements Database.Batchable<sObject>, Datab
 
     global Integer totalRecordsProcessed = 0;
     global Integer totalTasksCreated = 0;
+    global User fallbackOwner;
 
     global final String query = 'SELECT Id, OwnerId, Letzte_Aktivitaet_Erstelldatum__c FROM Opportunity WHERE IsClosed = false AND StageName != \'Postponed\'';
 
     global Database.QueryLocator start(Database.BatchableContext batchContext) {
+        fallbackOwner = [SELECT Id FROM User WHERE Alias = 'nnied'][0];
         return Database.getQueryLocator(query);
     }
 
@@ -24,7 +26,13 @@ global class OppInactivityReminder implements Database.Batchable<sObject>, Datab
                         OwnerId = opp.OwnerId,
                         ActivityDate = Date.today()
                     );
-                    insert reminderTask;
+                    try {
+                        insert reminderTask;
+                    } catch (DmlException e) {
+                        System.debug(e.getMessage());
+                        reminderTask.OwnerId = fallbackOwner.Id;
+                        insert reminderTask;
+                    }
                     totalTasksCreated++;
                 }
             }

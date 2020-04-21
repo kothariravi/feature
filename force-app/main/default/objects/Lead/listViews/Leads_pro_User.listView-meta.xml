@@ -9,7 +9,7 @@
     <filters>
         <field>LEAD.STATUS</field>
         <operation>equals</operation>
-        <value>In_Kontakt</value>
+        <value>Cold Outreach,In_Kontakt</value>
     </filters>
     <filters>
         <field>CORE.USERS.ALIAS</field>

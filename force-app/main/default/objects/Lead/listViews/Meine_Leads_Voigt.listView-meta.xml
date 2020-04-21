@@ -16,21 +16,14 @@
     <columns>LEAD.URL</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>LEAD.ZIP</field>
+        <field>CORE.USERS.LAST_NAME</field>
         <operation>equals</operation>
+        <value>Keese</value>
     </filters>
     <filters>
-        <field>LEAD.STREET</field>
+        <field>LEAD.STATUS</field>
         <operation>equals</operation>
-    </filters>
-    <filters>
-        <field>LEAD.CITY</field>
-        <operation>equals</operation>
-    </filters>
-    <filters>
-        <field>CORE.USERS.ALIAS</field>
-        <operation>equals</operation>
-        <value>tkud</value>
+        <value>Importiert,Cold Outreach,In_Kontakt,Call/Pitch Follow Up</value>
     </filters>
     <label>Alle Leads</label>
 </ListView>
