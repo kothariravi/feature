@@ -4,7 +4,7 @@
     <label>cremanski api</label>
     <oauthConfig>
         <callbackUrl>https://login.salesforce.com/services/oauth2/callback</callbackUrl>
-        <consumerKey>3MVG9lcxCTdG2VbtWAnBLcHTY.3jkEcIuuRwV9tMGyKgB2tLCbTy9SwLROKsz_Uv.91PQmU8MbEydYQglfaES</consumerKey>
+        <consumerKey>3MVG9llQY5kM9T6ft1Y9n7M2VbSDVi4NE.cqw2Te9RaSKIVU5dlmZ1usKtQB69czR3aNnHCuTOxupaiHLST4z</consumerKey>
         <isAdminApproved>false</isAdminApproved>
         <scopes>Full</scopes>
         <scopes>RefreshToken</scopes>

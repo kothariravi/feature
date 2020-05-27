@@ -56,11 +56,59 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AccInactivityReminder</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ContactEventsMatcher</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>EH_Test_Trigger_OpportunityLineItem</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>EventRelationBatchQuery</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LeadInactivityReminder</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OppInactivityReminder</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ScheduledInactivityReminder</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ScheduledMatchContactEventsToOpp</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestEventRelationBatchQuery</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestInactivityReminder</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestMatchContactEventsToOpp</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestRelateEventOnLeadConversion</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestTriggerLaunchCampaignFlow</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestTriggerUpdateOppNewRecurring</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -976,6 +1024,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.ConvertedContactId__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Event.Responsible__c</field>
         <readable>true</readable>
@@ -1711,14 +1764,15 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.ConvertedContactId__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Task.Responsible__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>Account_Last_Activity_Reminder</flow>
-    </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Complete_all_Tasks</flow>
@@ -1730,10 +1784,6 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Lead_Dropped</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>Lead_Inactivity_Reminder</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -1757,7 +1807,7 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Opp_Last_Activity_Reminder</flow>
+        <flow>Match_Contact_Events_to_Opp</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
