@@ -65,6 +65,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ContactEventsMatcher</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>EH_Test_Trigger_OpportunityLineItem</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -81,11 +85,23 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ScheduledMatchContactEventsToOpp</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestInactivityReminder</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TestMatchContactEventsToOpp</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestTriggerLaunchCampaignFlow</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestTriggerUpdateOppNewRecurring</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1451,9 +1467,14 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Opportunity.Branche__c</field>
+        <editable>false</editable>
+        <field>Opportunity.Branche_Account__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Branche__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1771,6 +1792,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Lead_Stage_Tracking_out</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Match_Contact_Events_to_Opp</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>

@@ -2,13 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Vortrag</fullName>
     <active>true</active>
-    <errorConditionFormula>AND(
-OR(
-ISPICKVAL(AccountSource, &#39;Vortrag (nicht CK)&#39;),
-ISPICKVAL(AccountSource, &#39;Vortrag&#39;)
-),
-ISBLANK( Vortrag__c )
-)</errorConditionFormula>
+    <errorConditionFormula>AND(CONTAINS(TEXT(AccountSource), &apos;Veranstaltung&apos;), Vortrag__c = &apos;&apos;)</errorConditionFormula>
     <errorDisplayField>Vortrag__c</errorDisplayField>
     <errorMessage>Bitte die genaue Veranstaltung angeben</errorMessage>
 </ValidationRule>

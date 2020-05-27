@@ -9,5 +9,6 @@
     <fields>Email</fields>
     <fields>OwnerId</fields>
     <fields>Status</fields>
+    <fields>RecordTypeId</fields>
     <label>Leads Custom Compact Layout</label>
 </CompactLayout>

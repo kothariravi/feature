@@ -259,6 +259,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -379,6 +383,7 @@
             <field>OPPORTUNITY.CREATED_DATE</field>
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N1v00000SQfbi</field>
@@ -577,6 +582,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -703,6 +712,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -903,6 +913,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -1033,6 +1047,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -1230,6 +1245,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -1359,6 +1378,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -1560,6 +1580,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -1690,6 +1714,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -1887,6 +1912,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -2016,6 +2045,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -2217,6 +2247,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -2347,6 +2381,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -2544,6 +2579,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -2673,6 +2712,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -2874,6 +2914,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -3004,6 +3048,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -3201,6 +3246,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -3330,6 +3379,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -3531,6 +3581,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -3661,6 +3715,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>
@@ -3858,6 +3913,10 @@
             <label>Andere Beratungen im Einsatz</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T0y6G</field>
+            <label>Branche</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N1v00000SQlAY</field>
             <label>Branche</label>
         </opportunityListFieldsLabelMappings>
@@ -3987,6 +4046,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00N1v00000SQfb4</field>
             <field>00N1v00000SQfbE</field>
+            <field>00N1v00000T0y6G</field>
             <field>00N1v00000SQlAY</field>
             <field>00N0Y00000OaQ3v</field>
             <field>00N0Y00000SLKEY</field>

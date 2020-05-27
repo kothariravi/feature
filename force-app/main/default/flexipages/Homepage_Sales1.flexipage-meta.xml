@@ -230,9 +230,6 @@
             <componentName>flexipage:reportChart</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>home:assistant</componentName>
-        </componentInstances>
-        <componentInstances>
             <componentInstanceProperties>
                 <name>context</name>
                 <value>BOOKMARKS</value>

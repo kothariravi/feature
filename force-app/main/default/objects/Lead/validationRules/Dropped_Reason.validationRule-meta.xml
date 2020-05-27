@@ -4,8 +4,8 @@
     <active>true</active>
     <errorConditionFormula>AND
 (
-ISPICKVAL(Status, &#39;Dropped&#39;),
-ISPICKVAL(Dropped_Reason__c, &#39;&#39;)
+ISPICKVAL(Status, &apos;Dropped&apos;),
+ISPICKVAL(Dropped_Reason__c, &apos;&apos;)
 )</errorConditionFormula>
     <errorDisplayField>Dropped_Reason__c</errorDisplayField>
     <errorMessage>Please specify Dropped Reason</errorMessage>
