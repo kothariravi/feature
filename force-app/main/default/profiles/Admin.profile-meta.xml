@@ -60,11 +60,51 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>InactivityReminder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OppForecastCalculator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ScheduledInactivityReminder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ScheduledOppForecastCalculator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestInactivityReminder</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestOppForecastCalculator</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestTriggerLaunchCampaignFlow</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TestTriggerUpdateOppNewRecurring</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestUpdateAllOppsNewRecurring</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestUpdateMonthlyGoalTrigger</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TriggerBypass</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>UpdateAllOppsNewRecurring</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
@@ -894,6 +934,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Next_Reminder__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Contact.OtherAddress</field>
         <readable>false</readable>
@@ -1315,6 +1360,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Expected_Amount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Forecast__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1399,7 +1449,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Opportunity.Type</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1637,6 +1687,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Contact-Contact Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ContactPointEmail-Kontaktpunkt-E-Mail-Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ContactPointPhone-Kontaktpunkttelefon-Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ContactProjectAsso__c-ContactProjectAssociation Layout</layout>
@@ -2096,6 +2152,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>ConsentApiUpdate</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>ContentAdministrator</name>
     </userPermissions>
     <userPermissions>
@@ -2525,6 +2585,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendExternalEmailAvailable</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

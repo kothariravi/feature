@@ -4,7 +4,7 @@
     <active>true</active>
     <errorConditionFormula>AND
 (
-ISPICKVAL(Dropped_Reason__c, &#39;Other&#39;),
+ISPICKVAL(Dropped_Reason__c, &apos;Other&apos;),
 ISBLANK(Dropped_Reason_Other__c)
 )</errorConditionFormula>
     <errorDisplayField>Dropped_Reason_Other__c</errorDisplayField>

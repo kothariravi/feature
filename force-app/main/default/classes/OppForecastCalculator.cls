@@ -79,49 +79,49 @@ global class OppForecastCalculator implements Database.Batchable<SObject> {
             }
         }
 
-        oppHistoryTable = new Set<Map<String, String>>();
-        for (Opportunity opp : allOppsWithHistories) {
-            for (OpportunityHistory oppHistory : opp.opportunityHistories) {
-                oppHistoryTable.add(new Map<String, String>{
-                    'opportunityId' => opp.id,
-                    'oppLeadSource' => opp.leadSource,
-                    'oppCurrentStage' => opp.stageName,
-                    'oppHistoryStage' => oppHistory.stageName
-                });
-            }
-        }
+        // oppHistoryTable = new Set<Map<String, String>>();
+        // for (Opportunity opp : allOppsWithHistories) {
+        //     for (OpportunityHistory oppHistory : opp.opportunityHistories) {
+        //         oppHistoryTable.add(new Map<String, String>{
+        //             'opportunityId' => opp.id,
+        //             'oppLeadSource' => opp.leadSource,
+        //             'oppCurrentStage' => opp.stageName,
+        //             'oppHistoryStage' => oppHistory.stageName
+        //         });
+        //     }
+        // }
 
-        Set<Map<String, String>> allOppsSameParams = new Set<Map<String, String>>();
-        for (Map<String, String> oppEntry : oppHistoryTable) {
-            if (oppEntry.get('oppHistoryStage') == oppToUpdate.stageName
-                && oppEntry.get('oppLeadSource') == oppToUpdate.leadSource
-                && oppEntry.get('opportunityId') != oppToUpdate.Id
-            ) {
-                allOppsSameParams.add(oppEntry);
-            }
-        }
-        System.debug('allOppsSameParams: ' + allOppsSameParams);
+        // Set<Map<String, String>> allOppsSameParams = new Set<Map<String, String>>();
+        // for (Map<String, String> oppEntry : oppHistoryTable) {
+        //     if (oppEntry.get('oppHistoryStage') == oppToUpdate.stageName
+        //         && oppEntry.get('oppLeadSource') == oppToUpdate.leadSource
+        //         && oppEntry.get('opportunityId') != oppToUpdate.Id
+        //     ) {
+        //         allOppsSameParams.add(oppEntry);
+        //     }
+        // }
+        // System.debug('allOppsSameParams: ' + allOppsSameParams);
 
-        Set<Map<String, String>> allWonOppsSameParams = new Set<Map<String, String>>();
-        for (Map<String, String> oppEntry : allOppsSameParams) {
-            if (oppEntry.get('oppCurrentStage') == 'Closed Won') {
-                allWonOppsSameParams.add(oppEntry);
-            }
-        }
-        System.debug('allWonOppsSameParams: ' + allWonOppsSameParams);
+        // Set<Map<String, String>> allWonOppsSameParams = new Set<Map<String, String>>();
+        // for (Map<String, String> oppEntry : allOppsSameParams) {
+        //     if (oppEntry.get('oppCurrentStage') == 'Closed Won') {
+        //         allWonOppsSameParams.add(oppEntry);
+        //     }
+        // }
+        // System.debug('allWonOppsSameParams: ' + allWonOppsSameParams);
 
-        Double calculatedAmount;
-        if (allOppsSameParams.size() == 0) {
-            // org-wide avg cvr
-            // aggregate queries
-            Double calculatedCVR = allWonOpps.size() / (Double) allClosedOpps.size();
-            calculatedAmount = oppToUpdate.amount * calculatedCVR;
-        } else {
-            Double calculatedCVR = allWonOppsSameParams.size() / (Double) allOppsSameParams.size();
-            calculatedAmount = oppToUpdate.amount * calculatedCVR;
-        }
+        // Double calculatedAmount;
+        // if (allOppsSameParams.size() == 0) {
+        //     // org-wide avg cvr
+        //     // aggregate queries
+        //     Double calculatedCVR = allWonOpps.size() / (Double) allClosedOpps.size();
+        //     calculatedAmount = oppToUpdate.amount * calculatedCVR;
+        // } else {
+        //     Double calculatedCVR = allWonOppsSameParams.size() / (Double) allOppsSameParams.size();
+        //     calculatedAmount = oppToUpdate.amount * calculatedCVR;
+        // }
 
-        oppToUpdate.expected_amount__c = calculatedAmount;
+        // oppToUpdate.expected_amount__c = calculatedAmount;
 
         return oppToUpdate;
     }

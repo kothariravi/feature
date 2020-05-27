@@ -4,8 +4,8 @@
     <active>true</active>
     <errorConditionFormula>AND(
 OR(
-ISPICKVAL(LeadSource , &#39;Vortrag (nicht CK)&#39;),
-ISPICKVAL(LeadSource , &#39;Vortrag&#39;)
+ISPICKVAL(LeadSource , &apos;Vortrag (nicht CK)&apos;),
+ISPICKVAL(LeadSource , &apos;Vortrag&apos;)
 ),
 ISBLANK( Vortrag__c  )
 )</errorConditionFormula>

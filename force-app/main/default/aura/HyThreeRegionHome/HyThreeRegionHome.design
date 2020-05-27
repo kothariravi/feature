@@ -1,0 +1,9 @@
+<design:component label="3+2 Column Page">
+    <flexipage:template >
+      <flexipage:region name="column1" defaultWidth="Medium" />
+      <flexipage:region name="column2" defaultWidth="Medium" />
+      <flexipage:region name="column3" defaultWidth="Medium" />
+      <flexipage:region name="bottomLeft" defaultWidth="Medium" />
+      <flexipage:region name="bottomRight" defaultWidth="Medium" />
+  </flexipage:template>
+</design:component>

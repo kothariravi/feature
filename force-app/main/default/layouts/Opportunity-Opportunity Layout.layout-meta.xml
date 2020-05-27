@@ -16,7 +16,7 @@
                 <field>AccountId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>Type</field>
             </layoutItems>
             <layoutItems>
@@ -34,6 +34,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Branche__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Expected_Amount__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

@@ -3,8 +3,6 @@ private class TestInactivityReminder {
     public static String CRON_EXP = '0 0 0 15 3 ? 2022';
 
     @isTest static void testScheduledMethod() {
-        // test w/ 1000+ records & tasks
-
         Account acc = new Account(
             Name = 'Test Acc',
             Kundensegment__c = 'Gold'

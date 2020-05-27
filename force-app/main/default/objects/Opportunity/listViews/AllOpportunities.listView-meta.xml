@@ -10,14 +10,8 @@
     <columns>ACCOUNT.NAME</columns>
     <columns>OPPORTUNITY.TYPE</columns>
     <columns>CORE.USERS.FULL_NAME</columns>
-    <columns>Lead_Partner__c</columns>
-    <columns>Reference_Guidelines__c</columns>
-    <columns>SYNCEDQUOTE.NAME</columns>
+    <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+    <columns>Expected_Amount__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>OPPORTUNITY.STAGE_NAME</field>
-        <operation>notEqual</operation>
-        <value>Closed Won</value>
-    </filters>
     <label>Alle Opportunities</label>
 </ListView>

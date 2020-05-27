@@ -1,0 +1,31 @@
+<aura:component implements="lightning:homeTemplate">
+    <aura:attribute name="column1" type="Aura.Component[]" />
+    <aura:attribute name="column2" type="Aura.Component[]" />
+    <aura:attribute name="column3" type="Aura.Component[]" />
+    <aura:attribute name="bottomLeft" type="Aura.Component[]" />
+    <aura:attribute name="bottomRight" type="Aura.Component[]" />
+     
+    <div>
+        <lightning:layout horizontalAlign="spread" pullToBoundary="small">
+            <lightning:layoutItem size="4" flexibility="grow" padding="around-small">
+                {!v.column1}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" flexibility="grow" padding="around-small">        
+                {!v.column2}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" flexibility="grow" padding="around-small">
+                {!v.column3}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    <div>
+        <lightning:layout>
+            <lightning:layoutItem flexibility="grow" class="slds-m-right_small">
+                {!v.bottomLeft}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="3.9" class="slds-m-left_small">
+                {!v.bottomRight}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>
