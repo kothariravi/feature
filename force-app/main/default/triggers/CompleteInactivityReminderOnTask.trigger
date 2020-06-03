@@ -1,6 +1,15 @@
-trigger CompleteInactivityReminderOnTask on Task (after insert) {
+trigger CompleteInactivityReminderOnTask on Task (after insert, after update) {
     for (Task task : Trigger.new) {
-        if (task.ActivityDate != null) {
+        Boolean proceedOnUpdate = false;
+
+        if (Trigger.isUpdate) {
+            Task oldTask = Trigger.oldMap.get(task.Id);
+            if (task.ActivityDate != oldTask.ActivityDate) {
+                proceedOnUpdate = true;
+            }
+        }
+
+        if ((Trigger.isInsert || proceedOnUpdate) && task.ActivityDate != null) {
             List<Task> reminderTasks = [
                 SELECT Id, Subject FROM Task
                 WHERE Type = 'Inactivity Reminder' AND isClosed = false
