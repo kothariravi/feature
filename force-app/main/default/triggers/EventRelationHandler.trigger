@@ -12,11 +12,7 @@ trigger EventRelationHandler on Event (after insert) {
                 EventId = event.Id,
                 IsWhat = false
             );
-            try {
-                insert evr;
-            } catch (System.DmlException e) {
-                System.debug(e.getMessage());
-            }
+            insert evr;
         }
 
 
