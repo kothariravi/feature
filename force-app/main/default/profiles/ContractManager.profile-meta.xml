@@ -97,6 +97,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TestPostponeOppLineItems</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestTriggerLaunchCampaignFlow</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1761,6 +1765,10 @@
         <field>Task.Responsible__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Clear_Opp_Postponed_Date_on_Stage_Change</flow>
+    </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Complete_all_Tasks</flow>
