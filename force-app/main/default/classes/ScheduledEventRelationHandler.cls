@@ -6,9 +6,9 @@ global class ScheduledEventRelationHandler implements Schedulable {
     }
 
     global void execute(SchedulableContext schedulableContext) {
-        InactivityReminderCompleter irc = new InactivityReminderCompleter(this.event.Id);
         if (event.WhatId == null) {
             ContactEventsMatcher cem = new ContactEventsMatcher(this.event.Id);
         }
+        InactivityReminderCompleter irc = new InactivityReminderCompleter(this.event.Id);
     }
 }
