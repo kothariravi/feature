@@ -14,9 +14,13 @@ global class ContactEventsMatcher {
             List<OpportunityContactRole> crList = [SELECT Id, OpportunityId FROM OpportunityContactRole WHERE ContactId = :evr.RelationId];
 
             for (OpportunityContactRole cr : crList) {
-                Opportunity opp = [SELECT Id, Name, CreatedDate FROM Opportunity WHERE Id = :cr.OpportunityId And IsClosed = false];
-                if (latestOpp == null || opp.CreatedDate > latestOpp.CreatedDate) {
-                    latestOpp = opp;
+                try {
+                    Opportunity opp = [SELECT Id, Name, CreatedDate FROM Opportunity WHERE Id = :cr.OpportunityId And IsClosed = false][0];
+                    if (latestOpp == null || opp.CreatedDate > latestOpp.CreatedDate) {
+                        latestOpp = opp;
+                    }
+                } catch (System.ListException e) {
+                    System.debug(e.getMessage());
                 }
             }
         }
