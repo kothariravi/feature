@@ -10,12 +10,28 @@ trigger CompleteInactivityReminderOnTask on Task (after insert, after update) {
                 }
             }
 
-            if ((Trigger.isInsert || proceedOnUpdate) && task.ActivityDate != null) {
-                List<Task> reminderTasks = [
-                    SELECT Id, Subject FROM Task
-                    WHERE Type = 'Inactivity Reminder' AND isClosed = false
-                    AND (WhoId = :task.WhoId OR WhatId = :task.WhatId)
-                ];
+            if ((Trigger.isInsert || proceedOnUpdate) && task.ActivityDate != null && (task.WhoId != null || task.WhatId != null)) {
+                List<Task> reminderTasks;
+                if (task.WhoId == null) {
+                    reminderTasks = [
+                        SELECT Id, Subject FROM Task
+                        WHERE Type = 'Inactivity Reminder' AND isClosed = false
+                        AND WhatId = :task.WhatId
+                    ];
+                } else if (task.WhatId == null) {
+                    reminderTasks = [
+                        SELECT Id, Subject FROM Task
+                        WHERE Type = 'Inactivity Reminder' AND isClosed = false
+                        AND WhoId = :task.WhoId
+                    ];
+                } else {
+                    reminderTasks = [
+                        SELECT Id, Subject FROM Task
+                        WHERE Type = 'Inactivity Reminder' AND isClosed = false
+                        AND (WhoId = :task.WhoId OR WhatId = :task.WhatId)
+                    ];
+                }
+
                 for (Task reminderTask : reminderTasks) {
                     System.debug(reminderTask);
                     reminderTask.Status = 'Abgeschlossen';

@@ -8,22 +8,45 @@ private class TestCompleteInactivityReminderOnTask {
         );
         insert lead;
 
-        Task reminderTask = new Task(
+        Task reminderTaskLead = new Task(
             Subject = 'Test Reminder Task',
             ActivityDate = Date.today(),
             Type = 'Inactivity Reminder',
             WhoId = lead.Id
         );
-        insert reminderTask;
+        insert reminderTaskLead;
 
-        Task newTask = new Task(
+        Task newTaskLead = new Task(
             Subject = 'Test New Task',
             ActivityDate = Date.today(),
             WhoId = lead.Id
         );
-        insert newTask;
+        insert newTaskLead;
 
-        Task reminderTaskAfterTest = [SELECT Id, isClosed FROM Task WHERE Id = :reminderTask.Id][0];
-        System.assert(reminderTaskAfterTest.isClosed == true);
+        Account acc = new Account(
+            Name = 'Test Account'
+        );
+        insert acc;
+
+        Task reminderTaskAccount = new Task(
+            Subject = 'Test Reminder Task',
+            ActivityDate = Date.today(),
+            Type = 'Inactivity Reminder',
+            WhatId = acc.Id
+        );
+        insert reminderTaskAccount;
+
+        Task newTaskAccount = new Task(
+            Subject = 'Test New Task',
+            ActivityDate = Date.today(),
+            WhatId = acc.Id
+        );
+        insert newTaskAccount;
+
+        Task reminderTaskLeadAfterTest = [SELECT Id, isClosed FROM Task WHERE Id = :reminderTaskLead.Id][0];
+        System.assert(reminderTaskLeadAfterTest.isClosed == true);
+
+        Task reminderTaskAccountAfterTest = [SELECT Id, isClosed FROM Task WHERE Id = :reminderTaskAccount.Id][0];
+        System.assert(reminderTaskAccountAfterTest.isClosed == true);
     }
 }
