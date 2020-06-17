@@ -14,7 +14,7 @@
     <filters>
         <field>CORE.USERS.ALIAS</field>
         <operation>notContain</operation>
-        <value>scamp</value>
+        <value>scamp,nnied</value>
     </filters>
     <filters>
         <field>LEAD.LAST_ACTIVITY</field>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
-    <label>New Lead Consulting</label>
+    <label>New Lead Other</label>
     <optionsCreateFeedItem>true</optionsCreateFeedItem>
     <quickActionLayout>
         <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
@@ -39,6 +39,6 @@
         <quickActionLayoutColumns/>
     </quickActionLayout>
     <targetObject>Lead</targetObject>
-    <targetRecordType>Lead.Consulting</targetRecordType>
+    <targetRecordType>Lead.Other</targetRecordType>
     <type>Create</type>
 </QuickAction>
