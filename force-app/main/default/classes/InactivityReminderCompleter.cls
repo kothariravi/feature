@@ -1,24 +1,15 @@
 global class InactivityReminderCompleter {
     public InactivityReminderCompleter(Id eventId) {
-        List<EventRelation> evrList = [SELECT Id, RelationId, Relation.Type FROM EventRelation WHERE EventId = :eventId];
+        List<EventRelation> evrList = [SELECT Id, RelationId, Relation.Type FROM EventRelation WHERE EventId = :eventId AND Relation.Type != 'User'];
         System.debug(evrList);
 
         for (EventRelation evr : evrList) {
             System.debug(evr);
 
-            String WhoId;
-            String WhatId;
-
-            if (evr.Relation.Type == 'Lead' || evr.Relation.Type == 'Contact') {
-                WhoId = evr.RelationId;
-            } else {
-                WhatId = evr.RelationId;
-            }
-
             List<Task> reminderTasks = [
                 SELECT Id, Subject FROM Task
                 WHERE Type = 'Inactivity Reminder' AND isClosed = false
-                AND (WhoId = :WhoId OR WhatId = :WhatId)
+                AND (WhoId = :evr.RelationId OR WhatId = :evr.RelationId)
             ];
 
             for (Task reminderTask : reminderTasks) {
