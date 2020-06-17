@@ -8,6 +8,7 @@
     <columns>Zielfortschritt__c</columns>
     <columns>UPDATEDBY_USER</columns>
     <columns>Monat__c</columns>
+    <columns>Record_Type__c</columns>
     <filterScope>Everything</filterScope>
     <label>Alle</label>
 </ListView>

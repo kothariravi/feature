@@ -34,21 +34,23 @@
             <value>
                 <stringValue>&quot;Ziel &quot;
 + TEXT(MONTH([Goal__c].Monat__c))
-+ &quot;/&quot; + TEXT(YEAR([Goal__c].Monat__c))</stringValue>
++ &quot;/&quot; + TEXT(YEAR([Goal__c].Monat__c))
++ &quot; - &quot; + TEXT([Goal__c].Record_Type__c)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_3936992678</name>
+        <name>formula_2_myRule_1_A1_4149131903</name>
         <dataType>String</dataType>
         <expression>&quot;Ziel &quot;
 + TEXT(MONTH({!myVariable_current.Monat__c}))
-+ &quot;/&quot; + TEXT(YEAR({!myVariable_current.Monat__c}))</expression>
++ &quot;/&quot; + TEXT(YEAR({!myVariable_current.Monat__c}))
++ &quot; - &quot; + TEXT({!myVariable_current.Record_Type__c})</expression>
     </formulas>
     <formulas>
         <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
-    <interviewLabel>Set_Goal_Name-3_InterviewLabel</interviewLabel>
+    <interviewLabel>Set_Goal_Name-4_InterviewLabel</interviewLabel>
     <label>Set Goal Name</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -150,7 +152,7 @@
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_3936992678</elementReference>
+                <elementReference>formula_2_myRule_1_A1_4149131903</elementReference>
             </value>
         </inputAssignments>
         <object>Goal__c</object>
