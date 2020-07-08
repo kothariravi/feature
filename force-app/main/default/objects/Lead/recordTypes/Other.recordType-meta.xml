@@ -82,6 +82,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Glückspiel</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Handel</fullName>
             <default>false</default>
         </values>
@@ -131,6 +135,10 @@
         </values>
         <values>
             <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sport</fullName>
             <default>false</default>
         </values>
         <values>
