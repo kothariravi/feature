@@ -36,6 +36,205 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Erstkontakt__c</picklist>
+        <values>
+            <fullName>Alina Jansen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andreas Tobits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Artur Reimer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charlotte Von Dryander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chris Heyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christoph Keese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christoph Schwienheer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claudia Alsdorf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Danny Krautz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eileen Hoffmann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franz Simon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Franziska Weller</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frederic Altfeld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friedemann Seith</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heiner Hoefer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isabel Schniepp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jakob Börsch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jan Thede</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jan Wildhirth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>John Lange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julia Pingmann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julian Niederauer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julian Ropers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katharina de Biasi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kathleen Olstedt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lars Zimmermann</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malte Lorenz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manuel Kilian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marc Belohoubek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marion Harnisch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marisa Lange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martin Spindler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monika Klaric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nick Lambeck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nikoline von Nieding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>René Schäfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sebastian Campos Groth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sebastian Herzog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sebastian Hornung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sebastian Voigt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simon Kozlik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stefanie Riechel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steffen Vollmerding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thorsten Kud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thorsten Schäfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tilman Schäfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tim Schwichtenberg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tim Steinmetzger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virginia Palm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Industry</picklist>
         <values>
             <fullName>Automobilzulieferer</fullName>

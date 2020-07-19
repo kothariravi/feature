@@ -29,6 +29,33 @@
             <componentName>flexipage:filterListCard</componentName>
         </componentInstances>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>enableInlineEdit</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>entityName</name>
+                <value>Task</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>filterName</name>
+                <value>Overdue_Records</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideSearchBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>pageSize</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:filterListCard</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentName>home:eventContainer</componentName>
         </componentInstances>
         <name>Facet-9e54a7f7-397b-4ec0-8361-48a1a3d3757d</name>
@@ -221,7 +248,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>reportName</name>
-                <value>Ziel_Bericht_Tws</value>
+                <value>Ziel_Bericht_Homepage_Wp7</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>showRefreshButton</name>
