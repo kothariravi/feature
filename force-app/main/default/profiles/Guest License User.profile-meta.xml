@@ -1897,10 +1897,6 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Set_Goal_Name</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
         <flow>Set_Lead_Converted_at</flow>
     </flowAccesses>
     <flowAccesses>
