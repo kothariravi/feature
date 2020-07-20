@@ -311,6 +311,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -396,6 +400,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -642,6 +647,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -727,6 +736,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -977,6 +987,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -1063,6 +1077,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -1309,6 +1324,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -1394,6 +1413,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -1644,6 +1664,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -1730,6 +1754,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -1976,6 +2001,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -2061,6 +2090,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -2311,6 +2341,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -2397,6 +2431,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -2643,6 +2678,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -2728,6 +2767,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -2978,6 +3018,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -3064,6 +3108,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -3310,6 +3355,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -3395,6 +3444,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -3645,6 +3695,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -3731,6 +3785,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>
@@ -3977,6 +4032,10 @@
             <label>Rechnung verschickt</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00N1v00000T97GA</field>
+            <label>Record Type Name</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00N0Y00000REFE0</field>
             <label>Reference Guidelines</label>
         </opportunityListFieldsLabelMappings>
@@ -4062,6 +4121,7 @@
             <field>00N1v00000T0D8x</field>
             <field>00N1v00000SQfcH</field>
             <field>00N0Y00000SLIBX</field>
+            <field>00N1v00000T97GA</field>
             <field>00N0Y00000REFE0</field>
             <field>00N1v00000T0Fkj</field>
             <field>00N1v00000SQfcR</field>

@@ -66,6 +66,11 @@
             <field>Monat__c</field>
             <table>Goal__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Record_Type__c</field>
+            <table>Goal__c</table>
+        </columns>
         <masterLabel>Ziele</masterLabel>
     </sections>
 </ReportType>

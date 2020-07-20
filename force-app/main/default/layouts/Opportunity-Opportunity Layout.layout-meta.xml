@@ -118,6 +118,10 @@
                 <behavior>Edit</behavior>
                 <field>Wiedervorlage_am__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Record_Type_Name__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
