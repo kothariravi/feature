@@ -31,5 +31,6 @@
     <tabs>standard-Lead</tabs>
     <tabs>standard-Campaign</tabs>
     <tabs>Goal__c</tabs>
+    <tabs>Data_Snapshot__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

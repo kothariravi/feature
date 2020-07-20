@@ -17,6 +17,7 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
     <tabs>Goal__c</tabs>
+    <tabs>Data_Snapshot__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Datamanagement_UtilityBar</utilityBar>
 </CustomApplication>

@@ -3,7 +3,6 @@
     <fullName>AllOpportunities</fullName>
     <columns>OPPORTUNITY.NAME</columns>
     <columns>OPPORTUNITY.AMOUNT</columns>
-    <columns>Branche__c</columns>
     <columns>OPPORTUNITY.STAGE_NAME</columns>
     <columns>OPPORTUNITY.PROBABILITY</columns>
     <columns>ACCOUNT.NAME</columns>
@@ -12,7 +11,7 @@
     <filters>
         <field>OPPORTUNITY.STAGE_NAME</field>
         <operation>notEqual</operation>
-        <value>Closed Won</value>
+        <value>Closed Won,Closed Lost</value>
     </filters>
     <label>Alle Opportunities</label>
 </ListView>

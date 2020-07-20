@@ -13,4 +13,5 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-File</tabs>
     <tabs>Goal__c</tabs>
+    <tabs>Data_Snapshot__c</tabs>
 </CustomApplication>
