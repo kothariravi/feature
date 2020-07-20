@@ -18,6 +18,12 @@ private class TestDataSnapshot {
             insert opp;
         }
 
+        SnapshotSettings__c setting = new SnapshotSettings__c(
+            Name = 'Test',
+            User_Id__c = UserInfo.getUserId()
+        );
+        insert setting;
+
         Test.startTest();
         System.schedule('ScheduledApexTest', '0 0 0 15 3 ? 2022', new ScheduledDataSnapshot());
         Test.stopTest();
