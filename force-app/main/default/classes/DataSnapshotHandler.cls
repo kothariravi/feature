@@ -202,7 +202,7 @@ global class DataSnapshotHandler {
             Leads_in_Priorisiert__c = (Decimal) snaps4Weeks.get('expr10'),
             Converted_Leads__c = (Decimal) snaps4Weeks.get('expr11'),
             Type__c = 'Average',
-            Title__c = 'Avg 4 Weeks'
+            Title__c = 'Avg 4 Weeks: ' + Date.today().day() + '.' + Date.today().month() + '.' + Date.today().year()
         );
         insert snap;
     }
@@ -243,7 +243,7 @@ global class DataSnapshotHandler {
             Leads_in_Priorisiert__c = (Decimal) snaps1Year.get('expr10'),
             Converted_Leads__c = (Decimal) snaps1Year.get('expr11'),
             Type__c = 'Average',
-            Title__c = 'Avg 1 Year'
+            Title__c = 'Avg 1 Year: ' + Date.today().day() + '.' + Date.today().month() + '.' + Date.today().year()
         );
         insert snap;
     }
