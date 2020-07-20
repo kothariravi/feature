@@ -26,6 +26,8 @@ trigger GetAmountUponGoalCreation on Goal__c (before insert, before update) {
 
             Double monthlyBookingsAmountInMonth = (Double) monthlyBookingsByMonth.get('expr0');
             goal.Betrag_im_Zielmonat__c = monthlyBookingsAmountInMonth;
+
+            goal.Name = 'Ziel ' + goal.Monat__c.month() + '/' + goal.Monat__c.year() + ' - ' + goal.Record_Type__c;
         } catch (QueryException e) {
             System.debug(e.getMessage());
         }

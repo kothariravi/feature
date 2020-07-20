@@ -12,5 +12,6 @@ trigger UpdateMonthlyGoal on Opportunity_LI_Monthly_Booking__c (after insert, af
     }
 
     System.debug(bookingList);
-    MonthlyGoalUpdater.updateMonthlyGoal(bookingList);
+    System.debug(bookingList.size());
+    Database.executeBatch(new MonthlyGoalUpdater(bookingList), 35);
 }
