@@ -45,7 +45,7 @@ global class DataSnapshotHandler {
         agr = [
             SELECT COUNT(Id)
             FROM Lead
-            WHERE CreatedDate >= :(Date.today() - 6)
+            WHERE CreatedDate >= :(Date.today() - 7)
         ];
         Decimal newLeads = (Decimal) agr.get('expr0');
 
@@ -59,7 +59,7 @@ global class DataSnapshotHandler {
         agr = [
             SELECT COUNT(Id)
             FROM Lead
-            WHERE Konvertiert_am__c >= :(Date.today() - 6)
+            WHERE Konvertiert_am__c >= :(Date.today() - 7)
         ];
         Decimal convertedLeads = (Decimal) agr.get('expr0');
 
@@ -125,7 +125,7 @@ global class DataSnapshotHandler {
             agr = [
                 SELECT COUNT(Id)
                 FROM Lead
-                WHERE CreatedDate >= :(Date.today() - 6) AND OwnerId = :userId
+                WHERE CreatedDate >= :(Date.today() - 7) AND OwnerId = :userId
             ];
             Decimal newLeads = (Decimal) agr.get('expr0');
 
@@ -139,7 +139,7 @@ global class DataSnapshotHandler {
             agr = [
                 SELECT COUNT(Id)
                 FROM Lead
-                WHERE Konvertiert_am__c >= :(Date.today() - 6) AND OwnerId = :userId
+                WHERE Konvertiert_am__c >= :(Date.today() - 7) AND OwnerId = :userId
             ];
             Decimal convertedLeads = (Decimal) agr.get('expr0');
 
