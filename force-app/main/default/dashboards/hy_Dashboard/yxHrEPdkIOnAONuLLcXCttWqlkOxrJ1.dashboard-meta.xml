@@ -21,8 +21,12 @@
             <values>Tech</values>
         </dashboardFilterOptions>
         <dashboardFilterOptions>
-            <operator>equals</operator>
+            <operator>contains</operator>
             <values>Other</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>contains</operator>
+            <values>Consulting + Other</values>
         </dashboardFilterOptions>
         <name>Record Type</name>
     </dashboardFilters>
@@ -35,7 +39,7 @@
                 <chartAxisRange>Auto</chartAxisRange>
                 <componentType>Bar</componentType>
                 <dashboardFilterColumns>
-                    <column>Goal__c$Record_Type__c</column>
+                    <column>Goal__c$RT_Name_Filter__c</column>
                 </dashboardFilterColumns>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>

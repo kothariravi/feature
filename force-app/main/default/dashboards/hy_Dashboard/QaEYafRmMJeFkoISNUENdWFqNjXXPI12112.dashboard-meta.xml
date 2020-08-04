@@ -24,6 +24,10 @@
             <operator>contains</operator>
             <values>Other</values>
         </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>contains</operator>
+            <values>Con+Oth</values>
+        </dashboardFilterOptions>
         <name>RecordType</name>
     </dashboardFilters>
     <dashboardGridLayout>
@@ -154,7 +158,7 @@
                 <chartAxisRange>Auto</chartAxisRange>
                 <componentType>Bar</componentType>
                 <dashboardFilterColumns>
-                    <column>Goal__c$Record_Type__c</column>
+                    <column>Goal__c$RT_Name_Filter__c</column>
                 </dashboardFilterColumns>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -181,7 +185,7 @@
                 <chartAxisRange>Auto</chartAxisRange>
                 <componentType>Bar</componentType>
                 <dashboardFilterColumns>
-                    <column>Goal__c$Record_Type__c</column>
+                    <column>Goal__c$RT_Name_Filter__c</column>
                 </dashboardFilterColumns>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -213,7 +217,7 @@
                 </chartSummary>
                 <componentType>Column</componentType>
                 <dashboardFilterColumns>
-                    <column>Goal__c$Record_Type__c</column>
+                    <column>Goal__c$RT_Name_Filter__c</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>0</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -251,7 +255,7 @@
                 </chartSummary>
                 <componentType>Column</componentType>
                 <dashboardFilterColumns>
-                    <column>Goal__c$Record_Type__c</column>
+                    <column>Goal__c$RT_Name_Filter__c</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>0</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
