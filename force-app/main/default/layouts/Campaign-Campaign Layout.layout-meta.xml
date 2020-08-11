@@ -68,6 +68,10 @@
                 <behavior>Readonly</behavior>
                 <field>Kampagnenlaufzeit__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Record_Type__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>

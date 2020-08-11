@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alina Jansen</fullName>
+        <default>false</default>
+        <label>Alina Jansen</label>
+    </customValue>
+    <customValue>
+        <fullName>Andreas Tobits</fullName>
+        <default>false</default>
+        <label>Andreas Tobits</label>
+    </customValue>
+    <customValue>
+        <fullName>Artur Reimer</fullName>
+        <default>false</default>
+        <label>Artur Reimer</label>
+    </customValue>
+    <customValue>
+        <fullName>Charlotte Von Dryander</fullName>
+        <default>false</default>
+        <label>Charlotte Von Dryander</label>
+    </customValue>
+    <customValue>
+        <fullName>Chris Heyer</fullName>
+        <default>false</default>
+        <label>Chris Heyer</label>
+    </customValue>
+    <customValue>
+        <fullName>Christoph Keese</fullName>
+        <default>false</default>
+        <label>Christoph Keese</label>
+    </customValue>
+    <customValue>
+        <fullName>Christoph Schwienheer</fullName>
+        <default>false</default>
+        <label>Christoph Schwienheer</label>
+    </customValue>
+    <customValue>
+        <fullName>Claudia Alsdorf</fullName>
+        <default>false</default>
+        <label>Claudia Alsdorf</label>
+    </customValue>
+    <customValue>
+        <fullName>Danny Krautz</fullName>
+        <default>false</default>
+        <label>Danny Krautz</label>
+    </customValue>
+    <customValue>
+        <fullName>Eileen Hoffmann</fullName>
+        <default>false</default>
+        <label>Eileen Hoffmann</label>
+    </customValue>
+    <customValue>
+        <fullName>Franziska Weller</fullName>
+        <default>false</default>
+        <label>Franziska Weller</label>
+    </customValue>
+    <customValue>
+        <fullName>Franz Simon</fullName>
+        <default>false</default>
+        <label>Franz Simon</label>
+    </customValue>
+    <customValue>
+        <fullName>Frederic Altfeld</fullName>
+        <default>false</default>
+        <label>Frederic Altfeld</label>
+    </customValue>
+    <customValue>
+        <fullName>Friedemann Seith</fullName>
+        <default>false</default>
+        <label>Friedemann Seith</label>
+    </customValue>
+    <customValue>
+        <fullName>Heiner Hoefer</fullName>
+        <default>false</default>
+        <label>Heiner Hoefer</label>
+    </customValue>
+    <customValue>
+        <fullName>Isabel Schniepp</fullName>
+        <default>false</default>
+        <label>Isabel Schniepp</label>
+    </customValue>
+    <customValue>
+        <fullName>Jakob Börsch</fullName>
+        <default>false</default>
+        <label>Jakob Börsch</label>
+    </customValue>
+    <customValue>
+        <fullName>Jan Thede</fullName>
+        <default>false</default>
+        <label>Jan Thede</label>
+    </customValue>
+    <customValue>
+        <fullName>Jan Wildhirth</fullName>
+        <default>false</default>
+        <label>Jan Wildhirth</label>
+    </customValue>
+    <customValue>
+        <fullName>John Lange</fullName>
+        <default>false</default>
+        <label>John Lange</label>
+    </customValue>
+    <customValue>
+        <fullName>Julian Niederauer</fullName>
+        <default>false</default>
+        <label>Julian Niederauer</label>
+    </customValue>
+    <customValue>
+        <fullName>Julian Ropers</fullName>
+        <default>false</default>
+        <label>Julian Ropers</label>
+    </customValue>
+    <customValue>
+        <fullName>Julia Pingmann</fullName>
+        <default>false</default>
+        <label>Julia Pingmann</label>
+    </customValue>
+    <customValue>
+        <fullName>Katharina de Biasi</fullName>
+        <default>false</default>
+        <label>Katharina de Biasi</label>
+    </customValue>
+    <customValue>
+        <fullName>Kathleen Olstedt</fullName>
+        <default>false</default>
+        <label>Kathleen Olstedt</label>
+    </customValue>
+    <customValue>
+        <fullName>Lars Zimmermann</fullName>
+        <default>false</default>
+        <label>Lars Zimmermann</label>
+    </customValue>
+    <customValue>
+        <fullName>Malte Lorenz</fullName>
+        <default>false</default>
+        <label>Malte Lorenz</label>
+    </customValue>
+    <customValue>
+        <fullName>Manuel Kilian</fullName>
+        <default>false</default>
+        <label>Manuel Kilian</label>
+    </customValue>
+    <customValue>
+        <fullName>Marc Belohoubek</fullName>
+        <default>false</default>
+        <label>Marc Belohoubek</label>
+    </customValue>
+    <customValue>
+        <fullName>Marion Harnisch</fullName>
+        <default>false</default>
+        <label>Marion Harnisch</label>
+    </customValue>
+    <customValue>
+        <fullName>Marisa Lange</fullName>
+        <default>false</default>
+        <label>Marisa Lange</label>
+    </customValue>
+    <customValue>
+        <fullName>Martin Spindler</fullName>
+        <default>false</default>
+        <label>Martin Spindler</label>
+    </customValue>
+    <customValue>
+        <fullName>Monika Klaric</fullName>
+        <default>false</default>
+        <label>Monika Klaric</label>
+    </customValue>
+    <customValue>
+        <fullName>Nick Lambeck</fullName>
+        <default>false</default>
+        <label>Nick Lambeck</label>
+    </customValue>
+    <customValue>
+        <fullName>Nikoline von Nieding</fullName>
+        <default>false</default>
+        <label>Nikoline von Nieding</label>
+    </customValue>
+    <customValue>
+        <fullName>René Schäfer</fullName>
+        <default>false</default>
+        <label>René Schäfer</label>
+    </customValue>
+    <customValue>
+        <fullName>Sebastian Campos Groth</fullName>
+        <default>false</default>
+        <label>Sebastian Campos Groth</label>
+    </customValue>
+    <customValue>
+        <fullName>Sebastian Herzog</fullName>
+        <default>false</default>
+        <label>Sebastian Herzog</label>
+    </customValue>
+    <customValue>
+        <fullName>Sebastian Hornung</fullName>
+        <default>false</default>
+        <label>Sebastian Hornung</label>
+    </customValue>
+    <customValue>
+        <fullName>Sebastian Voigt</fullName>
+        <default>false</default>
+        <label>Sebastian Voigt</label>
+    </customValue>
+    <customValue>
+        <fullName>Simon Kozlik</fullName>
+        <default>false</default>
+        <label>Simon Kozlik</label>
+    </customValue>
+    <customValue>
+        <fullName>Stefanie Riechel</fullName>
+        <default>false</default>
+        <label>Stefanie Riechel</label>
+    </customValue>
+    <customValue>
+        <fullName>Steffen Vollmerding</fullName>
+        <default>false</default>
+        <label>Steffen Vollmerding</label>
+    </customValue>
+    <customValue>
+        <fullName>Thorsten Kud</fullName>
+        <default>false</default>
+        <label>Thorsten Kud</label>
+    </customValue>
+    <customValue>
+        <fullName>Thorsten Schäfer</fullName>
+        <default>false</default>
+        <label>Thorsten Schäfer</label>
+    </customValue>
+    <customValue>
+        <fullName>Tilman Schäfer</fullName>
+        <default>false</default>
+        <label>Tilman Schäfer</label>
+    </customValue>
+    <customValue>
+        <fullName>Tim Schwichtenberg</fullName>
+        <default>false</default>
+        <label>Tim Schwichtenberg</label>
+    </customValue>
+    <customValue>
+        <fullName>Tim Steinmetzger</fullName>
+        <default>false</default>
+        <label>Tim Steinmetzger</label>
+    </customValue>
+    <customValue>
+        <fullName>Virginia Palm</fullName>
+        <default>false</default>
+        <label>Virginia Palm</label>
+    </customValue>
+    <masterLabel>hy Users</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -99,7 +99,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Kontaktperson__c</field>
+                <field>Erstkontakt__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -117,10 +117,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Wiedervorlage_am__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Record_Type_Name__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

@@ -15,4 +15,5 @@
     <tabs>standard-Quote</tabs>
     <tabs>Project__c</tabs>
     <tabs>Goal__c</tabs>
+    <tabs>Data_Snapshot__c</tabs>
 </CustomApplication>

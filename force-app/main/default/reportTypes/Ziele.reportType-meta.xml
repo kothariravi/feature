@@ -71,6 +71,11 @@
             <field>Record_Type__c</field>
             <table>Goal__c</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>RT_Name_Filter__c</field>
+            <table>Goal__c</table>
+        </columns>
         <masterLabel>Ziele</masterLabel>
     </sections>
 </ReportType>

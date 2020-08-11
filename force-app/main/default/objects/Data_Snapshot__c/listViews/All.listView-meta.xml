@@ -4,10 +4,9 @@
     <columns>NAME</columns>
     <columns>Title__c</columns>
     <columns>User_Snapshot__c</columns>
-    <columns>OWNER.ALIAS</columns>
+    <columns>Type__c</columns>
     <columns>Open_Opps__c</columns>
     <columns>Total_Pipeline__c</columns>
-    <columns>Type__c</columns>
     <columns>Snapshot_Date__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>

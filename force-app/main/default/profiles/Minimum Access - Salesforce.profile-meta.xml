@@ -13,7 +13,7 @@
     <applicationVisibilities>
         <application>standard__AppLauncher</application>
         <default>false</default>
-        <visible>false</visible>
+        <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__Chatter</application>
@@ -119,6 +119,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TestCompleteInactivityReminderOnTask</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestDataSnapshot</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -394,6 +398,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.crunchbase__CB_Permalink_TriggerField__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.crunchbase__Crunchbase_Categories__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -475,6 +484,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.crunchbase__Total_Funding_USD__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.crunchbase__Uuid__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -879,6 +893,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Campaign.RT_Name_Filter__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Campaign.Record_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Campaign.current_user_on_campaign__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1139,6 +1163,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Goal__c.RT_Name_Filter__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Goal__c.Zieldifferenz__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1224,6 +1253,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.Erstkontakt__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.Fax</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1255,11 +1289,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Jigsaw</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Lead.Kontaktperson__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1300,6 +1329,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Phone</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.RT_Name_Filter__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1439,6 +1473,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.crunchbase__CB_Permalink_TriggerField__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.crunchbase__Crunchbase_Categories__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1520,6 +1559,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.crunchbase__Total_Funding_USD__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.crunchbase__Uuid__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1624,6 +1668,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Erstkontakt__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.ExpectedRevenue</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1645,11 +1694,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Jahresziel_2019__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Opportunity.Kontaktperson__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1695,6 +1739,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Probability</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.RT_Name_Filter__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1877,6 +1926,11 @@
         <field>Task.Responsible__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>User.User_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Clear_Opp_Postponed_Date_on_Stage_Change</flow>
@@ -1943,7 +1997,7 @@
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
-        <flow>Set_Goal_Name</flow>
+        <flow>Set_Close_Date_on_Opp_Closing</flow>
     </flowAccesses>
     <flowAccesses>
         <enabled>false</enabled>
@@ -1953,6 +2007,21 @@
         <enabled>false</enabled>
         <flow>Update_Campaign_Users</flow>
     </flowAccesses>
+    <layoutAssignments>
+        <layout>ContactPointAddress-Kontaktpunktadresse-Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Data_Snapshot__c-Data Snapshot Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>UserProvAccount-Benutzerbereitstellungsaccount-Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>UserProvisioningLog-Benutzerbereitstellungsprotokoll-Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>UserProvisioningRequest-Benutzerbereitstellungsanforderung-Layout</layout>
+    </layoutAssignments>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Account.Consulting</recordType>

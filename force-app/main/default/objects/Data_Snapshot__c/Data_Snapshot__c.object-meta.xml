@@ -161,7 +161,14 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Data Snapshots</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Title__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>User_Snapshot__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Open_Opps__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_Pipeline__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Snapshot_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

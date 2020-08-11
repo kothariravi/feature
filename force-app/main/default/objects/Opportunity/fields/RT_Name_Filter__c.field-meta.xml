@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT_Name_Filter__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;All&quot;
++ $RecordType.Name
++ IF(OR($RecordType.Name = &quot;Consulting&quot;, $RecordType.Name = &quot;Other&quot;), &quot;Con+Oth&quot;, &quot;&quot;)</formula>
+    <label>RT Name Filter</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

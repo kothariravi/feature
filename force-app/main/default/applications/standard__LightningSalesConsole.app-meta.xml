@@ -22,9 +22,13 @@
     <tabs>standard-File</tabs>
     <tabs>Project__c</tabs>
     <tabs>Goal__c</tabs>
+    <tabs>Data_Snapshot__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Data_Snapshot__c</tab>
+        </mappings>
         <mappings>
             <tab>Goal__c</tab>
         </mappings>

@@ -16,11 +16,6 @@
     <columns>LEAD.URL</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>CORE.USERS.LAST_NAME</field>
-        <operation>equals</operation>
-        <value>Keese</value>
-    </filters>
-    <filters>
         <field>LEAD.STATUS</field>
         <operation>equals</operation>
         <value>Importiert,Cold Outreach,In_Kontakt,Call/Pitch Follow Up</value>

@@ -180,7 +180,11 @@
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>Goal__c</tabs>
+    <tabs>Data_Snapshot__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>Data_Snapshot__c</tab>
+        </mappings>
         <mappings>
             <tab>Goal__c</tab>
         </mappings>
