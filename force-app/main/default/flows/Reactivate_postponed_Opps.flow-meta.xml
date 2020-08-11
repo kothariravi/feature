@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <assignments>
+        <name>assign_reminder_tasks_count</name>
+        <label>assign reminder tasks count</label>
+        <locationX>892</locationX>
+        <locationY>349</locationY>
+        <assignmentItems>
+            <assignToReference>reminder_tasks_count</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>get_reminder_tasks_for_opp</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>update_loop_opp</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>assign_wiedervorlage_status</name>
         <label>assign wiedervorlage status</label>
-        <locationX>462</locationX>
+        <locationX>603</locationX>
         <locationY>349</locationY>
         <assignmentItems>
             <assignToReference>loop_opp.StageName</assignToReference>
@@ -21,15 +37,40 @@
             <operator>Assign</operator>
         </assignmentItems>
         <connector>
-            <targetReference>update_loop_opp</targetReference>
+            <targetReference>get_reminder_tasks_for_opp</targetReference>
         </connector>
     </assignments>
+    <decisions>
+        <name>existing_reminder_tasks</name>
+        <label>existing reminder tasks</label>
+        <locationX>1286</locationX>
+        <locationY>306</locationY>
+        <defaultConnector>
+            <targetReference>create_reactivation_task</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>no existing</defaultConnectorLabel>
+        <rules>
+            <name>already_existing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>reminder_tasks_count</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>loop_over_opps</targetReference>
+            </connector>
+            <label>already existing</label>
+        </rules>
+    </decisions>
     <interviewLabel>Reactivate postponed Opps {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Reactivate postponed Opps</label>
     <loops>
         <name>loop_over_opps</name>
         <label>loop over opps</label>
-        <locationX>617</locationX>
+        <locationX>758</locationX>
         <locationY>156</locationY>
         <assignNextValueToReference>loop_opp</assignNextValueToReference>
         <collectionReference>get_postponed_opps_today</collectionReference>
@@ -54,8 +95,8 @@
     <recordCreates>
         <name>create_reactivation_task</name>
         <label>create reactivation task</label>
-        <locationX>777</locationX>
-        <locationY>349</locationY>
+        <locationX>1291</locationX>
+        <locationY>102</locationY>
         <connector>
             <targetReference>loop_over_opps</targetReference>
         </connector>
@@ -90,6 +131,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Inactivity Reminder</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>WhatId</field>
             <value>
                 <elementReference>loop_opp.Id</elementReference>
@@ -101,7 +148,7 @@
     <recordLookups>
         <name>get_postponed_opps_today</name>
         <label>get postponed opps today</label>
-        <locationX>376</locationX>
+        <locationX>517</locationX>
         <locationY>156</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -125,19 +172,46 @@
         <object>Opportunity</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>get_reminder_tasks_for_opp</name>
+        <label>get reminder tasks for opp</label>
+        <locationX>746</locationX>
+        <locationY>349</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>assign_reminder_tasks_count</targetReference>
+        </connector>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Inactivity Reminder</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loop_opp.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>update_loop_opp</name>
         <label>update loop opp</label>
-        <locationX>630</locationX>
-        <locationY>349</locationY>
+        <locationX>1043</locationX>
+        <locationY>348</locationY>
         <connector>
-            <targetReference>create_reactivation_task</targetReference>
+            <targetReference>existing_reminder_tasks</targetReference>
         </connector>
         <inputReference>loop_opp</inputReference>
     </recordUpdates>
     <start>
-        <locationX>177</locationX>
-        <locationY>156</locationY>
+        <locationX>66</locationX>
+        <locationY>76</locationY>
         <connector>
             <targetReference>get_postponed_opps_today</targetReference>
         </connector>
@@ -156,5 +230,16 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>reminder_tasks_count</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
     </variables>
 </Flow>

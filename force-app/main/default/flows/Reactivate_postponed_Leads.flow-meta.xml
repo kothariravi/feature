@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <assignments>
+        <name>assign_reminder_tasks_count</name>
+        <label>assign reminder tasks count</label>
+        <locationX>912</locationX>
+        <locationY>348</locationY>
+        <assignmentItems>
+            <assignToReference>reminder_tasks_count</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>get_reminder_tasks_for_lead</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>update_loop_lead</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>assign_wiedervorlage_status</name>
         <label>assign wiedervorlage status</label>
-        <locationX>462</locationX>
-        <locationY>349</locationY>
+        <locationX>592</locationX>
+        <locationY>348</locationY>
         <assignmentItems>
             <assignToReference>loop_lead.Status</assignToReference>
             <operator>Assign</operator>
@@ -21,13 +37,13 @@
             <operator>Assign</operator>
         </assignmentItems>
         <connector>
-            <targetReference>update_loop_lead</targetReference>
+            <targetReference>get_reminder_tasks_for_lead</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>set_task_name_for_in_kontakt</name>
         <label>set task name for in kontakt</label>
-        <locationX>1013</locationX>
+        <locationX>1576</locationX>
         <locationY>289</locationY>
         <assignmentItems>
             <assignToReference>string_task_name</assignToReference>
@@ -43,8 +59,8 @@
     <assignments>
         <name>set_task_name_for_priorisiert</name>
         <label>set task name for priorisiert</label>
-        <locationX>1099</locationX>
-        <locationY>447</locationY>
+        <locationX>1660</locationX>
+        <locationY>446</locationY>
         <assignmentItems>
             <assignToReference>string_task_name</assignToReference>
             <operator>Assign</operator>
@@ -57,9 +73,34 @@
         </connector>
     </assignments>
     <decisions>
+        <name>already_existing_reminder_tasks</name>
+        <label>already existing reminder tasks</label>
+        <locationX>1199</locationX>
+        <locationY>269</locationY>
+        <defaultConnector>
+            <targetReference>decision_loop_lead_status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>no existing tasks</defaultConnectorLabel>
+        <rules>
+            <name>already_existing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>reminder_tasks_count</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>loop_over_leads</targetReference>
+            </connector>
+            <label>already existing</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>decision_loop_lead_status</name>
         <label>decision loop lead status</label>
-        <locationX>743</locationX>
+        <locationX>1377</locationX>
         <locationY>349</locationY>
         <defaultConnector>
             <targetReference>set_task_name_for_priorisiert</targetReference>
@@ -86,7 +127,7 @@
     <loops>
         <name>loop_over_leads</name>
         <label>loop over leads</label>
-        <locationX>617</locationX>
+        <locationX>758</locationX>
         <locationY>156</locationY>
         <assignNextValueToReference>loop_lead</assignNextValueToReference>
         <collectionReference>get_postponed_leads_today</collectionReference>
@@ -111,8 +152,8 @@
     <recordCreates>
         <name>create_reactivation_task</name>
         <label>create reactivation task</label>
-        <locationX>1157</locationX>
-        <locationY>156</locationY>
+        <locationX>1652</locationX>
+        <locationY>148</locationY>
         <connector>
             <targetReference>loop_over_leads</targetReference>
         </connector>
@@ -147,6 +188,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Inactivity Reminder</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>WhoId</field>
             <value>
                 <elementReference>loop_lead.Id</elementReference>
@@ -158,7 +205,7 @@
     <recordLookups>
         <name>get_postponed_leads_today</name>
         <label>get postponed leads today</label>
-        <locationX>376</locationX>
+        <locationX>517</locationX>
         <locationY>156</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -182,19 +229,46 @@
         <object>Lead</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>get_reminder_tasks_for_lead</name>
+        <label>get reminder tasks for lead</label>
+        <locationX>753</locationX>
+        <locationY>348</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>assign_reminder_tasks_count</targetReference>
+        </connector>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Inactivity Reminder</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>WhoId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>loop_lead.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>update_loop_lead</name>
         <label>update loop lead</label>
-        <locationX>607</locationX>
-        <locationY>347</locationY>
+        <locationX>1050</locationX>
+        <locationY>348</locationY>
         <connector>
-            <targetReference>decision_loop_lead_status</targetReference>
+            <targetReference>already_existing_reminder_tasks</targetReference>
         </connector>
         <inputReference>loop_lead</inputReference>
     </recordUpdates>
     <start>
-        <locationX>177</locationX>
-        <locationY>156</locationY>
+        <locationX>98</locationX>
+        <locationY>96</locationY>
         <connector>
             <targetReference>get_postponed_leads_today</targetReference>
         </connector>
@@ -220,6 +294,17 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>reminder_tasks_count</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
     </variables>
     <variables>
         <name>string_task_name</name>
