@@ -80,22 +80,46 @@ global class DataSnapshotHandler {
     }
 
     private static void loadOppValuesInSnapshot(Data_Snapshot__c snapping, Map<String,AggregateResult> oppAggResultByStage) {
-        AggregateResult pitchOppsAggregateResult = oppAggResultByStage.get('Pitch');
-        snapping.Opps_in_Pitch__c = (Decimal) pitchOppsAggregateResult.get('oppsCount');
-        snapping.Open_Pitch_Volume__c = (Decimal) pitchOppsAggregateResult.get('totalAmount');
-        Decimal pitchForecast = (Decimal) pitchOppsAggregateResult.get('totalForecast');
-        AggregateResult scopingOppsAggregateResult = oppAggResultByStage.get('Scoping');
-        snapping.Opps_in_Scoping__c = (Decimal) scopingOppsAggregateResult.get('oppsCount');
-        snapping.Open_Scoping_Volume__c = (Decimal) scopingOppsAggregateResult.get('totalAmount');
-        Decimal scopingForecast = (Decimal) scopingOppsAggregateResult.get('totalForecast');
-        AggregateResult LoPOppsAggregateResult = oppAggResultByStage.get('LoP');
-        snapping.Opps_in_LoP__c = (Decimal) LoPOppsAggregateResult.get('oppsCount');
-        snapping.Open_LoP_Volume__c = (Decimal) LoPOppsAggregateResult.get('totalAmount');
-        Decimal LoPForecast = (Decimal) LoPOppsAggregateResult.get('totalForecast');
-        snapping.Open_Opps__c = snapping.Opps_in_Pitch__c + snapping.Opps_in_Scoping__c + snapping.Opps_in_LoP__c;
-        snapping.Total_Pipeline__c =
-                snapping.Open_Pitch_Volume__c + snapping.Open_Scoping_Volume__c + snapping.Open_LoP_Volume__c;
-        snapping.Total_Forecast__c = pitchForecast + scopingForecast + LoPForecast;
+        Decimal pitchForecast;
+        Decimal scopingForecast;
+        Decimal LoPForecast;
+        try {
+            AggregateResult pitchOppsAggregateResult = oppAggResultByStage.get('Pitch');
+            snapping.Opps_in_Pitch__c = (Decimal) pitchOppsAggregateResult.get('oppsCount');
+            snapping.Open_Pitch_Volume__c = (Decimal) pitchOppsAggregateResult.get('totalAmount');
+            pitchForecast = (Decimal) pitchOppsAggregateResult.get('totalForecast');   
+        } catch (Exception ignoredException) {
+            System.debug('No Opportunities in Pitch Stage matching criteria');
+        }
+        try {
+            AggregateResult scopingOppsAggregateResult = oppAggResultByStage.get('Scoping');
+            snapping.Opps_in_Scoping__c = (Decimal) scopingOppsAggregateResult.get('oppsCount');
+            snapping.Open_Scoping_Volume__c = (Decimal) scopingOppsAggregateResult.get('totalAmount');
+            scopingForecast = (Decimal) scopingOppsAggregateResult.get('totalForecast');
+        } catch (Exception ignoredException) {
+            System.debug('No Opportunities in Scoping Stage matching criteria');
+        }
+        try {
+            AggregateResult LoPOppsAggregateResult = oppAggResultByStage.get('LoP');
+            snapping.Opps_in_LoP__c = (Decimal) LoPOppsAggregateResult.get('oppsCount');
+            snapping.Open_LoP_Volume__c = (Decimal) LoPOppsAggregateResult.get('totalAmount');
+            LoPForecast = (Decimal) LoPOppsAggregateResult.get('totalForecast');            
+        } catch (Exception ignoredException) {
+            System.debug('No Opportunities in LoP Stage matching criteria');
+        }
+        snapping.Open_Opps__c = decimalZeroForNull(snapping.Opps_in_Pitch__c)
+                + decimalZeroForNull(snapping.Opps_in_Scoping__c)
+                + decimalZeroForNull(snapping.Opps_in_LoP__c);
+        snapping.Total_Pipeline__c = decimalZeroForNull(snapping.Open_Pitch_Volume__c)
+                + decimalZeroForNull(snapping.Open_Scoping_Volume__c)
+                + decimalZeroForNull(snapping.Open_LoP_Volume__c);
+        snapping.Total_Forecast__c = decimalZeroForNull(pitchForecast)
+                + decimalZeroForNull(scopingForecast)
+                + decimalZeroForNull(LoPForecast);
+    }
+
+    private static Decimal decimalZeroForNull(Decimal input) {
+        return (input == null) ? 0 : input;
     }
 
     private static void takeUserSnapshot(SnapshotSettings__c userSetting) {
