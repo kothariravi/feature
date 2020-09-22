@@ -1,7 +1,7 @@
 global class DataSnapshotHandler {
     public static void takeSnapshot() {
-        Date date4Weeks = Date.today() - 365;
-        Date date1Year = Date.today() - 28;
+        Date date4Weeks = Date.today() - 28;
+        Date date1Year = Date.today() - 365;
 
         takeOrgSnapshot();
         takeAvgSnapshot(date4Weeks, 'Avg 4 Weeks', false, null);
