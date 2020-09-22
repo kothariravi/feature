@@ -1,12 +1,22 @@
 global class DataSnapshotHandler {
+
+    //-//-//-//-// INNER CLASSES //-//-//-//-//
+
+    private class NoSuchRecordTypeException extends Exception {}
+
+    //-//-//-//-// STATIC VARIABLES //-//-//-//-//
+
+    private final static Date date4Weeks = Date.today() - 28;
+    private final static Date date1Year = Date.today() - 365;
+    private final static Id consultingOppRecordTypeId = getOppRecordTypeId('Consulting');
+
+    //-//-//-//-// PUBLIC METHODS //-//-//-//-//
+
     public static void takeSnapshot() {
-        Date date4Weeks = Date.today() - 28;
-        Date date1Year = Date.today() - 365;
 
         takeOrgSnapshot();
         takeAvgSnapshot(date4Weeks, 'Avg 4 Weeks', false, null);
         takeAvgSnapshot(date1Year, 'Avg 1 Year', false, null);
-
         List<SnapshotSettings__c> userSettings = SnapshotSettings__c.getAll().values();
         for (SnapshotSettings__c userSetting : userSettings) {
             takeUserSnapshot(userSetting);
@@ -15,81 +25,77 @@ global class DataSnapshotHandler {
         }
     }
 
+    //-//-//-//-// PRIVATE METHODS //-//-//-//-//
+
+    private static Id getOppRecordTypeId(String recordTypeDevName) {
+        try {
+            return Schema.SObjectType.Opportunity.getRecordTypeInfosByName().get(recordTypeDevName).getRecordTypeId();
+        } catch (Exception ignoredException) {
+            throw new NoSuchRecordTypeException('Opportunity Record Type ' + recordTypeDevName + ' not found');
+        }
+    }
+
     private static void takeOrgSnapshot() {
-        AggregateResult agr;
-
-        agr = [
-            SELECT COUNT(Id), SUM(Amount), SUM(Forecast__c)
+        List<AggregateResult> groupedOpportunityAggregateResults = [
+            SELECT StageName, COUNT(Id) oppsCount, SUM(Amount) totalAmount, SUM(Forecast__c) totalForecast
             FROM Opportunity
-            WHERE isClosed = false
+            WHERE Opportunity.RecordTypeId = :consultingOppRecordTypeId
+                AND (
+                    StageName = 'Pitch'
+                    OR StageName = 'Scoping'
+                    OR StageName = 'LoP'
+                )
+            GROUP BY StageName
         ];
-        Decimal openOpps = (Decimal) agr.get('expr0');
-        Decimal totalPipeline = (Decimal) agr.get('expr1');
-        Decimal totalForecast = (Decimal) agr.get('expr2');
-
-        agr = [
-            SELECT SUM(Amount), COUNT(Id)
-            FROM Opportunity
-            WHERE isClosed = false AND StageName = 'Pitch'
-        ];
-        Decimal openPitchVolume = (Decimal) agr.get('expr0');
-        Decimal oppsInPitch = (Decimal) agr.get('expr1');
-
-        agr = [
-            SELECT SUM(Amount), COUNT(Id)
-            FROM Opportunity
-            WHERE isClosed = false AND StageName = 'Scoping'
-        ];
-        Decimal openScopingVolume = (Decimal) agr.get('expr0');
-        Decimal oppsInScoping = (Decimal) agr.get('expr1');
-
-        agr = [
-            SELECT SUM(Amount), COUNT(Id)
-            FROM Opportunity
-            WHERE isClosed = false AND StageName = 'LoP'
-        ];
-        Decimal openLoPVolume = (Decimal) agr.get('expr0');
-        Decimal oppsInLoP = (Decimal) agr.get('expr1');
-
-        agr = [
-            SELECT COUNT(Id)
-            FROM Lead
-            WHERE CreatedDate >= :(Date.today() - 7)
-        ];
-        Decimal newLeads = (Decimal) agr.get('expr0');
-
-        agr = [
-            SELECT COUNT(Id)
-            FROM Lead
-            WHERE Status = 'Call/Pitch Follow Up'
-        ];
-        Decimal leadsInPriorisiert = (Decimal) agr.get('expr0');
-
-        agr = [
-            SELECT COUNT(Id)
-            FROM Lead
-            WHERE Konvertiert_am__c >= :(Date.today() - 7)
-        ];
-        Decimal convertedLeads = (Decimal) agr.get('expr0');
-
+        Map<String,AggregateResult> oppAggregateResultByStage = new Map<String,AggregateResult>();
+        for (AggregateResult opportunityAggregateResult : groupedOpportunityAggregateResults) {
+            oppAggregateResultByStage.put(
+                    (String) opportunityAggregateResult.get('StageName'), opportunityAggregateResult);
+        }
         Data_Snapshot__c snap = new Data_Snapshot__c(
             Snapshot_Date__c = Date.today(),
-            Open_Opps__c = openOpps,
-            Total_Pipeline__c = totalPipeline,
-            Total_Forecast__c = totalForecast,
-            Open_Pitch_Volume__c = openPitchVolume,
-            Open_Scoping_Volume__c = openScopingVolume,
-            Open_LoP_Volume__c = openLoPVolume,
-            Opps_in_Pitch__c = oppsInPitch,
-            Opps_in_Scoping__c = oppsInScoping,
-            Opps_in_LoP__c = oppsInLoP,
-            New_Leads__c = newLeads,
-            Leads_in_Priorisiert__c = leadsInPriorisiert,
-            Converted_Leads__c = convertedLeads,
             Type__c = 'Actual',
             Title__c = 'Org: ' + Date.today().day() + '.' + Date.today().month() + '.' + Date.today().year()
         );
+        loadOppValuesInSnapshot(snap, oppAggregateResultByStage);
+        Decimal newLeads = (Decimal) [
+            SELECT COUNT(Id) leadsCount
+            FROM Lead
+            WHERE CreatedDate >= :(Date.today() - 7)
+        ][0].get('leadsCount');
+        Decimal leadsInPriorisiert = (Decimal) [
+            SELECT COUNT(Id) leadsCount
+            FROM Lead
+            WHERE Status = 'Call/Pitch Follow Up'
+        ][0].get('leadsCount');
+        Decimal convertedLeads = (Decimal) [
+            SELECT COUNT(Id) leadsCount
+            FROM Lead
+            WHERE Konvertiert_am__c >= :(Date.today() - 7)
+        ][0].get('leadsCount');
+        snap.New_Leads__c = newLeads;
+        snap.Leads_in_Priorisiert__c = leadsInPriorisiert;
+        snap.Converted_Leads__c = convertedLeads;
         insert snap;
+    }
+
+    private static void loadOppValuesInSnapshot(Data_Snapshot__c snapping, Map<String,AggregateResult> oppAggResultByStage) {
+        AggregateResult pitchOppsAggregateResult = oppAggResultByStage.get('Pitch');
+        snapping.Opps_in_Pitch__c = (Decimal) pitchOppsAggregateResult.get('oppsCount');
+        snapping.Open_Pitch_Volume__c = (Decimal) pitchOppsAggregateResult.get('totalAmount');
+        Decimal pitchForecast = (Decimal) pitchOppsAggregateResult.get('totalForecast');
+        AggregateResult scopingOppsAggregateResult = oppAggResultByStage.get('Scoping');
+        snapping.Opps_in_Scoping__c = (Decimal) scopingOppsAggregateResult.get('oppsCount');
+        snapping.Open_Scoping_Volume__c = (Decimal) scopingOppsAggregateResult.get('totalAmount');
+        Decimal scopingForecast = (Decimal) scopingOppsAggregateResult.get('totalForecast');
+        AggregateResult LoPOppsAggregateResult = oppAggResultByStage.get('LoP');
+        snapping.Opps_in_LoP__c = (Decimal) LoPOppsAggregateResult.get('oppsCount');
+        snapping.Open_LoP_Volume__c = (Decimal) LoPOppsAggregateResult.get('totalAmount');
+        Decimal LoPForecast = (Decimal) LoPOppsAggregateResult.get('totalForecast');
+        snapping.Open_Opps__c = snapping.Opps_in_Pitch__c + snapping.Opps_in_Scoping__c + snapping.Opps_in_LoP__c;
+        snapping.Total_Pipeline__c =
+                snapping.Open_Pitch_Volume__c + snapping.Open_Scoping_Volume__c + snapping.Open_LoP_Volume__c;
+        snapping.Total_Forecast__c = pitchForecast + scopingForecast + LoPForecast;
     }
 
     private static void takeUserSnapshot(SnapshotSettings__c userSetting) {
