@@ -34,7 +34,7 @@ global class DataSnapshotHandler {
             throw new NoSuchRecordTypeException('Opportunity Record Type ' + recordTypeDevName + ' not found');
         }
     }
-
+            
     private static void takeOrgSnapshot() {
         List<AggregateResult> groupedOpportunityAggregateResults = [
             SELECT StageName, COUNT(Id) oppsCount, SUM(Amount) totalAmount, SUM(Forecast__c) totalForecast
@@ -50,7 +50,41 @@ global class DataSnapshotHandler {
         Data_Snapshot__c snap = new Data_Snapshot__c(
             Snapshot_Date__c = Date.today(),
             Type__c = 'Actual',
-            Title__c = 'Org: ' + Date.today().day() + '.' + Date.today().month() + '.' + Date.today().year()
+            Title__c = 'Org: '
+                    + Date.today().day()
+                    + '.' + Date.today().month() + '.'
+                    + Date.today().year()
+        );
+        loadOppValuesInSnapshot(snap, groupedOpportunityAggregateResults);
+        queryLeadCountsAndLoadInSnapshot(snap, '');
+        insert snap;
+    }
+
+    private static void takeUserSnapshot(SnapshotSettings__c userSetting) {
+        final Id userId = (Id) userSetting.User_Id__c;
+        final String additionalUserCondition = 'AND  OwnerId = :userId';
+        List<AggregateResult> groupedOpportunityAggregateResults = [
+            SELECT StageName, COUNT(Id) oppsCount, SUM(Amount) totalAmount, SUM(Forecast__c) totalForecast
+            FROM Opportunity
+            WHERE Opportunity.RecordTypeId = :consultingOppRecordTypeId
+                AND (
+                    StageName = 'Pitch'
+                    OR StageName = 'Scoping'
+                    OR StageName = 'LoP'
+                )
+                AND  OwnerId = :userId
+            GROUP BY StageName
+        ];
+        Data_Snapshot__c snap = new Data_Snapshot__c(
+            Snapshot_Date__c = Date.today(),
+            Type__c = 'Actual',
+            User_Snapshot__c = true,
+            OwnerId = userId,
+            Title__c = 'User: '
+                    + Date.today().day()
+                    + '.' + Date.today().month()
+                    + '.' + Date.today().year()
+                    + ' (' + userSetting.Name + ')'
         );
         loadOppValuesInSnapshot(snap, groupedOpportunityAggregateResults);
         queryLeadCountsAndLoadInSnapshot(snap, '');
@@ -103,10 +137,11 @@ global class DataSnapshotHandler {
     }
 
     private static void queryLeadCountsAndLoadInSnapshot(Data_Snapshot__c snapping, String additionalCondition) {
+        final Date oneWeekAgo = Date.today() - 7;
         String lastWeekLeadsQueryString =
                 ('SELECT COUNT(Id) leadsCount'
                 + ' FROM Lead'
-                + ' WHERE CreatedDate >= :(Date.today() - 7)'
+                + ' WHERE CreatedDate >= :oneWeekAgo'
                 + ' ' + additionalCondition).trim();
         String leadsInPriorisiertQueryString =
                 ('SELECT COUNT(Id) leadsCount'
@@ -116,95 +151,15 @@ global class DataSnapshotHandler {
         String convertedLeadsQueryString =
                 ('SELECT COUNT(Id) leadsCount'
                 + ' FROM Lead'
-                + ' WHERE Konvertiert_am__c >= :(Date.today() - 7)'
+                + ' WHERE Konvertiert_am__c >= :oneWeekAgo'
                 + ' ' + additionalCondition).trim();
-        snapping.New_Leads__c = (Decimal) Database.query(leadsInPriorisiertQueryString)[0].get('leadsCount');
-        snapping.Leads_in_Priorisiert__c = (Decimal) Database.query(lastWeekLeadsQueryString)[0].get('leadsCount');
-        snapping.Converted_Leads__c = (Decimal) Database.query(lastWeekLeadsQueryString)[0].get('leadsCount');
+        snapping.New_Leads__c = (Decimal) Database.query(lastWeekLeadsQueryString)[0].get('leadsCount');
+        snapping.Leads_in_Priorisiert__c = (Decimal) Database.query(leadsInPriorisiertQueryString)[0].get('leadsCount');
+        snapping.Converted_Leads__c = (Decimal) Database.query(convertedLeadsQueryString)[0].get('leadsCount');
     }
 
     private static Decimal decimalZeroForNull(Decimal input) {
         return (input == null) ? 0 : input;
-    }
-
-    private static void takeUserSnapshot(SnapshotSettings__c userSetting) {
-        String userId = userSetting.User_Id__c;
-        AggregateResult agr;
-
-        agr = [
-            SELECT COUNT(Id), SUM(Amount), SUM(Forecast__c)
-            FROM Opportunity
-            WHERE isClosed = false AND OwnerId = :userId
-        ];
-        Decimal openOpps = (Decimal) agr.get('expr0');
-        Decimal totalPipeline = (Decimal) agr.get('expr1');
-        Decimal totalForecast = (Decimal) agr.get('expr2');
-
-        agr = [
-            SELECT SUM(Amount), COUNT(Id)
-            FROM Opportunity
-            WHERE isClosed = false AND StageName = 'Pitch' AND OwnerId = :userId
-        ];
-        Decimal openPitchVolume = (Decimal) agr.get('expr0');
-        Decimal oppsInPitch = (Decimal) agr.get('expr1');
-
-        agr = [
-            SELECT SUM(Amount), COUNT(Id)
-            FROM Opportunity
-            WHERE isClosed = false AND StageName = 'Scoping' AND OwnerId = :userId
-        ];
-        Decimal openScopingVolume = (Decimal) agr.get('expr0');
-        Decimal oppsInScoping = (Decimal) agr.get('expr1');
-
-        agr = [
-            SELECT SUM(Amount), COUNT(Id)
-            FROM Opportunity
-            WHERE isClosed = false AND StageName = 'LoP' AND OwnerId = :userId
-        ];
-        Decimal openLoPVolume = (Decimal) agr.get('expr0');
-        Decimal oppsInLoP = (Decimal) agr.get('expr1');
-
-        agr = [
-            SELECT COUNT(Id)
-            FROM Lead
-            WHERE CreatedDate >= :(Date.today() - 7) AND OwnerId = :userId
-        ];
-        Decimal newLeads = (Decimal) agr.get('expr0');
-
-        agr = [
-            SELECT COUNT(Id)
-            FROM Lead
-            WHERE Status = 'Call/Pitch Follow Up' AND OwnerId = :userId
-        ];
-        Decimal leadsInPriorisiert = (Decimal) agr.get('expr0');
-
-        agr = [
-            SELECT COUNT(Id)
-            FROM Lead
-            WHERE Konvertiert_am__c >= :(Date.today() - 7) AND OwnerId = :userId
-        ];
-        Decimal convertedLeads = (Decimal) agr.get('expr0');
-
-        Data_Snapshot__c snap = new Data_Snapshot__c(
-            Snapshot_Date__c = Date.today(),
-            Open_Opps__c = openOpps,
-            Total_Pipeline__c = totalPipeline,
-            Total_Forecast__c = totalForecast,
-            Open_Pitch_Volume__c = openPitchVolume,
-            Open_Scoping_Volume__c = openScopingVolume,
-            Open_LoP_Volume__c = openLoPVolume,
-            Opps_in_Pitch__c = oppsInPitch,
-            Opps_in_Scoping__c = oppsInScoping,
-            Opps_in_LoP__c = oppsInLoP,
-            New_Leads__c = newLeads,
-            Leads_in_Priorisiert__c = leadsInPriorisiert,
-            Converted_Leads__c = convertedLeads,
-            OwnerId = userId,
-            User_Snapshot__c = true,
-            Type__c = 'Actual',
-            Title__c = 'User: ' + Date.today().day() + '.' + Date.today().month() + '.' + Date.today().year() + ' (' + userSetting.Name + ')'
-        );
-        insert snap;
     }
 
     private static void takeAvgSnapshot(Date dateRange, String snapTitle, Boolean isUserSnapshot, SnapshotSettings__c userSetting) {
