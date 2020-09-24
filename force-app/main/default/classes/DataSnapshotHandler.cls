@@ -26,27 +26,8 @@ global class DataSnapshotHandler {
     }
 
     //-//-//-//-// PRIVATE METHODS //-//-//-//-//
-
-    private static Id getOppRecordTypeId(String recordTypeDevName) {
-        try {
-            return Schema.SObjectType.Opportunity.getRecordTypeInfosByName().get(recordTypeDevName).getRecordTypeId();
-        } catch (Exception ignoredException) {
-            throw new NoSuchRecordTypeException('Opportunity Record Type ' + recordTypeDevName + ' not found');
-        }
-    }
             
     private static void takeOrgSnapshot() {
-        List<AggregateResult> groupedOpportunityAggregateResults = [
-            SELECT StageName, COUNT(Id) oppsCount, SUM(Amount) totalAmount, SUM(Forecast__c) totalForecast
-            FROM Opportunity
-            WHERE Opportunity.RecordTypeId = :consultingOppRecordTypeId
-                AND (
-                    StageName = 'Pitch'
-                    OR StageName = 'Scoping'
-                    OR StageName = 'LoP'
-                )
-            GROUP BY StageName
-        ];
         Data_Snapshot__c snap = new Data_Snapshot__c(
             Snapshot_Date__c = Date.today(),
             Type__c = 'Actual',
@@ -55,40 +36,45 @@ global class DataSnapshotHandler {
                     + '.' + Date.today().month() + '.'
                     + Date.today().year()
         );
-        loadOppValuesInSnapshot(snap, groupedOpportunityAggregateResults);
+        loadOppValuesInSnapshot(snap, queryOpportunityValues(''));
         queryLeadCountsAndLoadInSnapshot(snap, '');
         insert snap;
     }
 
     private static void takeUserSnapshot(SnapshotSettings__c userSetting) {
-        final Id userId = (Id) userSetting.User_Id__c;
-        final String additionalUserCondition = 'AND  OwnerId = :userId';
-        List<AggregateResult> groupedOpportunityAggregateResults = [
-            SELECT StageName, COUNT(Id) oppsCount, SUM(Amount) totalAmount, SUM(Forecast__c) totalForecast
-            FROM Opportunity
-            WHERE Opportunity.RecordTypeId = :consultingOppRecordTypeId
-                AND (
-                    StageName = 'Pitch'
-                    OR StageName = 'Scoping'
-                    OR StageName = 'LoP'
-                )
-                AND  OwnerId = :userId
-            GROUP BY StageName
-        ];
+        final String userIdString = userSetting.User_Id__c;
+        final String additionalUserCondition = 'AND  OwnerId = \'' + userIdString + '\'';
         Data_Snapshot__c snap = new Data_Snapshot__c(
             Snapshot_Date__c = Date.today(),
             Type__c = 'Actual',
             User_Snapshot__c = true,
-            OwnerId = userId,
+            OwnerId = (Id) userIdString,
             Title__c = 'User: '
                     + Date.today().day()
                     + '.' + Date.today().month()
                     + '.' + Date.today().year()
                     + ' (' + userSetting.Name + ')'
         );
-        loadOppValuesInSnapshot(snap, groupedOpportunityAggregateResults);
-        queryLeadCountsAndLoadInSnapshot(snap, '');
+        loadOppValuesInSnapshot(snap, queryOpportunityValues(additionalUserCondition));
+        queryLeadCountsAndLoadInSnapshot(snap, additionalUserCondition);
         insert snap;
+    }
+
+    private static List<AggregateResult> queryOpportunityValues(String additionalCondition) {
+        String additionalConditionCompleteString =
+                additionalCondition != '' ? ' ' + additionalCondition : additionalCondition;
+        final String oppAggregateResultsQueryString =
+                'SELECT StageName, COUNT(Id) oppsCount, SUM(Amount) totalAmount, SUM(Forecast__c) totalForecast'
+                + ' FROM Opportunity'
+                + ' WHERE Opportunity.RecordTypeId = :consultingOppRecordTypeId'
+                +       ' AND ('
+                +           'StageName = \'Pitch\''
+                +           ' OR StageName = \'Scoping\''
+                +           ' OR StageName = \'LoP\''
+                +       ')'
+                +       additionalConditionCompleteString
+                + ' GROUP BY StageName';
+        return Database.query(oppAggregateResultsQueryString);
     }
 
     private static void loadOppValuesInSnapshot(
@@ -138,17 +124,17 @@ global class DataSnapshotHandler {
 
     private static void queryLeadCountsAndLoadInSnapshot(Data_Snapshot__c snapping, String additionalCondition) {
         final Date oneWeekAgo = Date.today() - 7;
-        String lastWeekLeadsQueryString =
+        final String lastWeekLeadsQueryString =
                 ('SELECT COUNT(Id) leadsCount'
                 + ' FROM Lead'
                 + ' WHERE CreatedDate >= :oneWeekAgo'
                 + ' ' + additionalCondition).trim();
-        String leadsInPriorisiertQueryString =
+        final String leadsInPriorisiertQueryString =
                 ('SELECT COUNT(Id) leadsCount'
                 + ' FROM Lead'
                 + ' WHERE Status = \'Call/Pitch Follow Up\''
                 + ' ' + additionalCondition).trim();
-        String convertedLeadsQueryString =
+        final String convertedLeadsQueryString =
                 ('SELECT COUNT(Id) leadsCount'
                 + ' FROM Lead'
                 + ' WHERE Konvertiert_am__c >= :oneWeekAgo'
@@ -156,6 +142,14 @@ global class DataSnapshotHandler {
         snapping.New_Leads__c = (Decimal) Database.query(lastWeekLeadsQueryString)[0].get('leadsCount');
         snapping.Leads_in_Priorisiert__c = (Decimal) Database.query(leadsInPriorisiertQueryString)[0].get('leadsCount');
         snapping.Converted_Leads__c = (Decimal) Database.query(convertedLeadsQueryString)[0].get('leadsCount');
+    }
+
+    private static Id getOppRecordTypeId(String recordTypeDevName) {
+        try {
+            return Schema.SObjectType.Opportunity.getRecordTypeInfosByName().get(recordTypeDevName).getRecordTypeId();
+        } catch (Exception ignoredException) {
+            throw new NoSuchRecordTypeException('Opportunity Record Type ' + recordTypeDevName + ' not found');
+        }
     }
 
     private static Decimal decimalZeroForNull(Decimal input) {
