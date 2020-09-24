@@ -47,44 +47,28 @@ global class DataSnapshotHandler {
                 )
             GROUP BY StageName
         ];
-        Map<String,AggregateResult> oppAggregateResultByStage = new Map<String,AggregateResult>();
-        for (AggregateResult opportunityAggregateResult : groupedOpportunityAggregateResults) {
-            oppAggregateResultByStage.put(
-                    (String) opportunityAggregateResult.get('StageName'), opportunityAggregateResult);
-        }
         Data_Snapshot__c snap = new Data_Snapshot__c(
             Snapshot_Date__c = Date.today(),
             Type__c = 'Actual',
             Title__c = 'Org: ' + Date.today().day() + '.' + Date.today().month() + '.' + Date.today().year()
         );
-        loadOppValuesInSnapshot(snap, oppAggregateResultByStage);
-        Decimal newLeads = (Decimal) [
-            SELECT COUNT(Id) leadsCount
-            FROM Lead
-            WHERE CreatedDate >= :(Date.today() - 7)
-        ][0].get('leadsCount');
-        Decimal leadsInPriorisiert = (Decimal) [
-            SELECT COUNT(Id) leadsCount
-            FROM Lead
-            WHERE Status = 'Call/Pitch Follow Up'
-        ][0].get('leadsCount');
-        Decimal convertedLeads = (Decimal) [
-            SELECT COUNT(Id) leadsCount
-            FROM Lead
-            WHERE Konvertiert_am__c >= :(Date.today() - 7)
-        ][0].get('leadsCount');
-        snap.New_Leads__c = newLeads;
-        snap.Leads_in_Priorisiert__c = leadsInPriorisiert;
-        snap.Converted_Leads__c = convertedLeads;
+        loadOppValuesInSnapshot(snap, groupedOpportunityAggregateResults);
+        queryLeadCountsAndLoadInSnapshot(snap, '');
         insert snap;
     }
 
-    private static void loadOppValuesInSnapshot(Data_Snapshot__c snapping, Map<String,AggregateResult> oppAggResultByStage) {
+    private static void loadOppValuesInSnapshot(
+            Data_Snapshot__c snapping, List<AggregateResult> groupedOpportunityAggregateResults) {
+        Map<String,AggregateResult> oppAggregateResultByStage = new Map<String,AggregateResult>();
+        for (AggregateResult opportunityAggregateResult : groupedOpportunityAggregateResults) {
+            oppAggregateResultByStage.put(
+                    (String) opportunityAggregateResult.get('StageName'), opportunityAggregateResult);
+        }
         Decimal pitchForecast;
         Decimal scopingForecast;
         Decimal LoPForecast;
         try {
-            AggregateResult pitchOppsAggregateResult = oppAggResultByStage.get('Pitch');
+            AggregateResult pitchOppsAggregateResult = oppAggregateResultByStage.get('Pitch');
             snapping.Opps_in_Pitch__c = (Decimal) pitchOppsAggregateResult.get('oppsCount');
             snapping.Open_Pitch_Volume__c = (Decimal) pitchOppsAggregateResult.get('totalAmount');
             pitchForecast = (Decimal) pitchOppsAggregateResult.get('totalForecast');   
@@ -92,7 +76,7 @@ global class DataSnapshotHandler {
             System.debug('No Opportunities in Pitch Stage matching criteria');
         }
         try {
-            AggregateResult scopingOppsAggregateResult = oppAggResultByStage.get('Scoping');
+            AggregateResult scopingOppsAggregateResult = oppAggregateResultByStage.get('Scoping');
             snapping.Opps_in_Scoping__c = (Decimal) scopingOppsAggregateResult.get('oppsCount');
             snapping.Open_Scoping_Volume__c = (Decimal) scopingOppsAggregateResult.get('totalAmount');
             scopingForecast = (Decimal) scopingOppsAggregateResult.get('totalForecast');
@@ -100,7 +84,7 @@ global class DataSnapshotHandler {
             System.debug('No Opportunities in Scoping Stage matching criteria');
         }
         try {
-            AggregateResult LoPOppsAggregateResult = oppAggResultByStage.get('LoP');
+            AggregateResult LoPOppsAggregateResult = oppAggregateResultByStage.get('LoP');
             snapping.Opps_in_LoP__c = (Decimal) LoPOppsAggregateResult.get('oppsCount');
             snapping.Open_LoP_Volume__c = (Decimal) LoPOppsAggregateResult.get('totalAmount');
             LoPForecast = (Decimal) LoPOppsAggregateResult.get('totalForecast');            
@@ -116,6 +100,27 @@ global class DataSnapshotHandler {
         snapping.Total_Forecast__c = decimalZeroForNull(pitchForecast)
                 + decimalZeroForNull(scopingForecast)
                 + decimalZeroForNull(LoPForecast);
+    }
+
+    private static void queryLeadCountsAndLoadInSnapshot(Data_Snapshot__c snapping, String additionalCondition) {
+        String lastWeekLeadsQueryString =
+                ('SELECT COUNT(Id) leadsCount'
+                + ' FROM Lead'
+                + ' WHERE CreatedDate >= :(Date.today() - 7)'
+                + ' ' + additionalCondition).trim();
+        String leadsInPriorisiertQueryString =
+                ('SELECT COUNT(Id) leadsCount'
+                + ' FROM Lead'
+                + ' WHERE Status = \'Call/Pitch Follow Up\''
+                + ' ' + additionalCondition).trim();
+        String convertedLeadsQueryString =
+                ('SELECT COUNT(Id) leadsCount'
+                + ' FROM Lead'
+                + ' WHERE Konvertiert_am__c >= :(Date.today() - 7)'
+                + ' ' + additionalCondition).trim();
+        snapping.New_Leads__c = (Decimal) Database.query(leadsInPriorisiertQueryString)[0].get('leadsCount');
+        snapping.Leads_in_Priorisiert__c = (Decimal) Database.query(lastWeekLeadsQueryString)[0].get('leadsCount');
+        snapping.Converted_Leads__c = (Decimal) Database.query(lastWeekLeadsQueryString)[0].get('leadsCount');
     }
 
     private static Decimal decimalZeroForNull(Decimal input) {
