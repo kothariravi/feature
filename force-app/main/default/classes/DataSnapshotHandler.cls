@@ -13,12 +13,10 @@ global class DataSnapshotHandler {
     //-//-//-//-// PUBLIC METHODS //-//-//-//-//
 
     public static void takeSnapshot() {
-
         takeOrgSnapshot();
         takeAvgSnapshot(date4Weeks, 'Avg 4 Weeks', false, null);
         takeAvgSnapshot(date1Year, 'Avg 1 Year', false, null);
-        List<SnapshotSettings__c> userSettings = SnapshotSettings__c.getAll().values();
-        for (SnapshotSettings__c userSetting : userSettings) {
+        for (SnapshotSettings__c userSetting : SnapshotSettings__c.getAll().values()) {
             takeUserSnapshot(userSetting);
             takeAvgSnapshot(date4Weeks, 'Avg 4 Weeks', true, userSetting);
             takeAvgSnapshot(date1Year, 'Avg 1 Year', true, userSetting);
@@ -129,7 +127,7 @@ global class DataSnapshotHandler {
                 + ' FROM Lead'
                 + ' WHERE CreatedDate >= :oneWeekAgo'
                 + ' ' + additionalCondition).trim();
-        final String leadsInPriorisiertQueryString =
+        final String leadsInPrioQueryString =
                 ('SELECT COUNT(Id) leadsCount'
                 + ' FROM Lead'
                 + ' WHERE Status = \'Call/Pitch Follow Up\''
@@ -140,7 +138,7 @@ global class DataSnapshotHandler {
                 + ' WHERE Konvertiert_am__c >= :oneWeekAgo'
                 + ' ' + additionalCondition).trim();
         snapping.New_Leads__c = (Decimal) Database.query(lastWeekLeadsQueryString)[0].get('leadsCount');
-        snapping.Leads_in_Priorisiert__c = (Decimal) Database.query(leadsInPriorisiertQueryString)[0].get('leadsCount');
+        snapping.Leads_in_Priorisiert__c = (Decimal) Database.query(leadsInPrioQueryString)[0].get('leadsCount');
         snapping.Converted_Leads__c = (Decimal) Database.query(convertedLeadsQueryString)[0].get('leadsCount');
     }
 
@@ -156,77 +154,60 @@ global class DataSnapshotHandler {
         return (input == null) ? 0 : input;
     }
 
-    private static void takeAvgSnapshot(Date dateRange, String snapTitle, Boolean isUserSnapshot, SnapshotSettings__c userSetting) {
-        AggregateResult avgSnap;
-
-        if (isUserSnapshot) {
-            avgSnap = [
-                SELECT AVG(Open_Opps__c),
-                    AVG(Total_Pipeline__c),
-                    AVG(Total_Forecast__c),
-                    AVG(Open_Pitch_Volume__c),
-                    AVG(Open_Scoping_Volume__c),
-                    AVG(Open_LoP_Volume__c),
-                    AVG(Opps_in_Pitch__c),
-                    AVG(Opps_in_Scoping__c),
-                    AVG(Opps_in_LoP__c),
-                    AVG(New_Leads__c),
-                    AVG(Leads_in_Priorisiert__c),
-                    AVG(Converted_Leads__c)
-                FROM Data_Snapshot__c
-                WHERE Snapshot_Date__c >= :dateRange
-                    AND Snapshot_Date__c < :Date.today()
-                    AND Type__c = 'Actual'
-                    AND User_Snapshot__c = true
-                    AND OwnerId = :userSetting.User_Id__c
-            ];
-        } else {
-            avgSnap = [
-                SELECT AVG(Open_Opps__c),
-                    AVG(Total_Pipeline__c),
-                    AVG(Total_Forecast__c),
-                    AVG(Open_Pitch_Volume__c),
-                    AVG(Open_Scoping_Volume__c),
-                    AVG(Open_LoP_Volume__c),
-                    AVG(Opps_in_Pitch__c),
-                    AVG(Opps_in_Scoping__c),
-                    AVG(Opps_in_LoP__c),
-                    AVG(New_Leads__c),
-                    AVG(Leads_in_Priorisiert__c),
-                    AVG(Converted_Leads__c)
-                FROM Data_Snapshot__c
-                WHERE Snapshot_Date__c >= :dateRange
-                    AND Snapshot_Date__c < :Date.today()
-                    AND Type__c = 'Actual'
-                    AND User_Snapshot__c = false
-            ];
-        }
-
+    private static void takeAvgSnapshot(
+            Date dateRangeStart, String snapTitle, Boolean isUserSnapshot, SnapshotSettings__c userSetting) {
+        final Date dateToday = Date.today();
+        final String userIdString = isUserSnapshot ? userSetting.User_Id__c : null;
+        final String userQueryConditions = isUserSnapshot ? 'true AND OwnerId = \'' + userIdString + '\'' : 'false';
+        String averageSnapshotQueryString =
+                'SELECT AVG(Open_Opps__c) oppsCountAVG,'
+                +      ' AVG(Total_Pipeline__c) totalAmountAVG,'
+                +      ' AVG(Total_Forecast__c) totalForecastAVG,'
+                +      ' AVG(Open_Pitch_Volume__c) PitchAVG,'
+                +      ' AVG(Open_Scoping_Volume__c) ScopingAVG,'
+                +      ' AVG(Open_LoP_Volume__c) LoPAVG,'
+                +      ' AVG(Opps_in_Pitch__c) PitchCountAVG,'
+                +      ' AVG(Opps_in_Scoping__c) ScopingCountAVG,'
+                +      ' AVG(Opps_in_LoP__c) LoPCountAVG,'
+                +      ' AVG(New_Leads__c) newLeadsAVG,'
+                +      ' AVG(Leads_in_Priorisiert__c) prioLeadsAVG,'
+                +      ' AVG(Converted_Leads__c) convertedLeadsAVG'
+                + ' FROM Data_Snapshot__c'
+                + ' WHERE Snapshot_Date__c >= :dateRangeStart'
+                +       ' AND Snapshot_Date__c < :dateToday'
+                +       ' AND Type__c = \'Actual\''
+                +       ' AND User_Snapshot__c = ' + userQueryConditions;
+        AggregateResult averageSnapshotResult = Database.query(averageSnapshotQueryString);
         Data_Snapshot__c snap = new Data_Snapshot__c(
-            Snapshot_Date__c = Date.today(),
-            Open_Opps__c = (Decimal) avgSnap.get('expr0'),
-            Total_Pipeline__c = (Decimal) avgSnap.get('expr1'),
-            Total_Forecast__c = (Decimal) avgSnap.get('expr2'),
-            Open_Pitch_Volume__c = (Decimal) avgSnap.get('expr3'),
-            Open_Scoping_Volume__c = (Decimal) avgSnap.get('expr4'),
-            Open_LoP_Volume__c = (Decimal) avgSnap.get('expr5'),
-            Opps_in_Pitch__c = (Decimal) avgSnap.get('expr6'),
-            Opps_in_Scoping__c = (Decimal) avgSnap.get('expr7'),
-            Opps_in_LoP__c = (Decimal) avgSnap.get('expr8'),
-            New_Leads__c = (Decimal) avgSnap.get('expr9'),
-            Leads_in_Priorisiert__c = (Decimal) avgSnap.get('expr10'),
-            Converted_Leads__c = (Decimal) avgSnap.get('expr11'),
-            Type__c = 'Average'
+            Snapshot_Date__c = dateToday,
+            Type__c = 'Average',
+            Open_Opps__c = (Decimal) averageSnapshotResult.get('oppsCountAVG'),
+            Total_Pipeline__c = (Decimal) averageSnapshotResult.get('totalAmountAVG'),
+            Total_Forecast__c = (Decimal) averageSnapshotResult.get('totalForecastAVG'),
+            Open_Pitch_Volume__c = (Decimal) averageSnapshotResult.get('PitchAVG'),
+            Open_Scoping_Volume__c = (Decimal) averageSnapshotResult.get('ScopingAVG'),
+            Open_LoP_Volume__c = (Decimal) averageSnapshotResult.get('LoPAVG'),
+            Opps_in_Pitch__c = (Decimal) averageSnapshotResult.get('PitchCountAVG'),
+            Opps_in_Scoping__c = (Decimal) averageSnapshotResult.get('ScopingCountAVG'),
+            Opps_in_LoP__c = (Decimal) averageSnapshotResult.get('LoPCountAVG'),
+            New_Leads__c = (Decimal) averageSnapshotResult.get('newLeadsAVG'),
+            Leads_in_Priorisiert__c = (Decimal) averageSnapshotResult.get('prioLeadsAVG'),
+            Converted_Leads__c = (Decimal) averageSnapshotResult.get('convertedLeadsAVG')
         );
-
         if (isUserSnapshot) {
-            snap.OwnerId = userSetting.User_Id__c;
+            snap.OwnerId = (Id) userIdString;
             snap.User_Snapshot__c = true;
-            snap.Title__c = snapTitle + ': ' + Date.today().day() + '.' + Date.today().month() + '.' + Date.today().year() + ' (' + userSetting.Name + ')';
+            snap.Title__c = snapTitle + ': '
+                    + Date.today().day() + '.'
+                    + Date.today().month() + '.'
+                    + Date.today().year() + ' ('
+                    + userSetting.Name + ')';
         } else {
-            snap.Title__c = snapTitle + ': ' + Date.today().day() + '.' + Date.today().month() + '.' + Date.today().year();
+            snap.Title__c = snapTitle
+                    + ': ' + Date.today().day() + '.'
+                    + Date.today().month() + '.'
+                    + Date.today().year();
         }
-
         insert snap;
     }
 }
