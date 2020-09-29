@@ -84,13 +84,16 @@ global class DataSnapshotHandler {
         }
         Decimal pitchForecast;
         Decimal scopingForecast;
-        Decimal LoPForecast;
+        Decimal loPForecast;
         try {
             AggregateResult pitchOppsAggregateResult = oppAggregateResultByStage.get('Pitch');
             snapping.Opps_in_Pitch__c = (Decimal) pitchOppsAggregateResult.get('oppsCount');
             snapping.Open_Pitch_Volume__c = (Decimal) pitchOppsAggregateResult.get('totalAmount');
             pitchForecast = (Decimal) pitchOppsAggregateResult.get('totalForecast');   
         } catch (Exception ignoredException) {
+            snapping.Opps_in_Pitch__c = 0;
+            snapping.Open_Pitch_Volume__c = 0;
+            pitchForecast = 0;
             System.debug('No Opportunities in Pitch Stage matching criteria');
         }
         try {
@@ -99,25 +102,26 @@ global class DataSnapshotHandler {
             snapping.Open_Scoping_Volume__c = (Decimal) scopingOppsAggregateResult.get('totalAmount');
             scopingForecast = (Decimal) scopingOppsAggregateResult.get('totalForecast');
         } catch (Exception ignoredException) {
+            snapping.Opps_in_Scoping__c = 0;
+            snapping.Open_Scoping_Volume__c = 0;
+            scopingForecast = 0;
             System.debug('No Opportunities in Scoping Stage matching criteria');
         }
         try {
             AggregateResult LoPOppsAggregateResult = oppAggregateResultByStage.get('LoP');
             snapping.Opps_in_LoP__c = (Decimal) LoPOppsAggregateResult.get('oppsCount');
             snapping.Open_LoP_Volume__c = (Decimal) LoPOppsAggregateResult.get('totalAmount');
-            LoPForecast = (Decimal) LoPOppsAggregateResult.get('totalForecast');            
+            loPForecast = (Decimal) LoPOppsAggregateResult.get('totalForecast');            
         } catch (Exception ignoredException) {
+            snapping.Opps_in_LoP__c = 0;
+            snapping.Open_LoP_Volume__c = 0;
+            loPForecast = 0;
             System.debug('No Opportunities in LoP Stage matching criteria');
         }
-        snapping.Open_Opps__c = decimalZeroForNull(snapping.Opps_in_Pitch__c)
-                + decimalZeroForNull(snapping.Opps_in_Scoping__c)
-                + decimalZeroForNull(snapping.Opps_in_LoP__c);
-        snapping.Total_Pipeline__c = decimalZeroForNull(snapping.Open_Pitch_Volume__c)
-                + decimalZeroForNull(snapping.Open_Scoping_Volume__c)
-                + decimalZeroForNull(snapping.Open_LoP_Volume__c);
-        snapping.Total_Forecast__c = decimalZeroForNull(pitchForecast)
-                + decimalZeroForNull(scopingForecast)
-                + decimalZeroForNull(LoPForecast);
+        snapping.Open_Opps__c = snapping.Opps_in_Pitch__c + snapping.Opps_in_Scoping__c + snapping.Opps_in_LoP__c;
+        snapping.Total_Pipeline__c =
+                snapping.Open_Pitch_Volume__c + snapping.Open_Scoping_Volume__c + snapping.Open_LoP_Volume__c;
+        snapping.Total_Forecast__c = pitchForecast + scopingForecast + loPForecast;
     }
 
     private static void queryLeadCountsAndLoadInSnapshot(Data_Snapshot__c snapping, String additionalCondition) {
@@ -148,10 +152,6 @@ global class DataSnapshotHandler {
         } catch (Exception ignoredException) {
             throw new NoSuchRecordTypeException('Opportunity Record Type ' + recordTypeDevName + ' not found');
         }
-    }
-
-    private static Decimal decimalZeroForNull(Decimal input) {
-        return (input == null) ? 0 : input;
     }
 
     private static void takeAvgSnapshot(
