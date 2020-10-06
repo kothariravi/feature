@@ -91,9 +91,6 @@ global class DataSnapshotHandler {
             snapping.Open_Pitch_Volume__c = (Decimal) pitchOppsAggregateResult.get('totalAmount');
             pitchForecast = (Decimal) pitchOppsAggregateResult.get('totalForecast');   
         } catch (Exception ignoredException) {
-            snapping.Opps_in_Pitch__c = 0;
-            snapping.Open_Pitch_Volume__c = 0;
-            pitchForecast = 0;
             System.debug('No Opportunities in Pitch Stage matching criteria');
         }
         try {
@@ -102,9 +99,6 @@ global class DataSnapshotHandler {
             snapping.Open_Scoping_Volume__c = (Decimal) scopingOppsAggregateResult.get('totalAmount');
             scopingForecast = (Decimal) scopingOppsAggregateResult.get('totalForecast');
         } catch (Exception ignoredException) {
-            snapping.Opps_in_Scoping__c = 0;
-            snapping.Open_Scoping_Volume__c = 0;
-            scopingForecast = 0;
             System.debug('No Opportunities in Scoping Stage matching criteria');
         }
         try {
@@ -113,11 +107,17 @@ global class DataSnapshotHandler {
             snapping.Open_LoP_Volume__c = (Decimal) LoPOppsAggregateResult.get('totalAmount');
             loPForecast = (Decimal) LoPOppsAggregateResult.get('totalForecast');            
         } catch (Exception ignoredException) {
-            snapping.Opps_in_LoP__c = 0;
-            snapping.Open_LoP_Volume__c = 0;
-            loPForecast = 0;
             System.debug('No Opportunities in LoP Stage matching criteria');
         }
+        snapping.Opps_in_Pitch__c = snapping.Opps_in_Pitch__c == null ? 0 : snapping.Opps_in_Pitch__c;
+        snapping.Open_Pitch_Volume__c = snapping.Open_Pitch_Volume__c == null ? 0 : snapping.Open_Pitch_Volume__c;
+        pitchForecast = pitchForecast == null ? 0 : pitchForecast;
+        snapping.Opps_in_Scoping__c = snapping.Opps_in_Scoping__c == null ? 0 : snapping.Opps_in_Scoping__c;
+        snapping.Open_Scoping_Volume__c = snapping.Open_Scoping_Volume__c == null ? 0 : snapping.Open_Scoping_Volume__c;
+        scopingForecast = scopingForecast == null ? 0 : scopingForecast;
+        snapping.Opps_in_LoP__c = snapping.Opps_in_LoP__c == null ? 0 : snapping.Opps_in_LoP__c;
+        snapping.Open_LoP_Volume__c = snapping.Open_LoP_Volume__c == null ? 0 : snapping.Open_LoP_Volume__c;
+        loPForecast = loPForecast == null ? 0 : loPForecast;
         snapping.Open_Opps__c = snapping.Opps_in_Pitch__c + snapping.Opps_in_Scoping__c + snapping.Opps_in_LoP__c;
         snapping.Total_Pipeline__c =
                 snapping.Open_Pitch_Volume__c + snapping.Open_Scoping_Volume__c + snapping.Open_LoP_Volume__c;
